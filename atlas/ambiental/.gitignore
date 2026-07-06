@@ -47,12 +47,7 @@ skills/*/notas-internas.md
 # Casos de uso
 examples/*
 !examples/README.md
-!examples/licenciamiento-ambiental.md
-!examples/deforestacion-areas-protegidas.md
-!examples/clima-y-riesgo.md
-!examples/ecosistemas-marino-costeros.md
-!examples/calidad-aire.md
-!examples/recurso-hidrico.md
+!examples/consultas-de-ejemplo.md
 
 # templates/lineamiento-profundidad-mapa.md, templates/briefing-*.md,
 # templates/herramientas-de-exploracion.md, templates/pruebas-skills.md,
