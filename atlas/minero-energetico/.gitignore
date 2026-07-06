@@ -47,14 +47,7 @@ skills/*/notas-internas.md
 # Casos de uso
 examples/*
 !examples/README.md
-!examples/tarifas-energia-electrica.md
-!examples/produccion-gas-natural.md
-!examples/cobertura-zni.md
-!examples/estadisticas-sectoriales.md
-!examples/exploracion-minera-territorial.md
-!examples/impacto-ambiental-hidrocarburos.md
-!examples/inversiones-convocatorias.md
-!examples/transicion-energetica-renovables.md
+!examples/consultas-de-ejemplo.md
 
 # Caso de analisis BECO: se publica la subcarpeta completa (README, notebook y CSV
 # de salida), pero no el Excel crudo del BECO, que el usuario descarga de la UPME

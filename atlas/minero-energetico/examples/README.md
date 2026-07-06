@@ -1,64 +1,36 @@
 # Casos de uso
 
-Se proponen dos tipos de casos, marcados con el campo `tipo:` en el frontmatter:
+Un caso de uso es un **flujo de análisis reproducible** sobre datos del sector: una consulta real que se resolvió navegando las fuentes oficiales y procesando sus datos. Cada caso vive en su propia subcarpeta `<slug>/` con un `README.md` y los archivos que produce.
 
-- **`navegacion`** — qué entidad y qué ruta responden una consulta. Es un archivo `.md` plano en esta carpeta.
-- **`analisis`** — un flujo reproducible sobre datos del sector (descargar, procesar, analizar). Vive en su propia subcarpeta `<slug>/` con un `README.md` y los archivos que produce el caso.
+La navegación no es un tipo de caso aparte: cada análisis documenta en su README **cómo se llegó a los datos** — la ruta de navegación entre entidades es parte del caso, no un artefacto separado.
+
+Además de los casos, [`consultas-de-ejemplo.md`](consultas-de-ejemplo.md) reúne consultas de demostración: prompts que puedes hacerle al agente con las skills instaladas, con la ruta que debería responderte.
 
 ## Cuándo agregar un caso
 
-- Consulta real que combina una o más skills → `navegacion`
-- Ruta de búsqueda para documentar y estandarizar → `navegacion`
-- Flujo de navegación entre entidades que resolvió un problema concreto → `navegacion`
-- Herramienta o metodología desarrollada sobre datos del sector → `analisis`
+- Herramienta o metodología desarrollada sobre datos del sector → caso nuevo
+- Consulta que se resolvió con datos descargados y procesados de fuentes oficiales → caso nuevo
+- Ruta de navegación útil pero sin componente de datos → agregar como consulta a `consultas-de-ejemplo.md`
 
-Un caso de `navegacion` puede corresponder con un caso de `analisis` y operar como una unidad: la navegación documenta dónde y cómo encontrar los datos, y el análisis los procesa. El campo `caso_relacionado` del frontmatter enlaza los dos, de forma recíproca.
-
-## Plantilla — tipo `navegacion`
-
-Archivo plano `tema-subtema.md` en esta carpeta.
-
-```markdown
----
-tipo: navegacion
-entidades: [navegar-upme, navegar-creg, ...]
-tema: mercado de gas / minería / regulación / etc.
-caso_relacionado: <slug-del-analisis>/   # opcional, si opera como unidad con un caso de analisis
----
-
-# [Título descriptivo]
-
-## Consulta
-"Una sola pregunta específica y contestable: lugar + objeto + qué se espera obtener."
-
-## Ruta
-
-1. Paso concreto en orden real de resolución (entidad → sistema → acción: descargar, filtrar, cruzar...)
-2. ...
-
-## Entidades y rutas
-
-- **ENTIDAD** — `ruta/dentro/del/sitio`: qué aporta (referencia compacta)
-```
-
-
-## Plantilla — tipo `analisis`
+## Plantilla
 
 Subcarpeta `<slug>/` con este `README.md` dentro, junto a los archivos que produce el caso.
 
 ```markdown
 ---
 tipo: analisis
-entidades: [navegar-xm, ...]
+entidades: [navegar-upme, ...]
 tema: precios de energía / producción de gas / etc.
 fecha: AAAA-MM-DD
-caso_relacionado: <tema-subtema>.md   # opcional, si opera como unidad con un caso de navegacion
 ---
 
 # [Título descriptivo]
 
 ## Consulta
 "¿Pregunta o tarea concreta que motivó el análisis?"
+
+## Cómo se llegó a los datos
+Ruta de navegación que condujo a la fuente: entidad → sistema → sección.
 
 ## Datos
 Fuente oficial exacta, formato y cómo obtenerlos (URL, API o paso de descarga).
@@ -74,22 +46,18 @@ Stack usado (Python, pandas, Power BI, etc.) y los archivos construidos, con su 
 Qué se obtuvo (incluidas figuras o reportes) y con qué limitaciones.
 ```
 
-
 ## Campos de frontmatter
 
-| Campo | Uso | Aplica a |
-|-------|-----|----------|
-| `tipo` | `navegacion` o `analisis` | ambos |
-| `entidades` | Skills involucradas | ambos |
-| `tema` | Tema principal del caso | ambos |
-| `fecha` | Cuándo se verificó o corrió el caso | ambos (opcional) |
-| `caso_relacionado` | Caso pareja con el que opera como unidad (recíproco) | ambos (opcional) |
-
+| Campo | Uso |
+|-------|-----|
+| `tipo` | `analisis` |
+| `entidades` | Skills involucradas |
+| `tema` | Tema principal del caso |
+| `fecha` | Cuándo se corrió o verificó el caso |
 
 ## Convención de nombre
 
-`tema-subtema.md` en minúsculas con guiones, tanto para el archivo `navegacion` como para la subcarpeta `analisis`. Ejemplos:
+Subcarpeta `tema-subtema/` en minúsculas con guiones. Ejemplos:
 
-- `mercado-gas-natural.md` (navegacion)
-- `series-precio-bolsa-xm/` (analisis)
-- `balance-energetico-analisis/` (analisis)
+- `balance-energetico-consumo-final/`
+- `series-precio-bolsa-xm/`

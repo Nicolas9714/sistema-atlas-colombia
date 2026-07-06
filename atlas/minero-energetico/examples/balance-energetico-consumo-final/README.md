@@ -3,7 +3,6 @@ tipo: analisis
 entidades: [navegar-upme]
 tema: balance energético / consumo final
 fecha: 2026-07-06
-caso_relacionado: estadisticas-sectoriales.md
 ---
 
 # Consumo final de energía por energético — BECO 2006-2024
@@ -11,6 +10,10 @@ caso_relacionado: estadisticas-sectoriales.md
 ## Consulta
 
 "¿Cómo ha evolucionado el consumo final de energía en Colombia por energético (gas natural, diésel, electricidad, leña...) entre 2006 y 2024, según el Balance Energético Colombiano?"
+
+## Cómo se llegó a los datos
+
+UPME → SIMEC → Oferta y Demanda → Balance Energético Colombiano (`simec/oferta-y-demanda/balance-energetico-colombiano/`). El BECO es la estadística oficial de oferta, transformación y consumo de energía del país; la skill `navegar-upme` documenta esta ruta y las demás fuentes estadísticas de la entidad.
 
 ## Datos
 
