@@ -24,7 +24,7 @@ El IPSE es una entidad adscrita al Ministerio de Minas y Energía. Se encarga de
 
 1. Consulta `mapa-web.md` para ubicar el geovisor, los boletines del CNM, los proyectos o la normativa ZNI.
 2. Consulta `fuentes-prioritarias.md` para acceder directamente al SIGIPSE, CNM, datasets o guías de proyectos.
-3. En el repositorio del Atlas, la carpeta `examples/` reúne casos de uso que combinan varias entidades.
+3. En el repositorio del Atlas, la carpeta `examples/` reúne casos de análisis reproducibles y consultas de ejemplo con su ruta esperada.
 
 ## Notas de navegación
 

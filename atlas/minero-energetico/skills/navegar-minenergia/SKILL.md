@@ -24,7 +24,7 @@ El Ministerio de Minas y Energía es la entidad rectora del sector minero-energ�
 
 1. Consulta `mapa-web.md` para ubicar la sección misional, micrositio o programa relevante dentro del sitio.
 2. Consulta `fuentes-prioritarias.md` para acceder directamente al repositorio normativo, Intégrame, los geovisores de la IDE-ME o los documentos TEJ.
-3. En el repositorio del Atlas, la carpeta `examples/` reúne casos de uso que combinan varias entidades.
+3. En el repositorio del Atlas, la carpeta `examples/` reúne casos de análisis reproducibles y consultas de ejemplo con su ruta esperada.
 
 ## Notas de navegación
 

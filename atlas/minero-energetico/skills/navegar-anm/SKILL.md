@@ -24,7 +24,7 @@ La ANM es una Agencia Nacional Estatal de Naturaleza Especial adscrita al Minist
 
 1. Consulta `mapa-web.md` para ubicar el catastro, estadísticas o normativa minera.
 2. Consulta `fuentes-prioritarias.md` para acceder directamente a AnnA Minería, la Cuadrícula Minera o los datos abiertos de producción.
-3. En el repositorio del Atlas, la carpeta `examples/` reúne casos de uso que combinan varias entidades.
+3. En el repositorio del Atlas, la carpeta `examples/` reúne casos de análisis reproducibles y consultas de ejemplo con su ruta esperada.
 
 ## Notas de navegación
 

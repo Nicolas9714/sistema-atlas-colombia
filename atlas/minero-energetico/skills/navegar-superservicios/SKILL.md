@@ -25,7 +25,7 @@ La Superintendencia de Servicios Públicos Domiciliarios es una entidad de cará
 
 1. Consulta `mapa-web.md` para ubicar el SUI, los informes por sector o la normativa.
 2. Consulta `fuentes-prioritarias.md` para acceder directamente al SUI, UMMEG, tarifas o geoportal.
-3. En el repositorio del Atlas, la carpeta `examples/` reúne casos de uso que combinan varias entidades.
+3. En el repositorio del Atlas, la carpeta `examples/` reúne casos de análisis reproducibles y consultas de ejemplo con su ruta esperada.
 
 ## Notas de navegación
 

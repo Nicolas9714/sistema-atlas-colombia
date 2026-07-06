@@ -25,7 +25,7 @@ El SGC es una entidad adscrita al Ministerio de Ciencia, Tecnología e Innovaci�
 
 1. Consulta `mapa-web.md` para ubicar el sistema, geovisor o publicación relevante.
 2. Consulta `fuentes-prioritarias.md` para acceder directamente al MIIG, catálogo sísmico, SIMMA o datos abiertos.
-3. En el repositorio del Atlas, la carpeta `examples/` reúne casos de uso que combinan varias entidades.
+3. En el repositorio del Atlas, la carpeta `examples/` reúne casos de análisis reproducibles y consultas de ejemplo con su ruta esperada.
 
 ## Notas de navegación
 

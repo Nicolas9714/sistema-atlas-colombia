@@ -25,7 +25,7 @@ XM es una filial de ISA que actúa como Operador del Sistema de Transmisión Nac
 
 1. Consulta `mapa-web.md` para ubicar la variable operativa, informe o sección del mercado que necesitas.
 2. Consulta `fuentes-prioritarias.md` para acceder directamente a la API SiNERGOX, SIMEM, informes o bases de datos de planeación.
-3. En el repositorio del Atlas, la carpeta `examples/` reúne casos de uso que combinan varias entidades.
+3. En el repositorio del Atlas, la carpeta `examples/` reúne casos de análisis reproducibles y consultas de ejemplo con su ruta esperada.
 
 ## Notas de navegación
 

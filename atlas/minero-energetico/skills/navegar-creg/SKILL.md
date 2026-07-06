@@ -23,7 +23,7 @@ La CREG es una comisión de expertos adscrita al Ministerio de Minas y Energía.
 
 1. Consulta `mapa-web.md` para ubicar el sector regulado o el tipo de normativa que necesitas.
 2. Consulta `fuentes-prioritarias.md` para acceder directamente al Gestor Normativo, las resoluciones o el marco regulatorio por sector.
-3. En el repositorio del Atlas, la carpeta `examples/` reúne casos de uso que combinan varias entidades.
+3. En el repositorio del Atlas, la carpeta `examples/` reúne casos de análisis reproducibles y consultas de ejemplo con su ruta esperada.
 
 ## Notas de navegación
 

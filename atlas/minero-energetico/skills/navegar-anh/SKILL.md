@@ -26,7 +26,7 @@ La ANH es una Agencia Nacional Estatal de Naturaleza Especial adscrita al Minist
 
 1. Consulta `mapa-web.md` para ubicar el geovisor, estadísticas, contratos o información geológica.
 2. Consulta `fuentes-prioritarias.md` para acceder directamente al Mapa de Tierras, estadísticas de producción, módulo de reservas o publicaciones.
-3. En el repositorio del Atlas, la carpeta `examples/` reúne casos de uso que combinan varias entidades.
+3. En el repositorio del Atlas, la carpeta `examples/` reúne casos de análisis reproducibles y consultas de ejemplo con su ruta esperada.
 
 ## Notas de navegación
 
