@@ -1,11 +1,9 @@
 # Casos de uso
 
-Se proponen dos tipos de casos:
+Se proponen dos tipos de casos, marcados con el campo `tipo:` en el frontmatter:
 
 - **`navegacion`** — qué entidad y qué ruta responden una consulta. Es un archivo `.md` plano en esta carpeta.
 - **`analisis`** — un flujo reproducible sobre datos del sector (descargar, procesar, analizar). Vive en su propia subcarpeta `<slug>/` con un `README.md` y los archivos que produce el caso.
-
- Estos casos son marcados con el campo `tipo:` en el frontmatter.
 
 ## Cuándo agregar un caso
 
