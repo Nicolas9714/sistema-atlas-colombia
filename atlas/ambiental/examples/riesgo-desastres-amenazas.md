@@ -2,7 +2,6 @@
 tipo: navegacion
 entidades: [navegar-ungrd, navegar-ideam, navegar-minambiente]
 tema: gestión del riesgo / amenazas naturales
-nivel: intermedio
 ---
 
 # Evaluar amenazas naturales y riesgo de desastres en un territorio
@@ -20,9 +19,3 @@ nivel: intermedio
 ## Entidades y rutas complementarias
 
 - **PNN** — RUNAP (`runap.parquesnacionales.gov.co`): cruce con áreas protegidas cuando la amenaza incide sobre o desde el SINAP.
-
-## Notas
-
-- Orden sugerido: UNGRD (el mapa de amenaza y riesgo) → IDEAM (el dato que la detona y su pronóstico) → MinAmbiente (la política de adaptación que la enmarca).
-- Distinción de roles: la UNGRD coordina el Sistema Nacional de Gestión del Riesgo de Desastres (SNGRD) y consolida el riesgo; el IDEAM es la autoridad técnica en hidrología y meteorología; MinAmbiente coordina el SINA y la política de cambio climático. El SNGRD y el SINA son sistemas distintos aunque se articulan.
-- Para amenaza sísmica y volcánica el dato geocientífico primario es del Servicio Geológico Colombiano; la UNGRD lo integra en sus geovisores de riesgo.

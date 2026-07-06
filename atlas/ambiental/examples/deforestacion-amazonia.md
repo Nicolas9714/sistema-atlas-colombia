@@ -2,7 +2,6 @@
 tipo: navegacion
 entidades: [navegar-ideam, navegar-iavh, navegar-minambiente]
 tema: deforestación
-nivel: intermedio
 ---
 
 # Rastrear cifras y contexto de deforestación en la Amazonía
@@ -20,8 +19,3 @@ nivel: intermedio
 ## Entidades y rutas complementarias
 
 - **PNN** — RUNAP (`runap.parquesnacionales.gov.co`): cruce con áreas protegidas cuando la deforestación ocurre dentro o en el borde del SINAP.
-
-## Notas
-
-- Orden sugerido: IDEAM (el dato) → IAvH (el efecto ecológico) → MinAmbiente (la política).
-- La cifra oficial de deforestación nacional es del IDEAM; otras entidades la citan, no la producen.

@@ -32,9 +32,6 @@ tema: biodiversidad / licenciamiento / clima / áreas protegidas / etc.
 ## Entidades y rutas
 
 - **ENTIDAD** — `ruta/dentro/del/sitio`: qué información se encuentra aquí
-
-## Notas
-(opcional — orden sugerido, distinción de roles, accesos, restricciones, tips de navegación)
 ```
 
 
@@ -47,7 +44,6 @@ Subcarpeta `<slug>/` con este `README.md` dentro, junto a los archivos que produ
 tipo: analisis
 entidades: [navegar-ideam, ...]
 tema: deforestación / calidad del agua / etc.
-nivel: intermedio / avanzado
 fecha: AAAA-MM-DD
 ---
 
@@ -78,7 +74,6 @@ Qué se obtuvo (incluidas figuras o reportes) y con qué limitaciones.
 | `tipo` | `navegacion` o `analisis` | ambos |
 | `entidades` | Skills involucradas | ambos |
 | `tema` | Tema principal del caso | ambos |
-| `nivel` | simple / intermedio / avanzado | ambos (opcional) |
 | `fecha` | Cuándo se verificó o corrió el caso | ambos (opcional) |
 
 
