@@ -15,9 +15,3 @@ tema: hidrocarburos / ambiente
 - **ANH** — `ambiental-social/`: normativa ambiental sectorial, información de bloques
 - **IDEAM** — `dhime-datos-hidrometeorologicos/`: datos hidrométricos de cuencas afectadas
 - **MinAmbiente** — normativa ambiental, política de gestión del recurso hídrico
-
-## Notas
-
-- Orden sugerido: ANLA (qué proyectos están licenciados y cómo se les hace seguimiento) → ANH (el contexto sectorial y de bloques) → IDEAM (el dato hídrico de base) → MinAmbiente (la norma que enmarca todo).
-- Distinción de roles: la ANLA otorga y vigila la licencia ambiental de los proyectos de hidrocarburos; la ANH administra el recurso y los contratos; el IDEAM aporta el dato hidrometeorológico; MinAmbiente define la política y la norma.
-- La inversión del 1 % y las compensaciones de un proyecto se consultan en la capa de seguimiento del geovisor de la ANLA, no en la ANH.

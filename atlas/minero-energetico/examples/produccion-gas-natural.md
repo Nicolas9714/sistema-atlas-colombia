@@ -2,7 +2,6 @@
 tipo: navegacion
 entidades: [navegar-anh, navegar-bec, navegar-creg]
 tema: mercado de gas
-nivel: intermedio
 ---
 
 # Consultar producción, mercado y regulación del gas natural
@@ -20,8 +19,3 @@ nivel: intermedio
 ## Entidades y rutas complementarias
 
 - **UPME** — `simec/planeacion-energetica/plan-de-abastecimiento-de-gas-natural/`: proyecciones de oferta y demanda de gas y balance de abastecimiento, para leer la producción actual contra la trayectoria esperada.
-
-## Notas
-
-- Orden sugerido: ANH (cuánto se produce) → BEC (cómo se transa) → CREG (bajo qué regulación); la UPME aporta la proyección de abastecimiento para el análisis prospectivo.
-- Distinción de roles: la ANH administra el recurso y publica producción; BEC opera el mercado transaccional; la CREG define la regulación y las tarifas; la UPME planea el abastecimiento.

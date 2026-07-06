@@ -15,9 +15,3 @@ tema: minería / territorio
 - **SGC** — `mapa-geologico/` (MIIG), `simma.sgc.gov.co/`: minerales metálicos y no metálicos, amenaza sísmica
 - **ANLA** — geovisor: capas de regionalización y áreas prioritarias de conservación
 - **MinAmbiente** — delimitación de páramos y áreas protegidas (`vital-publico.minambiente.gov.co/`)
-
-## Notas
-
-- Orden sugerido: ANM (qué títulos hay y su estado) → SGC (la geología y el potencial del subsuelo) → ANLA y MinAmbiente (qué restricciones ambientales aplican).
-- Distinción de roles: la ANM administra el catastro y los títulos mineros; el SGC produce el conocimiento geológico; la ANLA licencia y hace seguimiento ambiental; MinAmbiente delimita las áreas excluidas de minería (páramos, áreas protegidas).
-- Un título minero no habilita por sí solo la actividad: la exploración y explotación quedan sujetas a las restricciones ambientales que definen MinAmbiente y la ANLA.
