@@ -18,7 +18,7 @@ Este atlas es complementario al [Atlas de Navegación Minero Energético de Colo
 
 ## Cómo usar las skills
 
-Las skills institucionales son carpetas con tres archivos Markdown que cubren navegación, sistemas y fuentes de una entidad (ver [Estructura del repositorio](#estructura-del-repositorio)). La skill orquestadora `atlas-orquestador` contiene un solo archivo. Al instalar cualquier skill en tu proyecto, el agente o modelo de IA ya puede interactuar con su contenido.
+Las skills por entidad contienen tres archivos Markdown que cubren navegación, sistemas y fuentes de información (ver [Estructura del repositorio](#estructura-del-repositorio)). La skill orquestadora `atlas-orquestador` contiene un solo archivo. Al instalar cualquier skill en tu proyecto, el agente o modelo de IA ya puede interactuar con su contenido.
 
 La forma recomendada es mantener este Atlas como un repositorio fuente, clonado junto al proyecto donde vas a trabajar, y copiar al proyecto solo las skills que necesitas. Así el Atlas queda separado del proyecto y cada proyecto conserva solo las skills que usa.
 
@@ -134,7 +134,7 @@ En Codex, inicia la herramienta desde la raíz del proyecto y menciona directame
 
 En Claude.ai, ChatGPT, Gemini u otras plataformas compatibles, puedes adjuntar la carpeta de una entidad o agregar sus archivos al proyecto correspondiente.
 
-Cada skill incluye un `SKILL.md` como archivo principal. Las skills institucionales incluyen además `mapa-web.md` y `fuentes-prioritarias.md`.
+Cada skill incluye un `SKILL.md` como archivo principal. Las skills por entidad incluyen además `mapa-web.md` y `fuentes-prioritarias.md`.
 
 ---
 
@@ -190,12 +190,12 @@ Las skills son estructuras reutilizables para:
 
 ```text
 atlas-ambiental-colombia/
-├── skills/       → Una carpeta por skill: atlas-orquestador (skill orquestadora) + 7 entidades institucionales
-├── examples/     → Plantilla y convenciones para casos de uso (los ejemplos se contribuyen, ver examples/README.md)
+├── skills/       → Una carpeta por skill: atlas-orquestador (skill orquestadora) + 7 entidades
+├── examples/     → Plantilla y convenciones para casos de uso (los casos se contribuyen, ver examples/README.md)
 └── templates/    → Plantillas para nuevas skills
 ```
 
-Las 7 skills institucionales contienen:
+Las 7 skills contienen:
 
 - `SKILL.md` — descripción de la entidad y orientación general de navegación
 - `mapa-web.md` — árbol curado del sitio oficial, reducido a su contenido misional y estratégico

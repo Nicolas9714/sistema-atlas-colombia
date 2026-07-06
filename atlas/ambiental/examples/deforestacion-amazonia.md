@@ -1,4 +1,5 @@
 ---
+tipo: navegacion
 entidades: [navegar-ideam, navegar-iavh, navegar-minambiente]
 tema: deforestación
 nivel: intermedio

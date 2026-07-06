@@ -44,11 +44,17 @@ presentacion-socializacion.md
 # Notas internas de navegación por skill (no publicar)
 skills/*/notas-internas.md
 
-# Ejemplos y casos de uso internos (repo privado separado)
+# Casos de uso
 examples/*
 !examples/README.md
 !examples/licenciamiento-ambiental.md
 !examples/deforestacion-amazonia.md
+!examples/riesgo-desastres-amenazas.md
+!examples/areas-protegidas-conservacion.md
+!examples/ecosistemas-marino-costeros.md
+!examples/calidad-aire.md
+!examples/cambio-climatico.md
+!examples/recurso-hidrico.md
 
 # templates/lineamiento-profundidad-mapa.md, templates/briefing-*.md,
 # templates/herramientas-de-exploracion.md, templates/pruebas-skills.md,

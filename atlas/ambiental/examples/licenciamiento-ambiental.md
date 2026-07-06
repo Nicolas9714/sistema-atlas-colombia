@@ -1,4 +1,5 @@
 ---
+tipo: navegacion
 entidades: [navegar-anla, navegar-minambiente, navegar-ideam]
 tema: licenciamiento
 nivel: intermedio
