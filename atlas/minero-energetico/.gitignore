@@ -44,11 +44,17 @@ presentacion-socializacion.md
 # Notas internas de navegación por skill (no publicar)
 skills/*/notas-internas.md
 
-# Ejemplos y casos de uso internos (repo privado separado)
+# Casos de uso
 examples/*
 !examples/README.md
 !examples/tarifas-energia-electrica.md
 !examples/produccion-gas-natural.md
+!examples/cobertura-zni.md
+!examples/estadisticas-sectoriales.md
+!examples/exploracion-minera-territorial.md
+!examples/impacto-ambiental-hidrocarburos.md
+!examples/inversiones-convocatorias.md
+!examples/transicion-energetica-renovables.md
 
 # templates/lineamiento-profundidad-mapa.md, templates/briefing-*.md,
 # templates/herramientas-de-exploracion.md, templates/pruebas-skills.md,

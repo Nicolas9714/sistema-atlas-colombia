@@ -1,4 +1,5 @@
 ---
+tipo: navegacion
 entidades: [navegar-creg, navegar-superservicios, navegar-xm]
 tema: regulación
 nivel: intermedio
@@ -15,6 +16,10 @@ nivel: intermedio
 - **CREG** — Gestor Normativo (`gestornormativo.creg.gov.co`) y el sistema Alejandría: metodologías y fórmulas tarifarias vigentes (generación, transmisión, distribución y comercialización). Es quien define cómo se calcula la tarifa.
 - **Superservicios** — SUI (`sui.superservicios.gov.co`): tarifas efectivamente aplicadas por cada empresa comercializadora y datos de calidad del servicio. Es el dato de lo que se cobra en la práctica.
 - **XM** — SINERGOX (`sinergox.xm.com.co`) y la API pública (`servapibi.xm.com.co`): precio de bolsa y operación del mercado mayorista, el componente de generación que alimenta la tarifa.
+
+## Entidades y rutas complementarias
+
+- **UPME** — `simec/energia-electrica/transmision-de-energia-electrica/` y `simec/planeacion-energetica/plan-de-expansion-de-transmision/`: infraestructura de transmisión y expansión planeada, para entender el componente de transmisión (STN) que pesa en la tarifa.
 
 ## Notas
 

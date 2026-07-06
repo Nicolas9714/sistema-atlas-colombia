@@ -136,7 +136,7 @@ En Codex, inicia la herramienta desde la raíz del proyecto y menciona directame
 
 En Claude.ai, ChatGPT, Gemini u otras plataformas compatibles, puedes adjuntar la carpeta de una entidad o agregar sus archivos al proyecto correspondiente.
 
-Cada skill incluye un `SKILL.md` como archivo principal. Las skills institucionales incluyen además `mapa-web.md` y `fuentes-prioritarias.md`.
+Cada skill incluye un `SKILL.md` como archivo principal. Las skills por entidad incluyen además `mapa-web.md` y `fuentes-prioritarias.md`.
 
 ---
 
@@ -197,8 +197,8 @@ Las skills son estructuras reutilizables para:
 
 ```text
 atlas-minero-energetico-colombia/
-├── skills/       → Una carpeta por skill: atlas-orquestador (skill orquestadora) + 12 entidades institucionales
-├── examples/     → Plantilla y convenciones para casos de uso (los ejemplos se contribuyen, ver examples/README.md)
+├── skills/       → Una carpeta por skill: atlas-orquestador (skill orquestadora) + 12 entidades
+├── examples/     → Plantilla y convenciones para casos de uso (los casos se contribuyen, ver examples/README.md)
 └── templates/    → Plantillas para nuevas skills
 ```
 
