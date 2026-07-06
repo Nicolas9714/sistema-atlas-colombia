@@ -14,9 +14,7 @@ Se proponen dos tipos de casos:
 - Flujo de navegación entre entidades que resolvió un problema concreto → `navegacion`
 - Herramienta o metodología desarrollada sobre datos del sector → `analisis`
 
-Cada caso de navegacion puede corresponer con un caso de analisis, y operar como una unidad, 
-que integra los dos tipos de casos propuestos.
-
+Un caso de `navegacion` puede corresponder con un caso de `analisis` y operar como una unidad: la navegación documenta dónde y cómo encontrar los datos, y el análisis los procesa. El campo `caso_relacionado` del frontmatter enlaza los dos, de forma recíproca.
 
 ## Plantilla — tipo `navegacion`
 
@@ -27,16 +25,22 @@ Archivo plano `tema-subtema.md` en esta carpeta.
 tipo: navegacion
 entidades: [navegar-upme, navegar-creg, ...]
 tema: mercado de gas / minería / regulación / etc.
+caso_relacionado: <slug-del-analisis>/   # opcional, si opera como unidad con un caso de analisis
 ---
 
 # [Título descriptivo]
 
 ## Consulta
-"¿Pregunta o tarea concreta?"
+"Una sola pregunta específica y contestable: lugar + objeto + qué se espera obtener."
+
+## Ruta
+
+1. Paso concreto en orden real de resolución (entidad → sistema → acción: descargar, filtrar, cruzar...)
+2. ...
 
 ## Entidades y rutas
 
-- **ENTIDAD** — `ruta/dentro/del/sitio`: qué información se encuentra aquí
+- **ENTIDAD** — `ruta/dentro/del/sitio`: qué aporta (referencia compacta)
 ```
 
 
@@ -50,6 +54,7 @@ tipo: analisis
 entidades: [navegar-xm, ...]
 tema: precios de energía / producción de gas / etc.
 fecha: AAAA-MM-DD
+caso_relacionado: <tema-subtema>.md   # opcional, si opera como unidad con un caso de navegacion
 ---
 
 # [Título descriptivo]
@@ -80,6 +85,7 @@ Qué se obtuvo (incluidas figuras o reportes) y con qué limitaciones.
 | `entidades` | Skills involucradas | ambos |
 | `tema` | Tema principal del caso | ambos |
 | `fecha` | Cuándo se verificó o corrió el caso | ambos (opcional) |
+| `caso_relacionado` | Caso pareja con el que opera como unidad (recíproco) | ambos (opcional) |
 
 
 ## Convención de nombre

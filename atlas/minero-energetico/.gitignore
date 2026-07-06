@@ -56,6 +56,13 @@ examples/*
 !examples/inversiones-convocatorias.md
 !examples/transicion-energetica-renovables.md
 
+# Caso de analisis BECO: se publica la subcarpeta completa (README, notebook y CSV
+# de salida), pero no el Excel crudo del BECO, que el usuario descarga de la UPME
+!examples/balance-energetico-consumo-final/
+!examples/balance-energetico-consumo-final/**
+examples/balance-energetico-consumo-final/*.xlsx
+examples/balance-energetico-consumo-final/*.xlk
+
 # templates/lineamiento-profundidad-mapa.md, templates/briefing-*.md,
 # templates/herramientas-de-exploracion.md, templates/pruebas-skills.md,
 # internal_tools/ y sesiones/ ya no viven en este repo — se movieron a

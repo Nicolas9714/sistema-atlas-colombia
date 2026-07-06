@@ -2,6 +2,7 @@
 tipo: navegacion
 entidades: [navegar-upme, navegar-minenergia, navegar-xm, navegar-sgc]
 tema: estadísticas / política energética
+caso_relacionado: balance-energetico-consumo-final/
 ---
 
 # Estadísticas consolidadas del sector para análisis de política energética
