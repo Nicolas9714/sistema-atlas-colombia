@@ -25,7 +25,7 @@ INVEMAR es el instituto científico de referencia del Estado colombiano para la 
 
 1. Consulta `mapa-web.md` para ubicar la sección o subdominio relevante dentro del sitio y los sistemas del SIAM.
 2. Consulta `fuentes-prioritarias.md` para acceder directamente al SIAM, las operaciones estadísticas, el Geovisor, el Catálogo HUB o las colecciones del museo.
-3. En el repositorio del Atlas, la carpeta `examples/` reúne casos de uso que combinan varias entidades.
+3. En el repositorio del Atlas, la carpeta `examples/` reúne casos de análisis reproducibles y consultas de ejemplo con su ruta esperada.
 
 ## Notas de navegación
 

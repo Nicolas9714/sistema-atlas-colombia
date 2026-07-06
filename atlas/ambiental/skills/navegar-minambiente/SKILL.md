@@ -25,7 +25,7 @@ El Ministerio de Ambiente y Desarrollo Sostenible es la autoridad ambiental del 
 
 1. Consulta `mapa-web.md` para ubicar la temática relevante dentro del sitio (cambio climático, bosques, agua, aire, normativa, etc.).
 2. Consulta `fuentes-prioritarias.md` para acceder directamente a los subsistemas del SIAC, geovisores, portales temáticos y normativa clave.
-3. En el repositorio del Atlas, la carpeta `examples/` reúne casos de uso que combinan varias entidades.
+3. En el repositorio del Atlas, la carpeta `examples/` reúne casos de análisis reproducibles y consultas de ejemplo con su ruta esperada.
 
 ## Notas de navegación
 

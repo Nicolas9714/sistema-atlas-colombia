@@ -26,7 +26,7 @@ El IAvH es un instituto de investigación científica adscrito al Ministerio de 
 
 1. Consulta `mapa-web.md` para ubicar el sistema, colección o sección relevante dentro del sitio y sus subdominios.
 2. Consulta `fuentes-prioritarias.md` para acceder directamente al I2D, BioModelos, BioTablero, Reporte BIO, colecciones biológicas o repositorio institucional.
-3. En el repositorio del Atlas, la carpeta `examples/` reúne casos de uso que combinan varias entidades.
+3. En el repositorio del Atlas, la carpeta `examples/` reúne casos de análisis reproducibles y consultas de ejemplo con su ruta esperada.
 
 ## Notas de navegación
 
