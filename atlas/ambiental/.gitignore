@@ -48,12 +48,10 @@ skills/*/notas-internas.md
 examples/*
 !examples/README.md
 !examples/licenciamiento-ambiental.md
-!examples/deforestacion-amazonia.md
-!examples/riesgo-desastres-amenazas.md
-!examples/areas-protegidas-conservacion.md
+!examples/deforestacion-areas-protegidas.md
+!examples/clima-y-riesgo.md
 !examples/ecosistemas-marino-costeros.md
 !examples/calidad-aire.md
-!examples/cambio-climatico.md
 !examples/recurso-hidrico.md
 
 # templates/lineamiento-profundidad-mapa.md, templates/briefing-*.md,
