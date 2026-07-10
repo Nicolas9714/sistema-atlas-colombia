@@ -62,7 +62,7 @@
 | Nombre | URL o ruta | Descripción | Verificado |
 |---|---|---|---|
 | Ecosistema H2 Colombia | `minenergia.gov.co/es/ecosistema-hidrogeno-colombia/` | Plan nacional de hidrógeno; directorio de actores, proyectos activos y publicaciones | 2026-05-29 |
-| Plan 6GW+ | `upme.gov.co/simec/plan-6gw/` | Sitio del Plan 6GW+ dentro del SIMEC de la UPME — no es un micrositio de MinEnergía; la home del ministerio solo lo enlaza (la ruta `minenergia.gov.co/plan-6gw` devuelve 404). Documentado en la skill `navegar-upme` | 2026-07-10 |
+| Plan 6GW+ | `upme.gov.co/simec/plan-6gw/` | Sitio del Plan 6GW+ operado por la UPME dentro del SIMEC; enlazado desde la home del ministerio. Documentado en la skill `navegar-upme` | 2026-07-10 |
 | Transición Energética Justa (TEJ) | `minenergia.gov.co/es/micrositios/transicion-energetica-justa/` | Hoja de Ruta TEJ; documentos oficiales, cursos, audiencias y avances | 2026-05-29 |
 | Energía Eólica Costa Afuera | `minenergia.gov.co/es/micrositios/energia-eolica-costa-afuera/` | Normatividad del proceso de energía eólica offshore | 2026-05-29 |
 | Comunidades Energéticas | `minenergia.gov.co/es/comunidades-energeticas/` | Impacto (comunidad/educación/salud), recursos (ABC, normativa, procesos) y Registro RCE | 2026-05-29 |
