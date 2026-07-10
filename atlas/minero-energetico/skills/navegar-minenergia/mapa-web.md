@@ -154,23 +154,6 @@ minenergia.gov.co/es/
 │   ├── beneficios
 │   └── convocatoria
 │
-├── plan-6gw/
-│   ├── centro-de-monitoreo
-│   ├── informacion-de-proyectos
-│   ├── indicadores-energeticos
-│   │   ├── capacidad-acumulada-fncer
-│   │   ├── capacidad-fncer-por-departamento
-│   │   ├── infraestructura-energetica
-│   │   ├── historico-capacidad-instalada
-│   │   └── curva-generacion-horaria
-│   ├── informacion-geografica
-│   │   ├── geovisor-6gw-plus
-│   │   ├── geoportal-sectorial-gps
-│   │   └── geovisor-potencial-solar
-│   └── acciones-estrategicas-complementarias
-│       ├── acciones-estrategicas
-│       └── acciones-complementarias
-│
 ├── repositorio-normativo/
 │   ├── normativa
 │   ├── agenda-normativa-regulatoria

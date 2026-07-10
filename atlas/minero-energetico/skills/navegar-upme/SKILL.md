@@ -11,6 +11,7 @@ La UPME es una Unidad Administrativa Especial adscrita al Ministerio de Minas y 
 
 - Sistema de Información Minero Energético Colombiano (SIMEC): estadísticas de energía eléctrica, hidrocarburos, minería (SIMCO), eficiencia energética, oferta y demanda, y planeación energética (PEN, PERS, PET, PROURE, proyecciones)
 - Plan 6GW+: monitoreo de proyectos FNCER, indicadores energéticos y geovisores del plan de expansión de renovables
+- SIEM (Sistema de Interoperabilidad de Electromovilidad): registro y reporte de los operadores de puntos de carga de acceso público bajo el protocolo OCPI 2.2.1, con guía técnica de integración y normativa de electromovilidad
 - Geovisores sectoriales en cuatro categorías: Distritos Mineros, Potencial Energético (solar, OBCO, FNCER), Energía Eléctrica (capacidad, generación, transmisión) y Territorial
 - Convocatorias de expansión: transmisión (STN), gas y subastas de largo plazo para renovables
 - Tableros Power BI con series históricas de indicadores minero-energéticos

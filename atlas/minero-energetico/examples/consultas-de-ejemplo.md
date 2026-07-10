@@ -48,4 +48,4 @@ Ruta esperada: CREG (Gestor Normativo: fórmula tarifaria y componentes) → Sup
 
 **«¿Cuánta capacidad solar y eólica entró en operación frente a la meta 6GW, qué proyectos siguen en licenciamiento y cuánto generan los que ya operan?»**
 
-Ruta esperada: MinEnergía (Plan 6GW+: monitoreo oficial) → ANLA (Geovisor Público y Eureka: estado del licenciamiento) → XM (SIMEM: generación horaria por fuente) → UPME (plan de expansión y potencial energético).
+Ruta esperada: UPME (Plan 6GW+: monitoreo oficial, enlazado desde la home de MinEnergía) → ANLA (Geovisor Público y Eureka: estado del licenciamiento) → XM (SIMEM: generación horaria por fuente) → UPME (plan de expansión y potencial energético).

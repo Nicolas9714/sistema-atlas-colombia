@@ -15,6 +15,7 @@
 | SIMCO — Minería | `upme.gov.co/simec/mineria` | Sistema de Información Minero Colombiano; distritos mineros y plan de ordenamiento | 2026-05-30 |
 | Territorio Vivo | `upme.gov.co/simec/territorio-vivo` | Herramienta de análisis territorial minero-energético | 2026-05-30 |
 | Plan 6GW+ | `upme.gov.co/simec/plan-6gw/` | Dashboard del Plan de Expansión de FNCER; monitoreo de proyectos, indicadores y geovisores; también enlazado desde la home de MinEnergía | 2026-05-30 |
+| SIEM — Electromovilidad | `upme.gov.co/simec/siem/` | Sistema de Interoperabilidad de Electromovilidad: reporte obligatorio de los operadores de puntos de carga (CPO) de acceso público según la Resolución 40559 de 2025 de MinEnergía; adopta el protocolo OCPI 2.2.1; guía técnica de integración y normativa de electromovilidad | 2026-07-10 |
 | Aplicativos UPME | `upme.gov.co/simec/aplicativos` | Listado de aplicativos y herramientas web de la UPME | 2026-05-30 |
 
 ---
@@ -107,6 +108,10 @@
 | `simec/planeacion-energetica/pang` | Plan de Abastecimiento de Gas Natural; misma observación de URL con typo |
 | `simec/mineria` | Portal SIMCO; incluye estadísticas de producción, exportaciones y títulos mineros |
 | `simec/territorio-vivo` | Herramienta interactiva que cruza variables minero-energéticas con datos territoriales y socioeconómicos |
+| `simec/plan-6gw/centro-de-monitoreo` | Abre `app.upme.gov.co/CentroMonitoreo/6GW+`; seguimiento en tiempo real por proyecto, tecnología y estado |
+| `simec/plan-6gw/informacion-de-proyectos` | Enlaza a `upme.gov.co/upme-descargas/6gw/`; fichas y datos de proyectos registrados |
+| `simec/plan-6gw/informacion-geografica` | Tres geovisores en `sig.upme.gov.co`: 6GW+, Geoportal Sectorial GPS y Potencial Solar con IA |
+| `simec/siem/` | Página única: qué es el SIEM, guía de integración OCPI 2.2.1 (junio de 2026), preguntas frecuentes, glosario, video de socialización y normativa de electromovilidad (Ley 1964 de 2019; Resoluciones 40223 de 2021, 40123 de 2024 y 40559 de 2025) |
 | `simec/geovisores` | Alojados en `sig.upme.gov.co` (Experience Builder); 4 categorías: Distritos Mineros, Potencial Energético, Energía Eléctrica y Territorial |
 | `indicadores-y-graficos` | Dashboards Power BI con series históricas de indicadores energéticos y mineros |
 | `nosotros/biblioteca-juridica/circulares-upme/circulares-upme-energia-electrica` | Circulares externas del subsector eléctrico; publicación frecuente (varias por mes) |
