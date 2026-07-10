@@ -15,7 +15,7 @@ La ANLA es la entidad del Estado colombiano responsable de garantizar que los pr
 - Catálogo de ~30 proyectos en evaluación (por sector) y ~28-30 proyectos en seguimiento (por región operativa SSLA)
 - Normativa, jurisprudencia, manuales, guías, conceptos jurídicos y especies en riesgo consolidados en Eureka (8 categorías)
 - Cinco tipos de certificaciones ambientales procesadas vía VITAL: emisiones vehículos (CEPD), exclusión IVA (CEI), deducción renta (CADR), soluciones ambientales (CSA), alternativas sostenibles (CASP)
-- Dashboards de analítica de datos (Power BI) sobre permisos, emisiones, calidad del agua, biodiversidad, participación ciudadana y seguimiento de proyectos estratégicos
+- Dashboards de analítica de datos (Power BI) sobre permisos, calidad del aire y ruido de proyectos licenciados, calidad del agua, biodiversidad, participación ciudadana y seguimiento de proyectos estratégicos
 - Informes de gestión anuales (2016-2025) con reporte GRI de sostenibilidad desde 2020, y datos abiertos en datos.gov.co
 
 ## Sitio oficial

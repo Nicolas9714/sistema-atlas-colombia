@@ -30,7 +30,7 @@ Ruta esperada: IDEAM (DHIME: series de caudales; SIRH: calidad) → ANLA (VITAL 
 
 **«¿Cómo ha evolucionado el PM2.5 en el Valle de Aburrá, qué fuentes fijas licenciadas emiten en la zona y contra qué norma se compara?»**
 
-Ruta esperada: IDEAM (SISAIRE: series por estación; RETC: inventario de emisiones) → ANLA (dashboards de emisiones de fuentes fijas licenciadas) → MinAmbiente (estándares de calidad del aire vigentes).
+Ruta esperada: IDEAM (SISAIRE: series por estación; RETC: inventario de emisiones) → ANLA (tableros de calidad del aire de proyectos licenciados; expedientes de fuentes fijas de competencia nacional vía VITAL) → MinAmbiente (estándares de calidad del aire vigentes).
 
 ---
 

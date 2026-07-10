@@ -83,7 +83,7 @@
 | SimplifICA | `anla.gov.co/01_anla/entidad/subdirecciones-y-oficinas/instrumentos-permisos-y-tramites-ambientales/sistema-de-informacion-geografica` | Aplicativo de simplificación de información cartográfica para Informes de Cumplimiento Ambiental | 2026-06-01 |
 | Eureka!! | `anla.gov.co/wanla/eureka` | Base de conocimiento jurídico-técnico: normativa, jurisprudencia, documentos estratégicos, conceptos jurídicos, manuales, especies en riesgo; búsqueda rápida de documentos ANLA y SINA | 2026-06-01 |
 | Tablero Power BI — Actuaciones Sancionatorias | `anla.gov.co/oficina-asesora-juridica/actuaciones-sancionatorias-ambientales` | Tablero de control de casos sancionatorios ambientales; embebido en la página de la Oficina Jurídica | 2026-06-01 |
-| Analítica de Datos ANLA | `anla.gov.co/gestion-del-conocimiento-y-la-innovacion/gci-analitica-de-datos` | Tableros de control por área: evaluación, permisos SIPTA, participación ciudadana SMPCA, seguimiento SLA, gestión administrativa | 2026-06-01 |
+| Analítica de Datos ANLA | `anla.gov.co/gestion-del-conocimiento-y-la-innovacion/gci-analitica-de-datos` | Tableros de control por área (evaluación, permisos SIPTA, participación SMPCA, seguimiento SLA, administrativa, planeación y jurídica) y temáticos: calidad del aire de proyectos licenciados (Cerrejón, Alto San Jorge), ruido del aeropuerto El Dorado, calidad del agua y monitoreo participativo de ríos, FNCER, compensaciones de biodiversidad y procesos sancionatorios. No existe un tablero general de emisiones de fuentes fijas | 2026-07-10 |
 
 ---
 
