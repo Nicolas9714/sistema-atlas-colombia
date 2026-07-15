@@ -1,4 +1,4 @@
-<div align="center">
+﻿<div align="center">
   <img src="assets/logo_atlas_anmec.svg" width="250" alt="Atlas de Navegación Minero Energético de Colombia">
   <h1>Atlas de Navegación Minero Energético de Colombia (ANMEC)</h1>
   <p><em>Colección abierta de skills para encontrar, usar y apropiar la información pública del sector minero energético colombiano.</em></p>
@@ -199,7 +199,7 @@ Las skills son estructuras reutilizables para:
 atlas-minero-energetico-colombia/
 ├── skills/       → Una carpeta por skill: atlas-orquestador (skill orquestadora) + 12 entidades
 ├── examples/     → Plantilla y convenciones para casos de uso (los casos se contribuyen, ver examples/README.md)
-└── templates/    → Plantillas para nuevas skills
+└── templates/    → Puntero a las plantillas del Sistema Atlas Colombia
 ```
 
 Las 12 skills contienen:

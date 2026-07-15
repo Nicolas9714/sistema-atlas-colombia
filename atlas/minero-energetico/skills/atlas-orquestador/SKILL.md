@@ -70,3 +70,7 @@ Puntos de entrada para consultas que cruzan varias entidades. El orden es orient
   - XM publica precios de bolsa y operación del SIN; CREG regula los cargos y el diseño del mercado.
   - UPME publica estadísticas sectoriales agregadas; XM publica datos operativos en tiempo real.
 
+## Consultas que cruzan a otros sectores
+
+Para consultas que cruzan a otros sectores, el enrutamiento entre atlas vive en [Sistema Atlas Colombia](https://github.com/Nicolas9714/sistema-atlas-colombia).
+
