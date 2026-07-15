@@ -192,7 +192,7 @@ Las skills son estructuras reutilizables para:
 atlas-ambiental-colombia/
 ├── skills/       → Una carpeta por skill: atlas-orquestador (skill orquestadora) + 7 entidades
 ├── examples/     → Plantilla y convenciones para casos de uso (los casos se contribuyen, ver examples/README.md)
-└── templates/    → Plantillas para nuevas skills
+└── templates/    → Puntero a las plantillas del Sistema Atlas Colombia
 ```
 
 Las 7 skills contienen:

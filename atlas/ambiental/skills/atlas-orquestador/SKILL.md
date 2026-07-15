@@ -72,3 +72,7 @@ Puntos de entrada para consultas que cruzan varias entidades. El orden es orient
   - UNGRD coordina el Sistema Nacional de Gestión del Riesgo de Desastres (SNGRD), distinto del SINA que coordina MinAmbiente; UNGRD gestiona la respuesta y reducción del riesgo ante amenazas (muchas de origen natural o climático), mientras IDEAM produce el conocimiento hidrometeorológico que UNGRD usa para monitoreo y alerta temprana.
   - PNN administra las áreas protegidas (gestión); IAvH e INVEMAR producen el conocimiento científico que puede sustentar su declaratoria o manejo.
   - El SIAC (MinAmbiente) es el sistema agregador de datos ambientales de todo el SINA; las entidades técnicas (IDEAM, IAvH, INVEMAR, PNN) son la fuente primaria de esos datos.
+
+## Consultas que cruzan a otros sectores
+
+Para consultas que cruzan a otros sectores, el enrutamiento entre atlas vive en [Sistema Atlas Colombia](https://github.com/Nicolas9714/sistema-atlas-colombia).
