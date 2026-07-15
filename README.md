@@ -1,7 +1,25 @@
 <div align="center">
   <img src="assets/Logo_sistema_atlas.svg" width="250" alt="Sistema Atlas Colombia">
   <h1>Sistema Atlas Colombia</h1>
-  <p><em>Marco común y registro abierto de atlas sectoriales.</em></p>
+  <p><em>Marco común y registro abierto de atlas sectoriales: la red que conecta las rutas hacia la información pública de Colombia.</em></p>
+  <table>
+    <tr>
+      <td align="center" width="180">
+        <a href="https://github.com/Nicolas9714/atlas-minero-energetico-colombia">
+          <img src="assets/logo_atlas_anmec.svg" width="90" alt="ANMEC"><br>
+          <strong>ANMEC</strong>
+        </a><br>
+        <sub>Atlas de Navegación<br>Minero Energético</sub>
+      </td>
+      <td align="center" width="180">
+        <a href="https://github.com/Nicolas9714/atlas-ambiental-colombia">
+          <img src="assets/Logo_atlas_anac.svg" width="90" alt="ANAC"><br>
+          <strong>ANAC</strong>
+        </a><br>
+        <sub>Atlas de Navegación<br>Ambiental</sub>
+      </td>
+    </tr>
+  </table>
 </div>
 
 ---

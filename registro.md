@@ -56,3 +56,4 @@ Temas que cruzan atlas, con las entidades de cada lado. Punto de partida para el
 
 1. El atlas cumple la parte normativa de [`estandar/especificacion.md`](estandar/especificacion.md) y declara la versión que cumple.
 2. Pull request a este archivo: fila en la tabla de atlas registrados, tabla de entidades y las fronteras temáticas nuevas que introduce.
+3. El mismo pull request agrega la tarjeta del atlas al banner del `README.md` (logo en `assets/` + sigla enlazada) y su fila en la tabla de atlas del README.
