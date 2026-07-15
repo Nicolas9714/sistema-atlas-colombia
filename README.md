@@ -24,17 +24,18 @@
 
 ---
 
-Sistema Atlas Colombia es un proyecto abierto. Es el nodo que articula los Atlas de Navegación sectoriales de Colombia: define el estándar que comparten, registra qué atlas existen y qué entidades cubre cada uno, y orquesta las consultas que cruzan de un sector a otro.
-
-Cada Atlas de Navegación es una colección abierta de skills — archivos Markdown instalables en agentes y herramientas de IA para código (Claude Code, Codex, entre otras) — que documentan cómo encontrar, usar y apropiar la información pública de un sector. Una skill por entidad, más una skill orquestadora que coordina las consultas que cruzan entidades del sector. Este repositorio agrega la capa siguiente: la skill que coordina las consultas que cruzan atlas. Cómo se construye cada skill está definido en la [especificación](estandar/especificacion.md).
-
 ## El problema que resuelve
 
 La información pública de Colombia está distribuida en cientos de sitios institucionales, sistemas de información, geovisores, portales de datos y documentos. Saber navegarla — dónde buscar, qué priorizar, qué ignorar, qué fuente contrastar — es un conocimiento práctico que suele permanecer invisible, acumulado en la experiencia de quienes conocen cada sector. Cada Atlas de Navegación convierte ese saber en una estructura abierta, documentada y reutilizable que opera directamente en herramientas de IA: no un directorio de enlaces, sino el criterio de navegación de quien conoce el sector, versionado y verificable.
 
 Pero las preguntas reales no respetan las fronteras sectoriales: un proyecto minero necesita licencias ambientales, un parque eólico se monta sobre estudios hidrometeorológicos, una cuenca es a la vez recurso hídrico y frontera de exploración. El Sistema resuelve esa segunda capa del problema: articula los atlas en una red donde toda consulta encuentra su ruta, cruce los sectores que cruce — y publica el estándar para que la red crezca hacia nuevos sectores y otros países sin depender de una coordinación central.
 
-## Cómo funciona la red
+## Cómo funciona
+
+Sistema Atlas Colombia es un proyecto abierto. Es el nodo que articula los Atlas de Navegación sectoriales de Colombia: define el estándar que comparten, registra qué atlas existen y qué entidades cubre cada uno, y orquesta las consultas que cruzan de un sector a otro.
+
+Cada Atlas de Navegación es una colección abierta de skills — archivos Markdown instalables en agentes y herramientas de IA para código (Claude Code, Codex, entre otras) — que documentan cómo encontrar, usar y apropiar la información pública de un sector. Una skill por entidad, más una skill orquestadora que coordina las consultas que cruzan entidades del sector. Este repositorio agrega la capa siguiente: la skill que coordina las consultas que cruzan atlas. Cómo se construye cada skill está definido en la [especificación](estandar/especificacion.md).
+
 
 El mismo patrón se repite en tres escalas: una unidad funciona sola, y una orquestadora opcional conecta varias.
 
