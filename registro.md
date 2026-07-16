@@ -1,17 +1,17 @@
 # Registro de atlas
 
-Único lugar de la red con el conocimiento estructural: qué atlas existen, qué entidades cubre cada uno y qué temas cruzan sus fronteras. Las skills de los atlas no declaran dependencias entre sectores — toda frontera se declara aquí.
+Único lugar del Sistema con el conocimiento estructural: qué atlas existen, qué entidades cubre cada uno y qué temas cruzan sus fronteras. Las skills de los atlas no declaran dependencias entre sectores — toda frontera se declara aquí.
 
 ## Atlas registrados
 
-| Atlas | Sigla | Sector | Repositorio | Estándar declarado |
-| --- | --- | --- | --- | --- |
-| Atlas de Navegación Minero Energético de Colombia | ANMEC | Minero energético | [atlas-minero-energetico-colombia](https://github.com/Nicolas9714/atlas-minero-energetico-colombia) | v0.1 |
-| Atlas de Navegación Ambiental de Colombia | ANAC | Ambiental | [atlas-ambiental-colombia](https://github.com/Nicolas9714/atlas-ambiental-colombia) | v0.1 |
+| Atlas | Sector | Repositorio | Estándar declarado |
+| --- | --- | --- | --- |
+| Atlas de Navegación Minero Energético de Colombia | Minero energético | [atlas-minero-energetico-colombia](https://github.com/Nicolas9714/atlas-minero-energetico-colombia) | v0.1 |
+| Atlas de Navegación Ambiental de Colombia | Ambiental | [atlas-ambiental-colombia](https://github.com/Nicolas9714/atlas-ambiental-colombia) | v0.1 |
 
 ## Entidades por atlas
 
-### ANMEC — 12 entidades
+### Atlas de Navegación Minero Energético de Colombia — 12 entidades
 
 | Skill | Entidad | Rol principal |
 | --- | --- | --- |
@@ -28,7 +28,7 @@
 | `navegar-superservicios` | Superservicios | Vigilancia de servicios públicos |
 | `navegar-bec` | BEC | Bolsa de energía de Colombia |
 
-### ANAC — 7 entidades
+### Atlas de Navegación Ambiental de Colombia — 7 entidades
 
 | Skill | Entidad | Rol principal |
 | --- | --- | --- |
@@ -44,7 +44,7 @@
 
 Temas que cruzan atlas, con las entidades de cada lado. Punto de partida para el enrutamiento de `atlas-orquestador-colombia`.
 
-| Frontera | Lado ANMEC | Lado ANAC |
+| Frontera | Lado minero energético | Lado ambiental |
 | --- | --- | --- |
 | Licenciamiento y restricciones ambientales de proyectos mineros | ANM (títulos y solicitudes), SGC (potencial geológico) | ANLA (regionalización, geovisor), MinAmbiente (páramos, áreas protegidas) |
 | Obligaciones ambientales e impacto hídrico de hidrocarburos | ANH (mapa de tierras, normativa sectorial) | ANLA (licencias y seguimiento), IDEAM (series hidrométricas), MinAmbiente (recurso hídrico) |
@@ -56,4 +56,4 @@ Temas que cruzan atlas, con las entidades de cada lado. Punto de partida para el
 
 1. El atlas cumple la parte normativa de [`estandar/especificacion.md`](estandar/especificacion.md) y declara la versión que cumple.
 2. Pull request a este archivo: fila en la tabla de atlas registrados, tabla de entidades y las fronteras temáticas nuevas que introduce.
-3. El mismo pull request agrega la tarjeta del atlas al banner del `README.md` (logo en `assets/` + sigla enlazada) y su fila en la tabla de atlas del README.
+3. El mismo pull request agrega la tarjeta del atlas al banner del `README.md` (logo en `assets/` + nombre del atlas enlazado) y su fila en la tabla de atlas del README.

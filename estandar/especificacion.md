@@ -1,9 +1,9 @@
 # Especificación de los Atlas de Navegación — v0.1
 
-**Versión:** 0.1 · **Estado:** en incubación — puede cambiar sin garantía de compatibilidad entre versiones.
-**Versionado:** esta especificación usa versionado semántico. Es el único artefacto versionado del Sistema; el resto del repositorio evoluciona por git. La versión 1.0 se publicará cuando el primer atlas externo la adopte.
+**Versión:** 0.1 · **Estado:** en incubación.
+**Versionado:** semántico (`mayor.menor.parche`). Las correcciones de redacción que no alteran lo exigido suben el parche; las adiciones que no obligan a ajustar los atlas registrados suben la versión menor; los cambios que sí los obligan suben la versión mayor. Mientras la versión mayor sea 0, la especificación está en incubación y un cambio de versión menor también puede exigir ajustes. Es el único documento del Sistema con número de versión; el resto del repositorio evoluciona con el historial de git. La versión 1.0 se publicará cuando el estándar quede listo para adopción externa.
 
-Un Atlas de Navegación documenta las rutas hacia la información pública de un sector: qué entidad consultar, qué sistema priorizar, qué fuente contrastar. Esta especificación define qué debe cumplir un atlas para ser compatible con la red y registrarse en el Sistema.
+Un Atlas de Navegación sistematiza las rutas hacia la información pública de un sector: qué entidad consultar, qué sistema priorizar, qué fuente contrastar. Esta especificación define la forma común que ese saber toma y qué debe cumplir un atlas para ser compatible con el Sistema y registrarse en él.
 
 ## Parte normativa
 
@@ -43,7 +43,7 @@ Un tercero debe poder construir un atlas de otro sector — o de otro país — 
 
 ## Parte recomendada
 
-Buenas prácticas de los atlas fundadores (ANMEC y ANAC). Mejoran la calidad; su ausencia no rompe la compatibilidad.
+Buenas prácticas de los atlas fundadores (el Atlas de Navegación Minero Energético de Colombia y el Atlas de Navegación Ambiental de Colombia). Mejoran la calidad; su ausencia no rompe la compatibilidad.
 
 - **Mapa web curado, no exhaustivo:** el árbol de `mapa-web.md` se reduce al contenido misional y estratégico del sitio; profundidad guiada por el valor de navegación, no por la estructura completa del sitio.
 - **Tablas de fuentes con inventario tipificado:** sistemas, geovisores, portales de datos, publicaciones y documentos clave, cada uno con su URL verificada y una nota de qué resuelve.
@@ -51,8 +51,8 @@ Buenas prácticas de los atlas fundadores (ANMEC y ANAC). Mejoran la calidad; su
 - **Redacción en positivo:** afirmaciones de atribución («operado por X»), sin negaciones ni menciones de fallas salvo que sean información de navegación necesaria.
 - **Verificación en vivo:** las URLs y afirmaciones sobre sistemas se contrastan contra el sitio real antes de publicarse.
 - **Reglas de competencia en la orquestadora:** cómo combinar resultados sin atribuir datos de una entidad a otra.
-- **Identidad visual:** logo propio en SVG monocromo dentro de la familia visual de la red.
+- **Identidad visual:** logo propio en SVG monocromo dentro de la familia visual del Sistema.
 
 ## Registro
 
-Un atlas se registra en la red mediante pull request a [`../registro.md`](../registro.md), declarando la versión de esta especificación que cumple.
+Un atlas se registra en el Sistema mediante pull request a [`../registro.md`](../registro.md), declarando la versión de esta especificación que cumple.

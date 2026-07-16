@@ -1,22 +1,20 @@
 <div align="center">
   <img src="assets/Logo_sistema_atlas.svg" width="250" alt="Sistema Atlas Colombia">
   <h1>Sistema Atlas Colombia</h1>
-  <p><em>Marco común y registro abierto de atlas sectoriales: la red que conecta las rutas hacia la información pública de Colombia.</em></p>
+  <p><em>Marco común y registro abierto de atlas sectoriales: el sistema que conecta las rutas hacia la información pública de Colombia.</em></p>
   <table>
     <tr>
       <td align="center" width="180">
         <a href="https://github.com/Nicolas9714/atlas-minero-energetico-colombia">
-          <img src="assets/logo_atlas_anmec.svg" width="90" alt="ANMEC"><br>
-          <strong>ANMEC</strong>
-        </a><br>
-        <sub>Atlas de Navegación<br>Minero Energético</sub>
+          <img src="assets/logo-atlas-minero-energetico.svg" width="90" alt="Atlas de Navegación Minero Energético de Colombia"><br>
+          <strong>Atlas de Navegación<br>Minero Energético<br>de Colombia</strong>
+        </a>
       </td>
       <td align="center" width="180">
         <a href="https://github.com/Nicolas9714/atlas-ambiental-colombia">
-          <img src="assets/Logo_atlas_anac.svg" width="90" alt="ANAC"><br>
-          <strong>ANAC</strong>
-        </a><br>
-        <sub>Atlas de Navegación<br>Ambiental</sub>
+          <img src="assets/logo-atlas-ambiental.svg" width="90" alt="Atlas de Navegación Ambiental de Colombia"><br>
+          <strong>Atlas de Navegación<br>Ambiental<br>de Colombia</strong>
+        </a>
       </td>
     </tr>
   </table>
@@ -24,18 +22,15 @@
 
 ---
 
-## El problema que resuelve
+Sistema Atlas Colombia es un proyecto abierto que busca democratizar el acceso a la información pública sectorial. El Sistema es el nodo que articula y coordina los Atlas de Navegación sectoriales de Colombia: define el estándar que comparten, registra qué atlas existen y qué entidades cubre cada uno, y orquesta las consultas que cruzan de un sector a otro.
 
-La información pública de Colombia está distribuida en cientos de sitios institucionales, sistemas de información, geovisores, portales de datos y documentos. Saber navegarla — dónde buscar, qué priorizar, qué ignorar, qué fuente contrastar — es un conocimiento práctico que suele permanecer invisible, acumulado en la experiencia de quienes conocen cada sector. Cada Atlas de Navegación convierte ese saber en una estructura abierta, documentada y reutilizable que opera directamente en herramientas de IA: el criterio de navegación de quien conoce el sector, hecho explícito, versionado y verificable.
-
-La segunda capa del problema es estructural. La información pública se organiza según las competencias de las instituciones que la producen; las preguntas se organizan según los problemas de quien las formula, y un problema rara vez coincide con una sola competencia. Responder una consulta real exige descomponerla, resolver cada parte ante la fuente competente y recomponer el resultado respetando la autoridad de cada una. El Sistema hace operable esa descomposición: mantiene el registro de qué atlas existen y qué cubre cada uno, declara en un único lugar las fronteras temáticas entre sectores y enruta cada tramo de la consulta al atlas que puede responderlo. El estándar completa la arquitectura: define la forma común que hace interoperables los atlas y permite que la red crezca hacia nuevos sectores y otros países de manera descentralizada.
+Saber navegar la información pública de Colombia — dónde buscar, qué priorizar, qué ignorar, qué fuente contrastar — es un conocimiento práctico que suele permanecer invisible, acumulado en la experiencia de quienes conocen cada sector. Cada Atlas de Navegación convierte ese saber en una estructura abierta, documentada y reutilizable que opera directamente en herramientas de IA.
 
 ## Cómo funciona
 
-Sistema Atlas Colombia es un proyecto abierto. Es el nodo que articula los Atlas de Navegación sectoriales de Colombia: define el estándar que comparten, registra qué atlas existen y qué entidades cubre cada uno, y orquesta las consultas que cruzan de un sector a otro.
+Cada Atlas de Navegación es una colección abierta de skills — archivos Markdown instalables en agentes y herramientas de IA para código (Claude Code, Codex, entre otras) — que documentan cómo encontrar, usar y apropiar la información pública de un sector. Una skill por entidad, más una skill orquestadora que coordina las consultas que cruzan entidades del sector. 
 
-Cada Atlas de Navegación es una colección abierta de skills — archivos Markdown instalables en agentes y herramientas de IA para código (Claude Code, Codex, entre otras) — que documentan cómo encontrar, usar y apropiar la información pública de un sector. Una skill por entidad, más una skill orquestadora que coordina las consultas que cruzan entidades del sector. Este repositorio agrega la capa siguiente: la skill que coordina las consultas que cruzan atlas. Cómo se construye cada skill está definido en la [especificación](estandar/especificacion.md).
-
+Este repositorio agrega la capa siguiente: la skill que coordina las consultas que cruzan atlas. Cómo se construye cada skill está definido en la [especificación](estandar/especificacion.md).
 
 El mismo patrón se repite en tres escalas: una unidad funciona sola, y una orquestadora opcional conecta varias.
 
@@ -43,16 +38,18 @@ El mismo patrón se repite en tres escalas: una unidad funciona sola, y una orqu
 | --- | --- | --- | --- |
 | Entidad | Skill `navegar-*` (3 archivos: orientación, mapa web, fuentes) | — | «¿Dónde consulto los expedientes de la ANLA?» |
 | Atlas | Colección de skills de un sector | `atlas-orquestador` del atlas | «¿Qué entidad del sector ambiental tiene los datos de calidad del agua?» |
-| Red | Los atlas registrados | `atlas-orquestador-colombia` (este repo) | «¿Qué títulos mineros hay en la zona y qué restricciones ambientales la limitan?» |
+| Sistema | Los atlas registrados | `atlas-orquestador-colombia` (este repo) | «¿Qué títulos mineros hay en la zona y qué restricciones ambientales la limitan?» |
 
 Cada nivel enruta hacia abajo sin reemplazar lo de abajo: la respuesta específica siempre vive en la skill de la entidad. Si solo tienes un atlas instalado, todo sigue funcionando — el atlas resuelve su sector y te señala dónde vive el resto.
 
+Tres piezas de este repositorio sostienen el Sistema: el estándar define la forma común que hace interoperables los atlas, el registro sistematiza qué atlas existen y dónde termina la competencia de cada sector, y la skill orquestadora nacional pone esa estructura a operar enrutando cada tramo de una consulta al atlas que puede responderlo.
+
 ## Atlas registrados
 
-| Atlas | Sigla | Sector | Entidades | Repositorio |
-| --- | --- | --- | --- | --- |
-| Atlas de Navegación Minero Energético de Colombia | ANMEC | Minero energético | 12 | [atlas-minero-energetico-colombia](https://github.com/Nicolas9714/atlas-minero-energetico-colombia) |
-| Atlas de Navegación Ambiental de Colombia | ANAC | Ambiental | 7 | [atlas-ambiental-colombia](https://github.com/Nicolas9714/atlas-ambiental-colombia) |
+| Atlas | Sector | Entidades | Repositorio |
+| --- | --- | --- | --- |
+| Atlas de Navegación Minero Energético de Colombia | Minero energético | 12 | [atlas-minero-energetico-colombia](https://github.com/Nicolas9714/atlas-minero-energetico-colombia) |
+| Atlas de Navegación Ambiental de Colombia | Ambiental | 7 | [atlas-ambiental-colombia](https://github.com/Nicolas9714/atlas-ambiental-colombia) |
 
 El detalle de entidades y fronteras temáticas vive en [`registro.md`](registro.md).
 
@@ -76,7 +73,7 @@ sistema-atlas-colombia/
 
 ### 1. Instala los atlas
 
-Sigue el README de cada atlas ([ANMEC](https://github.com/Nicolas9714/atlas-minero-energetico-colombia), [ANAC](https://github.com/Nicolas9714/atlas-ambiental-colombia)): clonar el repo junto a tu proyecto y copiar sus skills a la carpeta de skills de tu herramienta.
+Sigue el README de cada atlas ([Atlas de Navegación Minero Energético de Colombia](https://github.com/Nicolas9714/atlas-minero-energetico-colombia), [Atlas de Navegación Ambiental de Colombia](https://github.com/Nicolas9714/atlas-ambiental-colombia)): clonar el repo junto a tu proyecto y copiar sus skills a la carpeta de skills de tu herramienta.
 
 ### 2. Agrega la orquestadora nacional
 
@@ -120,7 +117,11 @@ Las rutas esperadas de estas consultas viven en [`examples/consultas-de-ejemplo.
 2. Usa las plantillas de [`estandar/templates/`](estandar/templates/) para las skills de entidad, y los dos atlas registrados como referencia de buenas prácticas.
 3. Cuando el atlas esté publicado, propón su registro con un pull request a [`registro.md`](registro.md), declarando la versión del estándar que cumple y agregando su tarjeta al banner de este README.
 
-El estándar aplica a cualquier sector — agro, salud, transporte — y a cualquier país: un nodo nacional de otro país usa esta misma forma sin pedir permiso ni coordinación central.
+La información pública se organiza según las competencias de las instituciones que la producen, y los problemas reales suelen abarcar varias: por eso cada atlas nuevo amplía lo que el Sistema puede responder. El estándar aplica a cualquier sector — agro, salud, transporte — y a cualquier país: un nodo nacional de otro país usa esta misma forma sin pedir permiso ni coordinación central, y los sistemas nacionales que comparten el estándar forman, entre sí, una red.
+
+## Contribuir
+
+Ver [CONTRIBUTING.md](CONTRIBUTING.md): cómo registrar un atlas, proponer cambios al estándar o mejorar el enrutamiento entre atlas.
 
 ## Licencia
 

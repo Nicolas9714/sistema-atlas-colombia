@@ -1,6 +1,6 @@
 ---
 name: atlas-orquestador-colombia
-description: "Nodo nacional del Sistema Atlas Colombia: enruta consultas que cruzan sectores entre los Atlas de Navegación registrados (ANMEC y ANAC)."
+description: "Nodo nacional del Sistema Atlas Colombia: enruta consultas que cruzan sectores entre los Atlas de Navegación registrados (minero energético y ambiental)."
 ---
 
 # Sistema Atlas Colombia — Skill Orquestadora Nacional
@@ -11,10 +11,10 @@ Requiere tener instalado al menos un atlas; agrega valor cuando hay dos o más. 
 
 ## Tabla de atlas
 
-| Atlas | Sigla | Sector | Entidades | Orquestadora |
-| --- | --- | --- | --- | --- |
-| Atlas de Navegación Minero Energético de Colombia | ANMEC | Minero energético | 12: MinEnergía, UPME, CREG, ANH, ANM, SGC, XM, Ecopetrol, IPSE, FENOGE, Superservicios, BEC | `atlas-orquestador` (ANMEC) |
-| Atlas de Navegación Ambiental de Colombia | ANAC | Ambiental | 7: MinAmbiente, ANLA, IDEAM, IAvH, INVEMAR, PNN, UNGRD | `atlas-orquestador` (ANAC) |
+| Atlas | Sector | Entidades | Orquestadora |
+| --- | --- | --- | --- |
+| Atlas de Navegación Minero Energético de Colombia | Minero energético | 12: MinEnergía, UPME, CREG, ANH, ANM, SGC, XM, Ecopetrol, IPSE, FENOGE, Superservicios, BEC | `atlas-orquestador` (de ese atlas) |
+| Atlas de Navegación Ambiental de Colombia | Ambiental | 7: MinAmbiente, ANLA, IDEAM, IAvH, INVEMAR, PNN, UNGRD | `atlas-orquestador` (de ese atlas) |
 
 ## Fronteras temáticas
 
@@ -22,11 +22,11 @@ Temas cuya respuesta cruza atlas. La entrada indica por dónde empezar; el detal
 
 | Frontera | Entrada sugerida | Ruta entre atlas |
 | --- | --- | --- |
-| Licenciamiento y restricciones ambientales de minería | ANMEC | ANM, SGC (títulos, geología) → ANAC: ANLA, MinAmbiente (regionalización, páramos, áreas protegidas) |
-| Obligaciones ambientales e impacto hídrico de hidrocarburos | ANAC | ANLA (licencias y seguimiento) → ANMEC: ANH (tierras, normativa) → ANAC: IDEAM, MinAmbiente (series hidrométricas, recurso hídrico) |
-| Licenciamiento ambiental de FNCER | ANMEC | UPME (Plan 6GW+) → ANAC: ANLA (Geovisor Público, Eureka) → ANMEC: XM (generación por fuente) |
-| Línea base hidrometeorológica de proyectos energéticos | ANMEC | UPME, ANH (planeación) → ANAC: IDEAM (DHIME, SIRH) |
-| Gestión del riesgo en infraestructura minero energética | ANAC | UNGRD (geovisores de amenaza) → ANMEC: ANM, SGC (zonas mineras) → ANAC: IDEAM (alertas) |
+| Licenciamiento y restricciones ambientales de minería | Atlas de Navegación Minero Energético de Colombia | ANM, SGC (títulos, geología) → Atlas de Navegación Ambiental de Colombia: ANLA, MinAmbiente (regionalización, páramos, áreas protegidas) |
+| Obligaciones ambientales e impacto hídrico de hidrocarburos | Atlas de Navegación Ambiental de Colombia | ANLA (licencias y seguimiento) → Atlas de Navegación Minero Energético de Colombia: ANH (tierras, normativa) → Atlas de Navegación Ambiental de Colombia: IDEAM, MinAmbiente (series hidrométricas, recurso hídrico) |
+| Licenciamiento ambiental de FNCER | Atlas de Navegación Minero Energético de Colombia | UPME (Plan 6GW+) → Atlas de Navegación Ambiental de Colombia: ANLA (Geovisor Público, Eureka) → Atlas de Navegación Minero Energético de Colombia: XM (generación por fuente) |
+| Línea base hidrometeorológica de proyectos energéticos | Atlas de Navegación Minero Energético de Colombia | UPME, ANH (planeación) → Atlas de Navegación Ambiental de Colombia: IDEAM (DHIME, SIRH) |
+| Gestión del riesgo en infraestructura minero energética | Atlas de Navegación Ambiental de Colombia | UNGRD (geovisores de amenaza) → Atlas de Navegación Minero Energético de Colombia: ANM, SGC (zonas mineras) → Atlas de Navegación Ambiental de Colombia: IDEAM (alertas) |
 
 ## Procedimiento
 
