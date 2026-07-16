@@ -1,6 +1,6 @@
 ﻿<div align="center">
-  <img src="assets/logo_atlas_anmec.svg" width="250" alt="Atlas de Navegación Minero Energético de Colombia">
-  <h1>Atlas de Navegación Minero Energético de Colombia (ANMEC)</h1>
+  <img src="assets/logo-atlas-minero-energetico.svg" width="250" alt="Atlas de Navegación Minero Energético de Colombia">
+  <h1>Atlas de Navegación Minero Energético de Colombia</h1>
   <p><em>Colección abierta de skills para encontrar, usar y apropiar la información pública del sector minero energético colombiano.</em></p>
 </div>
 
@@ -14,7 +14,7 @@ Este atlas parte de la convicción de que hacer pública la información tambié
 
 Así, el atlas convierte ese conocimiento disperso en una primera estructura abierta, documentada y reutilizable. A través de sus skills, permite identificar dónde buscar, qué fuentes priorizar y cómo orientarse dentro del complejo ecosistema institucional del sector minero-energético colombiano.
 
-Este atlas es complementario al [Atlas de Navegación Ambiental de Colombia (ANAC)](https://github.com/Nicolas9714/atlas-ambiental-colombia), y sigue la misma estructura y convenciones.
+Este atlas es complementario al [Atlas de Navegación Ambiental de Colombia](https://github.com/Nicolas9714/atlas-ambiental-colombia), y sigue la misma estructura y convenciones.
 
 ## Cómo usar las skills
 
