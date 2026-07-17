@@ -1,5 +1,5 @@
 ---
-name: atlas-orquestador
+name: atlas-orquestador-minero-energetico
 description: "Capa de coordinación del Atlas de Navegación Minero Energético de Colombia: orienta consultas temáticas e interinstitucionales para las 12 skills institucionales."
 ---
 
@@ -33,7 +33,7 @@ Esta skill coordina el uso de las 12 skills institucionales del Atlas según el 
 
 ## Cómo usar esta skill
 
-Consulta `atlas-orquestador` para:
+Consulta `atlas-orquestador-minero-energetico` para:
 
 - Identificar qué entidad o entidades cubren un tema sectorial
 - Definir el orden de consulta en una ruta interinstitucional

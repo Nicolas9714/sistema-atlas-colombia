@@ -18,7 +18,7 @@ Este atlas es complementario al [Atlas de Navegación Ambiental de Colombia](htt
 
 ## Cómo usar las skills
 
-Las skills por entidad contienen tres archivos Markdown que cubren navegación, sistemas y fuentes de información (ver [Estructura del repositorio](#estructura-del-repositorio)). La skill orquestadora `atlas-orquestador` contiene un solo archivo. Al instalar cualquier skill en tu proyecto, el agente o modelo de IA ya puede interactuar con su contenido.
+Las skills por entidad contienen tres archivos Markdown que cubren navegación, sistemas y fuentes de información (ver [Estructura del repositorio](#estructura-del-repositorio)). La skill orquestadora `atlas-orquestador-minero-energetico` contiene un solo archivo. Al instalar cualquier skill en tu proyecto, el agente o modelo de IA ya puede interactuar con su contenido.
 
 La forma recomendada es mantener este Atlas como un repositorio fuente, clonado junto al proyecto donde vas a trabajar, y copiar al proyecto solo las skills que necesitas. Así el Atlas queda separado del proyecto y cada proyecto conserva solo las skills que usa.
 
@@ -29,6 +29,8 @@ Flujo básico recomendado:
 1. Descarga este Atlas.
 2. Ubícalo junto al proyecto donde vas a trabajar.
 3. Copia el Atlas completo o solo las skills que necesitas a la carpeta de skills de tu herramienta (Claude Code, Codex, Open Code, etc.).
+
+Para instalar varios atlas a la vez (con la orquestadora nacional incluida), usa el script `instalar.ps1` / `instalar.sh` del [Sistema Atlas Colombia](https://github.com/Nicolas9714/sistema-atlas-colombia).
 
 ### 1. Descarga el Atlas
 
@@ -62,7 +64,7 @@ proyectos/
 
 ### 3. Instala el Atlas completo
 
-Incluye `atlas-orquestador`, la skill orquestadora necesaria para consultas que cruzan varias entidades.
+Incluye `atlas-orquestador-minero-energetico`, la skill orquestadora necesaria para consultas que cruzan varias entidades.
 
 En Claude Code:
 
@@ -91,7 +93,7 @@ Cambia `.claude\skills` por `.agents\skills` si estás usando Codex.
 
 ### 4. Instala solo una entidad
 
-Si solo necesitas información de una entidad específica, copia únicamente esa skill. `atlas-orquestador` no es necesaria en este caso.
+Si solo necesitas información de una entidad específica, copia únicamente esa skill. `atlas-orquestador-minero-energetico` no es necesaria en este caso.
 
 En Claude Code:
 
@@ -176,7 +178,7 @@ Las skills son estructuras reutilizables para:
 
 ## Entidades cubiertas
 
-**Skill orquestadora:** `atlas-orquestador` — coordina consultas temáticas e interinstitucionales entre las 12 skills. Necesaria al instalar el Atlas completo; no es necesaria si solo se instala una entidad.
+**Skill orquestadora:** `atlas-orquestador-minero-energetico` — coordina consultas temáticas e interinstitucionales entre las 12 skills. Necesaria al instalar el Atlas completo; no es necesaria si solo se instala una entidad.
 
 | Skill | Entidad | Rol principal |
 | --- | --- | --- |
@@ -197,7 +199,7 @@ Las skills son estructuras reutilizables para:
 
 ```text
 atlas-minero-energetico-colombia/
-├── skills/       → Una carpeta por skill: atlas-orquestador (skill orquestadora) + 12 entidades
+├── skills/       → Una carpeta por skill: atlas-orquestador-minero-energetico (skill orquestadora) + 12 entidades
 ├── examples/     → Plantilla y convenciones para casos de uso (los casos se contribuyen, ver examples/README.md)
 └── templates/    → Puntero a las plantillas del Sistema Atlas Colombia
 ```
@@ -208,7 +210,7 @@ Las 12 skills contienen:
 - `mapa-web.md` — árbol curado del sitio oficial, reducido a su contenido misional y estratégico
 - `fuentes-prioritarias.md` — inventario de sistemas, geovisores, portales, publicaciones y documentos clave
 
-`atlas-orquestador` contiene solo `SKILL.md` con el mapa de skills por subsector, el procedimiento de navegación y las rutas sugeridas.
+`atlas-orquestador-minero-energetico` contiene solo `SKILL.md` con el mapa de skills por subsector, el procedimiento de navegación y las rutas sugeridas.
 
 ---
 
@@ -220,7 +222,7 @@ Una vez cargada la skill, pregunta en lenguaje natural. El tipo de pregunta dete
 | --- | --- | --- |
 | **Acceso directo** — «llévame a», «dame el link de» | Sabes qué herramienta o sistema buscas | «Llévame al geovisor de títulos mineros de la ANM» |
 | **Exploración** — «qué tiene», «qué publica», «qué sistemas opera» | Quieres un mapa de lo que ofrece la entidad | «¿Qué información geológica publica el SGC?» |
-| **Transversal** — «qué entidad tiene», «por dónde empiezo» | No sabes qué entidad consultar o la consulta cruza varias — usa `atlas-orquestador` como punto de entrada | «¿Qué entidad tiene los datos de tarifas eléctricas?» |
+| **Transversal** — «qué entidad tiene», «por dónde empiezo» | No sabes qué entidad consultar o la consulta cruza varias — usa `atlas-orquestador-minero-energetico` como punto de entrada | «¿Qué entidad tiene los datos de tarifas eléctricas?» |
 
 Más ejemplos:
 
