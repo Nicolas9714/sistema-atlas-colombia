@@ -1,7 +1,7 @@
 # Especificación de los Atlas de Navegación — v0.1
 
 **Versión:** 0.1 · **Estado:** en incubación.
-**Versionado:** semántico (`mayor.menor.parche`). Las correcciones de redacción que no alteran lo exigido suben el parche; las adiciones que no obligan a ajustar los atlas registrados suben la versión menor; los cambios que sí los obligan suben la versión mayor. Mientras la versión mayor sea 0, la especificación está en incubación y un cambio de versión menor también puede exigir ajustes. Es el único documento del Sistema con número de versión; el resto del repositorio evoluciona con el historial de git. La versión 1.0 se publicará cuando el estándar quede listo para adopción externa.
+**Versionado:** semántico (`mayor.menor.parche`). Mientras la versión mayor sea 0, la especificación está en incubación y cualquier cambio puede exigir ajustes a los atlas registrados.
 
 Un Atlas de Navegación sistematiza las rutas hacia la información pública de un sector: qué entidad consultar, qué sistema priorizar, qué fuente contrastar. Esta especificación define la forma común que ese saber toma y qué debe cumplir un atlas para ser compatible con el Sistema y registrarse en él.
 
@@ -25,7 +25,9 @@ Las skills de entidad se nombran `navegar-<entidad>` (p. ej. `navegar-ideam`, `n
 
 ### N3 — Skill orquestadora
 
-Todo atlas tiene una skill orquestadora (`atlas-orquestador`) con: el mapa de skills por subsector, el procedimiento de navegación y rutas sugeridas para consultas que cruzan varias entidades del sector.
+Todo atlas tiene una skill orquestadora, nombrada `atlas-orquestador-<sector>` (p. ej. `atlas-orquestador-ambiental`, `atlas-orquestador-minero-energetico`), con: el mapa de skills por subsector, el procedimiento de navegación y rutas sugeridas para consultas que cruzan varias entidades del sector.
+
+El sufijo de sector es obligatorio — nunca `atlas-orquestador` a secas — porque el nombre de cada skill debe ser único en todo el Sistema: instalar varios atlas en un mismo proyecto copia sus skills a una sola carpeta, y dos orquestadoras con el mismo nombre se sobrescribirían entre sí. Aplica tanto al nombre de la carpeta como al campo `name` del `SKILL.md`.
 
 ### N4 — Patrón de enrutamiento
 

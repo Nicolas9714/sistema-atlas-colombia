@@ -13,8 +13,8 @@ Requiere tener instalado al menos un atlas; agrega valor cuando hay dos o más. 
 
 | Atlas | Sector | Entidades | Orquestadora |
 | --- | --- | --- | --- |
-| Atlas de Navegación Minero Energético de Colombia | Minero energético | 12: MinEnergía, UPME, CREG, ANH, ANM, SGC, XM, Ecopetrol, IPSE, FENOGE, Superservicios, BEC | `atlas-orquestador` (de ese atlas) |
-| Atlas de Navegación Ambiental de Colombia | Ambiental | 7: MinAmbiente, ANLA, IDEAM, IAvH, INVEMAR, PNN, UNGRD | `atlas-orquestador` (de ese atlas) |
+| Atlas de Navegación Minero Energético de Colombia | Minero energético | 12: MinEnergía, UPME, CREG, ANH, ANM, SGC, XM, Ecopetrol, IPSE, FENOGE, Superservicios, BEC | `atlas-orquestador-minero-energetico` |
+| Atlas de Navegación Ambiental de Colombia | Ambiental | 7: MinAmbiente, ANLA, IDEAM, IAvH, INVEMAR, PNN, UNGRD | `atlas-orquestador-ambiental` |
 
 ## Fronteras temáticas
 
