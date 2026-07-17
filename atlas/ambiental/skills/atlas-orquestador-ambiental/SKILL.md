@@ -1,5 +1,5 @@
 ---
-name: atlas-orquestador
+name: atlas-orquestador-ambiental
 description: "Capa de coordinación del Atlas Ambiental de Colombia: orienta consultas temáticas e interinstitucionales para las 7 skills institucionales."
 ---
 
@@ -28,7 +28,7 @@ Esta skill coordina el uso de las 7 skills institucionales del Atlas según el t
 
 ## Cómo usar esta skill
 
-Consulta `atlas-orquestador` para:
+Consulta `atlas-orquestador-ambiental` para:
 
 - Identificar qué entidad o entidades cubren un tema ambiental
 - Definir el orden de consulta en una ruta interinstitucional
