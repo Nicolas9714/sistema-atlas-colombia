@@ -75,6 +75,8 @@ sistema-atlas-colombia/
 
 Con los repos clonados junto a tu proyecto, un solo comando ejecutado desde la raíz del proyecto instala los atlas que pidas — y, si son dos o más, agrega automáticamente la orquestadora nacional:
 
+> El repo clonado y la copia en tu proyecto cumplen roles distintos: el clon es la fuente, que actualizas con `git pull`; la copia en tu carpeta de skills es la instalación, que tu proyecto controla y que solo cambia cuando decides reinstalar. Un mismo clon puede alimentar varios proyectos.
+
 ```powershell
 # Windows (PowerShell)
 ..\sistema-atlas-colombia\instalar.ps1 -Atlas todos
