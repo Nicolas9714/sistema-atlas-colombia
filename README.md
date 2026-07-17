@@ -22,7 +22,7 @@
 
 ---
 
-Sistema Atlas Colombia es un proyecto abierto que busca democratizar el acceso a la información pública sectorial. El Sistema es el nodo que articula y coordina los Atlas de Navegación sectoriales de Colombia: define el estándar que comparten, registra qué atlas existen y qué entidades cubre cada uno, y orquesta las consultas que cruzan de un sector a otro.
+Sistema Atlas Colombia es un proyecto abierto que busca democratizar el acceso a la información pública sectorial. El Sistema representa el nodo que articula y coordina los Atlas de Navegación sectoriales de Colombia: define el estándar que comparten, registra qué atlas existen y qué entidades cubre cada uno, y orquesta las consultas que cruzan de un sector a otro.
 
 Saber navegar la información pública de Colombia — dónde buscar, qué priorizar, qué ignorar, qué fuente contrastar — es un conocimiento práctico que suele permanecer invisible, acumulado en la experiencia de quienes conocen cada sector. Cada Atlas de Navegación convierte ese saber en una estructura abierta, documentada y reutilizable que opera directamente en herramientas de IA.
 
@@ -37,7 +37,7 @@ El mismo patrón se repite en tres escalas: una unidad funciona sola, y una orqu
 | Escala | Unidad | Orquestadora | Qué resuelve |
 | --- | --- | --- | --- |
 | Entidad | Skill `navegar-*` (3 archivos: orientación, mapa web, fuentes) | — | «¿Dónde consulto los expedientes de la ANLA?» |
-| Atlas | Colección de skills de un sector | `atlas-orquestador` del atlas | «¿Qué entidad del sector ambiental tiene los datos de calidad del agua?» |
+| Atlas | Colección de skills de un sector | `atlas-orquestador-<sector>` del atlas | «¿Qué entidad del sector ambiental tiene los datos de calidad del agua?» |
 | Sistema | Los atlas registrados | `atlas-orquestador-colombia` (este repo) | «¿Qué títulos mineros hay en la zona y qué restricciones ambientales la limitan?» |
 
 Cada nivel enruta hacia abajo sin reemplazar lo de abajo: la respuesta específica siempre vive en la skill de la entidad. Si solo tienes un atlas instalado, todo sigue funcionando — el atlas resuelve su sector y te señala dónde vive el resto.
@@ -70,6 +70,24 @@ sistema-atlas-colombia/
 ## Cómo usar la skill orquestadora nacional
 
 `atlas-orquestador-colombia` solo es útil si tienes instalados dos o más atlas. Cada atlas funciona completo por sí solo; esta skill agrega el enrutamiento entre ellos.
+
+### Instalación con script
+
+Con los repos clonados junto a tu proyecto, un solo comando ejecutado desde la raíz del proyecto instala los atlas que pidas — y, si son dos o más, agrega automáticamente la orquestadora nacional:
+
+```powershell
+# Windows (PowerShell)
+..\sistema-atlas-colombia\instalar.ps1 -Atlas todos
+```
+
+```bash
+# macOS / Linux / Git Bash
+../sistema-atlas-colombia/instalar.sh --atlas todos
+```
+
+Opciones: `-Atlas ambiental,minero-energetico` elige atlas específicos; `-Destino .agents\skills` instala para Codex; `-Entidad navegar-anla` instala una sola skill; `-Global` instala en tu carpeta de usuario; `-Actualizar` hace `git pull` en los repos fuente antes de copiar. En bash las opciones son las mismas en minúscula (`--atlas`, `--destino`, `--entidad`, `--global`, `--actualizar`).
+
+Los pasos siguientes muestran la instalación manual equivalente.
 
 ### 1. Instala los atlas
 
