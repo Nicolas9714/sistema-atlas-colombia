@@ -51,32 +51,7 @@ Tres piezas de este repositorio sostienen el Sistema: el estándar define la for
 | Atlas de Navegación Minero Energético de Colombia | Minero energético | 12 | [atlas-minero-energetico-colombia](https://github.com/Nicolas9714/atlas-minero-energetico-colombia) |
 | Atlas de Navegación Ambiental de Colombia | Ambiental | 7 | [atlas-ambiental-colombia](https://github.com/Nicolas9714/atlas-ambiental-colombia) |
 
-```text
-Sistema Atlas Colombia
-├── Atlas Minero Energético
-│   └── atlas-orquestador-minero-energetico
-│       ├── MinEnergía · navegar-minenergia
-│       ├── UPME · navegar-upme
-│       ├── CREG · navegar-creg
-│       ├── ANH · navegar-anh
-│       ├── ANM · navegar-anm
-│       ├── SGC · navegar-sgc
-│       ├── XM · navegar-xm
-│       ├── Ecopetrol · navegar-ecopetrol
-│       ├── IPSE · navegar-ipse
-│       ├── FENOGE · navegar-fenoge
-│       ├── Superservicios · navegar-superservicios
-│       └── BEC · navegar-bec
-└── Atlas Ambiental
-    └── atlas-orquestador-ambiental
-        ├── MinAmbiente · navegar-minambiente
-        ├── ANLA · navegar-anla
-        ├── IDEAM · navegar-ideam
-        ├── IAvH · navegar-iavh
-        ├── INVEMAR · navegar-invemar
-        ├── Parques Nacionales Naturales · navegar-pnn
-        └── UNGRD · navegar-ungrd
-```
+<img src="assets/estructura-sistema-atlas.svg" width="100%" alt="Árbol de la estructura del Sistema Atlas Colombia">
 
 El detalle de entidades y fronteras temáticas vive en [`registro.md`](registro.md).
 
