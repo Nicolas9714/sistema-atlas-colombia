@@ -1,39 +1,89 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 820" role="img" aria-labelledby="titulo descripcion">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 800" role="img" aria-labelledby="titulo descripcion">
 <title id="titulo">Estructura del Sistema Atlas Colombia</title>
-<desc id="descripcion">?rbol del sistema nacional, los atlas sectoriales, sus skills orquestadoras y las skills de entidad registradas.</desc>
+<desc id="descripcion">&#193;rbol del sistema nacional, los atlas sectoriales, sus skills orquestadoras y las entidades registradas.</desc>
 <style>
-  .fondo { fill: #FFFFFF; stroke: #DCE4E0; stroke-width: 2; }
-  text { font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif; fill: #22302A; paint-order: stroke; stroke: #FFFFFF; stroke-width: 5px; stroke-linejoin: round; }
-  .conexion { fill: none; stroke: #3ECF8E; stroke-width: 1.5; opacity: .52; }
-  .sistema circle, .atlas circle, .orquestadora polygon, .entidad circle { fill: #FFFFFF; stroke: #3ECF8E; }
+  .fondo { fill: #0D1117; stroke: #30363D; stroke-width: 2; }
+  text { font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif; fill: #E6EDF3; paint-order: stroke; stroke: #0D1117; stroke-width: 5px; stroke-linejoin: round; }
+  .conexion { fill: none; stroke: #3ECF8E; stroke-width: 1.5; opacity: .48; }
+  .sistema circle, .atlas circle, .orquestadora polygon, .entidad circle { fill: #0D1117; stroke: #3ECF8E; }
   .sistema .exterior { stroke-width: 2.4; }
   .sistema .interior { stroke-width: 1.5; }
   .atlas circle { stroke-width: 2.2; }
   .orquestadora polygon { stroke-width: 2; }
   .entidad circle { stroke-width: 1.7; }
   .titulo { font-size: 20px; font-weight: 650; }
-  .subtitulo { font-size: 14px; font-weight: 600; }
-  .skill { font-size: 11px; opacity: .58; }
-  .entidad text:not(.skill) { font-size: 14px; font-weight: 560; }
+  .skill { font-size: 11px; fill: #8B949E; }
+  .entidad text { font-size: 14px; font-weight: 560; }
   .etiqueta-atlas { font-size: 17px; font-weight: 650; text-anchor: end; }
   .etiqueta-orq { font-size: 12px; font-weight: 600; text-anchor: middle; }
-  .nodo:hover circle, .nodo:hover polygon { fill: #E9FAF2; stroke-width: 3; }
+  .nodo:hover circle, .nodo:hover polygon { fill: #163B2B; stroke-width: 3; }
 </style>
-<rect class="fondo" x="1" y="1" width="1598" height="818" rx="18"/>
-<path d="M 184 410 C 346.0 410, 346.0 235, 508 235" class="conexion"/><path d="M 184 410 C 346.0 410, 346.0 610, 508 610" class="conexion"/><path d="M 532 235 C 670.0 235, 670.0 235, 808 235" class="conexion"/><path d="M 532 610 C 670.0 610, 670.0 610, 808 610" class="conexion"/><path d="M 832 235 C 963.5 235, 963.5 42, 1095 42" class="conexion"/><path d="M 832 235 C 963.5 235, 963.5 77, 1095 77" class="conexion"/><path d="M 832 235 C 963.5 235, 963.5 112, 1095 112" class="conexion"/><path d="M 832 235 C 963.5 235, 963.5 147, 1095 147" class="conexion"/><path d="M 832 235 C 963.5 235, 963.5 182, 1095 182" class="conexion"/><path d="M 832 235 C 963.5 235, 963.5 217, 1095 217" class="conexion"/><path d="M 832 235 C 963.5 235, 963.5 252, 1095 252" class="conexion"/><path d="M 832 235 C 963.5 235, 963.5 287, 1095 287" class="conexion"/><path d="M 832 235 C 963.5 235, 963.5 322, 1095 322" class="conexion"/><path d="M 832 235 C 963.5 235, 963.5 357, 1095 357" class="conexion"/><path d="M 832 235 C 963.5 235, 963.5 392, 1095 392" class="conexion"/><path d="M 832 235 C 963.5 235, 963.5 427, 1095 427" class="conexion"/><path d="M 832 610 C 963.5 610, 963.5 500, 1095 500" class="conexion"/><path d="M 832 610 C 963.5 610, 963.5 543, 1095 543" class="conexion"/><path d="M 832 610 C 963.5 610, 963.5 586, 1095 586" class="conexion"/><path d="M 832 610 C 963.5 610, 963.5 629, 1095 629" class="conexion"/><path d="M 832 610 C 963.5 610, 963.5 672, 1095 672" class="conexion"/><path d="M 832 610 C 963.5 610, 963.5 715, 1095 715" class="conexion"/><path d="M 832 610 C 963.5 610, 963.5 758, 1095 758" class="conexion"/><g class="nodo sistema"><title>atlas-orquestador-colombia</title>
-<circle class="exterior" cx="170" cy="410" r="15"/>
-<circle class="interior" cx="170" cy="410" r="8"/>
-<text x="170" y="354" class="titulo" text-anchor="middle">Sistema Atlas</text>
-<text x="170" y="377" class="titulo" text-anchor="middle">Colombia</text>
-<text x="170" y="452" class="skill" text-anchor="middle">atlas-orquestador-colombia</text></g><g class="nodo atlas"><title>Atlas de Navegaci?n Minero Energ?tico de Colombia</title>
-<circle cx="520" cy="235" r="12"/>
-<text x="498" y="231" class="etiqueta-atlas">Atlas Minero</text>
-<text x="498" y="252" class="etiqueta-atlas">Energ?tico</text></g>
-<g class="nodo atlas"><title>Atlas de Navegaci?n Ambiental de Colombia</title>
-<circle cx="520" cy="610" r="12"/>
-<text x="498" y="616" class="etiqueta-atlas">Atlas Ambiental</text></g><g class="nodo orquestadora"><title>atlas-orquestador-minero-energetico</title>
-<polygon points="820,223 832,235 820,247 808,235"/>
-<text x="820" y="269" class="etiqueta-orq">atlas-orquestador-minero-energetico</text></g>
-<g class="nodo orquestadora"><title>atlas-orquestador-ambiental</title>
-<polygon points="820,598 832,610 820,622 808,610"/>
-<text x="820" y="644" class="etiqueta-orq">atlas-orquestador-ambiental</text></g><g class="nodo entidad"><title>MinEnerg?a ? navegar-minenergia</title><circle cx="1100" cy="42" r="5"/><text x="1118" y="47">MinEnerg?a</text><text x="1118" y="62" class="skill">navegar-minenergia</text></g><g class="nodo entidad"><title>UPME ? navegar-upme</title><circle cx="1100" cy="77" r="5"/><text x="1118" y="82">UPME</text><text x="1118" y="97" class="skill">navegar-upme</text></g><g class="nodo entidad"><title>CREG ? navegar-creg</title><circle cx="1100" cy="112" r="5"/><text x="1118" y="117">CREG</text><text x="1118" y="132" class="skill">navegar-creg</text></g><g class="nodo entidad"><title>ANH ? navegar-anh</title><circle cx="1100" cy="147" r="5"/><text x="1118" y="152">ANH</text><text x="1118" y="167" class="skill">navegar-anh</text></g><g class="nodo entidad"><title>ANM ? navegar-anm</title><circle cx="1100" cy="182" r="5"/><text x="1118" y="187">ANM</text><text x="1118" y="202" class="skill">navegar-anm</text></g><g class="nodo entidad"><title>SGC ? navegar-sgc</title><circle cx="1100" cy="217" r="5"/><text x="1118" y="222">SGC</text><text x="1118" y="237" class="skill">navegar-sgc</text></g><g class="nodo entidad"><title>XM ? navegar-xm</title><circle cx="1100" cy="252" r="5"/><text x="1118" y="257">XM</text><text x="1118" y="272" class="skill">navegar-xm</text></g><g class="nodo entidad"><title>Ecopetrol ? navegar-ecopetrol</title><circle cx="1100" cy="287" r="5"/><text x="1118" y="292">Ecopetrol</text><text x="1118" y="307" class="skill">navegar-ecopetrol</text></g><g class="nodo entidad"><title>IPSE ? navegar-ipse</title><circle cx="1100" cy="322" r="5"/><text x="1118" y="327">IPSE</text><text x="1118" y="342" class="skill">navegar-ipse</text></g><g class="nodo entidad"><title>FENOGE ? navegar-fenoge</title><circle cx="1100" cy="357" r="5"/><text x="1118" y="362">FENOGE</text><text x="1118" y="377" class="skill">navegar-fenoge</text></g><g class="nodo entidad"><title>Superservicios ? navegar-superservicios</title><circle cx="1100" cy="392" r="5"/><text x="1118" y="397">Superservicios</text><text x="1118" y="412" class="skill">navegar-superservicios</text></g><g class="nodo entidad"><title>BEC ? navegar-bec</title><circle cx="1100" cy="427" r="5"/><text x="1118" y="432">BEC</text><text x="1118" y="447" class="skill">navegar-bec</text></g><g class="nodo entidad"><title>MinAmbiente ? navegar-minambiente</title><circle cx="1100" cy="500" r="5"/><text x="1118" y="505">MinAmbiente</text><text x="1118" y="520" class="skill">navegar-minambiente</text></g><g class="nodo entidad"><title>ANLA ? navegar-anla</title><circle cx="1100" cy="543" r="5"/><text x="1118" y="548">ANLA</text><text x="1118" y="563" class="skill">navegar-anla</text></g><g class="nodo entidad"><title>IDEAM ? navegar-ideam</title><circle cx="1100" cy="586" r="5"/><text x="1118" y="591">IDEAM</text><text x="1118" y="606" class="skill">navegar-ideam</text></g><g class="nodo entidad"><title>IAvH ? navegar-iavh</title><circle cx="1100" cy="629" r="5"/><text x="1118" y="634">IAvH</text><text x="1118" y="649" class="skill">navegar-iavh</text></g><g class="nodo entidad"><title>INVEMAR ? navegar-invemar</title><circle cx="1100" cy="672" r="5"/><text x="1118" y="677">INVEMAR</text><text x="1118" y="692" class="skill">navegar-invemar</text></g><g class="nodo entidad"><title>Parques Nacionales Naturales ? navegar-pnn</title><circle cx="1100" cy="715" r="5"/><text x="1118" y="720">Parques Nacionales Naturales</text><text x="1118" y="735" class="skill">navegar-pnn</text></g><g class="nodo entidad"><title>UNGRD ? navegar-ungrd</title><circle cx="1100" cy="758" r="5"/><text x="1118" y="763">UNGRD</text><text x="1118" y="778" class="skill">navegar-ungrd</text></g></svg>
+<rect class="fondo" x="1" y="1" width="1238" height="798" rx="18"/>
+  <path d="M 159 400 C 281.0 400, 281.0 225, 403 225" class="conexion"/>
+  <path d="M 159 400 C 281.0 400, 281.0 595, 403 595" class="conexion"/>
+  <path d="M 427 225 C 542.5 225, 542.5 225, 658 225" class="conexion"/>
+  <path d="M 427 595 C 542.5 595, 542.5 595, 658 595" class="conexion"/>
+  <path d="M 682 225 C 786.0 225, 786.0 35, 890 35" class="conexion"/>
+  <path d="M 682 225 C 786.0 225, 786.0 69, 890 69" class="conexion"/>
+  <path d="M 682 225 C 786.0 225, 786.0 103, 890 103" class="conexion"/>
+  <path d="M 682 225 C 786.0 225, 786.0 137, 890 137" class="conexion"/>
+  <path d="M 682 225 C 786.0 225, 786.0 171, 890 171" class="conexion"/>
+  <path d="M 682 225 C 786.0 225, 786.0 205, 890 205" class="conexion"/>
+  <path d="M 682 225 C 786.0 225, 786.0 239, 890 239" class="conexion"/>
+  <path d="M 682 225 C 786.0 225, 786.0 273, 890 273" class="conexion"/>
+  <path d="M 682 225 C 786.0 225, 786.0 307, 890 307" class="conexion"/>
+  <path d="M 682 225 C 786.0 225, 786.0 341, 890 341" class="conexion"/>
+  <path d="M 682 225 C 786.0 225, 786.0 375, 890 375" class="conexion"/>
+  <path d="M 682 225 C 786.0 225, 786.0 409, 890 409" class="conexion"/>
+  <path d="M 682 595 C 786.0 595, 786.0 490, 890 490" class="conexion"/>
+  <path d="M 682 595 C 786.0 595, 786.0 533, 890 533" class="conexion"/>
+  <path d="M 682 595 C 786.0 595, 786.0 576, 890 576" class="conexion"/>
+  <path d="M 682 595 C 786.0 595, 786.0 619, 890 619" class="conexion"/>
+  <path d="M 682 595 C 786.0 595, 786.0 662, 890 662" class="conexion"/>
+  <path d="M 682 595 C 786.0 595, 786.0 705, 890 705" class="conexion"/>
+  <path d="M 682 595 C 786.0 595, 786.0 748, 890 748" class="conexion"/>
+  <g class="nodo sistema"><title>atlas-orquestador-colombia</title>
+    <circle class="exterior" cx="145" cy="400" r="15"/>
+    <circle class="interior" cx="145" cy="400" r="8"/>
+    <text x="145" y="344" class="titulo" text-anchor="middle">Sistema Atlas</text>
+    <text x="145" y="367" class="titulo" text-anchor="middle">Colombia</text>
+    <text x="145" y="442" class="skill" text-anchor="middle">atlas-orquestador-colombia</text>
+  </g>
+  <g class="nodo atlas"><title>Atlas de Navegaci&#243;n Minero Energ&#233;tico de Colombia</title>
+    <circle cx="415" cy="225" r="12"/>
+    <text x="393" y="221" class="etiqueta-atlas">Atlas Minero</text>
+    <text x="393" y="242" class="etiqueta-atlas">Energ&#233;tico</text>
+  </g>
+  <g class="nodo atlas"><title>Atlas de Navegaci&#243;n Ambiental de Colombia</title>
+    <circle cx="415" cy="595" r="12"/>
+    <text x="393" y="601" class="etiqueta-atlas">Atlas Ambiental</text>
+  </g>
+  <g class="nodo orquestadora"><title>atlas-orquestador-minero-energetico</title>
+    <polygon points="670,213 682,225 670,237 658,225"/>
+    <text x="670" y="259" class="etiqueta-orq">skill orquestadora</text>
+  </g>
+  <g class="nodo orquestadora"><title>atlas-orquestador-ambiental</title>
+    <polygon points="670,583 682,595 670,607 658,595"/>
+    <text x="670" y="629" class="etiqueta-orq">skill orquestadora</text>
+  </g>
+  <g class="nodo entidad"><title>MinEnerg&#237;a</title><circle cx="895" cy="35" r="5"/><text x="913" y="40">MinEnerg&#237;a</text></g>
+  <g class="nodo entidad"><title>UPME</title><circle cx="895" cy="69" r="5"/><text x="913" y="74">UPME</text></g>
+  <g class="nodo entidad"><title>CREG</title><circle cx="895" cy="103" r="5"/><text x="913" y="108">CREG</text></g>
+  <g class="nodo entidad"><title>ANH</title><circle cx="895" cy="137" r="5"/><text x="913" y="142">ANH</text></g>
+  <g class="nodo entidad"><title>ANM</title><circle cx="895" cy="171" r="5"/><text x="913" y="176">ANM</text></g>
+  <g class="nodo entidad"><title>SGC</title><circle cx="895" cy="205" r="5"/><text x="913" y="210">SGC</text></g>
+  <g class="nodo entidad"><title>XM</title><circle cx="895" cy="239" r="5"/><text x="913" y="244">XM</text></g>
+  <g class="nodo entidad"><title>Ecopetrol</title><circle cx="895" cy="273" r="5"/><text x="913" y="278">Ecopetrol</text></g>
+  <g class="nodo entidad"><title>IPSE</title><circle cx="895" cy="307" r="5"/><text x="913" y="312">IPSE</text></g>
+  <g class="nodo entidad"><title>FENOGE</title><circle cx="895" cy="341" r="5"/><text x="913" y="346">FENOGE</text></g>
+  <g class="nodo entidad"><title>Superservicios</title><circle cx="895" cy="375" r="5"/><text x="913" y="380">Superservicios</text></g>
+  <g class="nodo entidad"><title>BEC</title><circle cx="895" cy="409" r="5"/><text x="913" y="414">BEC</text></g>
+  <g class="nodo entidad"><title>MinAmbiente</title><circle cx="895" cy="490" r="5"/><text x="913" y="495">MinAmbiente</text></g>
+  <g class="nodo entidad"><title>ANLA</title><circle cx="895" cy="533" r="5"/><text x="913" y="538">ANLA</text></g>
+  <g class="nodo entidad"><title>IDEAM</title><circle cx="895" cy="576" r="5"/><text x="913" y="581">IDEAM</text></g>
+  <g class="nodo entidad"><title>IAvH</title><circle cx="895" cy="619" r="5"/><text x="913" y="624">IAvH</text></g>
+  <g class="nodo entidad"><title>INVEMAR</title><circle cx="895" cy="662" r="5"/><text x="913" y="667">INVEMAR</text></g>
+  <g class="nodo entidad"><title>Parques Nacionales Naturales</title><circle cx="895" cy="705" r="5"/><text x="913" y="710">Parques Nacionales Naturales</text></g>
+  <g class="nodo entidad"><title>UNGRD</title><circle cx="895" cy="748" r="5"/><text x="913" y="753">UNGRD</text></g>
+</svg>
