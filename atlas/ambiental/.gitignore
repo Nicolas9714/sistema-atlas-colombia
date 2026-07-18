@@ -49,6 +49,12 @@ examples/*
 !examples/README.md
 !examples/consultas-de-ejemplo.md
 
+# Caso de análisis deforestación SMByC: se publica la subcarpeta completa (README,
+# notebook y CSV de salida), pero no los Excel crudos del IDEAM, que el usuario descarga
+!examples/deforestacion-series-smbyc/
+!examples/deforestacion-series-smbyc/**
+examples/deforestacion-series-smbyc/*.xlsx
+
 # templates/lineamiento-profundidad-mapa.md, templates/briefing-*.md,
 # templates/herramientas-de-exploracion.md, templates/pruebas-skills.md,
 # internal_tools/ y sesiones/ ya no viven en este repo — se movieron a
