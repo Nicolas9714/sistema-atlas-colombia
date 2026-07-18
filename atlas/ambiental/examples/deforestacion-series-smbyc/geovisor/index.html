@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Geovisor de deforestación — Atlas de Navegación Ambiental de Colombia</title>
+<title>Geovisor de deforestación</title>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <link rel="stylesheet" href="estilos.css">
 </head>
@@ -19,11 +19,10 @@
     <span class="chevron-control" aria-hidden="true">⌃</span>
   </button>
   <div id="contenido-controles">
-    <div class="fila-controles">
+    <div class="fila-controles fila-capas">
       <button id="btn-capa-coropleta" class="btn activo" data-capa="coropleta"><span class="swatch swatch-coropleta"></span>Deforestación</button>
       <button id="btn-capa-runap" class="btn" data-capa="runap"><span class="swatch swatch-runap"></span>Áreas protegidas</button>
       <button id="btn-capa-reserva" class="btn" data-capa="reserva"><span class="swatch swatch-reserva"></span>Reserva forestal</button>
-      <button id="btn-capa-recorrido" class="btn" data-capa="recorrido"><span class="swatch swatch-recorrido"></span>Recorrido del centro de gravedad</button>
     </div>
     <div class="fila-controles fila-anio">
       <button id="btn-reproducir" aria-label="Reproducir animación de años">▶</button>
@@ -38,7 +37,7 @@
 
 <aside id="sidebar">
   <header id="sidebar-header">
-    <h1>Geovisor de deforestación — Atlas de Navegación Ambiental de Colombia</h1>
+    <h1>Geovisor de deforestación</h1>
     <button id="btn-colapsar-sidebar" aria-label="Colapsar panel">−</button>
   </header>
 
@@ -56,7 +55,6 @@
         <span class="chip-leyenda"><span class="swatch swatch-coropleta"></span>Deforestación</span>
         <span class="chip-leyenda"><span class="swatch swatch-runap"></span>Áreas protegidas</span>
         <span class="chip-leyenda"><span class="swatch swatch-reserva"></span>Reserva forestal</span>
-        <span class="chip-leyenda"><span class="swatch swatch-recorrido"></span>Recorrido del centro de gravedad</span>
       </div>
       <p class="nota-tarjeta" id="leyenda-titulo">Hectáreas deforestadas por departamento — cuantiles de 6 grupos, recalculados cada año.</p>
       <div class="escala-leyenda" id="escala-leyenda"></div>
@@ -68,10 +66,6 @@
       <div id="lienzo-serie"></div>
     </div>
 
-    <div class="tarjeta" id="tarjeta-recorrido" style="display:none">
-      <h2>Recorrido del centro de gravedad</h2>
-      <p class="nota-tarjeta">Centro medio ponderado por hectáreas deforestadas; resolución departamental — indica tendencia regional, no el frente exacto.</p>
-    </div>
   </div>
 
   <footer id="pie-sidebar">
@@ -85,7 +79,6 @@
 <script src="datos.js"></script>
 <script src="capa_areas_protegidas.js"></script>
 <script src="capa_reserva_forestal.js"></script>
-<script src="capa_recorrido.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

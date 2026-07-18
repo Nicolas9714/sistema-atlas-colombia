@@ -7,7 +7,6 @@ const SVGNS = "http://www.w3.org/2000/svg";
 const ACC = "#3ECF8E";          // esmeralda: marca/UI, títulos, controles y serie histórica
 const COLOR_RUNAP = "#38BDF8";  // azul: áreas protegidas RUNAP
 const COLOR_RESERVA = "#F59E0B"; // ámbar: reserva forestal Ley 2ª
-const COLOR_RECORRIDO = "#C084FC"; // violeta: recorrido del centro de gravedad
 
 // Rampa secuencial ColorBrewer YlOrBr (6 clases): independiente del verde
 // de la interfaz; marrón más oscuro = mayor deforestación.
@@ -34,13 +33,6 @@ function formatoEntero(v) {
 function formatoPorcentaje(v) {
   return v.toLocaleString("es-CO", { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + " %";
 }
-function formatoKm(v) {
-  return v.toLocaleString("es-CO", { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + " km";
-}
-function formatoCoord(lat, lon) {
-  return `${lat.toFixed(2)}°, ${lon.toFixed(2)}°`;
-}
-
 /* ---------------------------------------------------------------------
    Estado global
    --------------------------------------------------------------------- */
@@ -51,7 +43,7 @@ const estado = {
   reproduciendo: false,
   idIntervalo: null,
   deptoSeleccionado: null,
-  capas: { coropleta: true, runap: false, reserva: false, recorrido: false }
+  capas: { coropleta: true, runap: false, reserva: false }
 };
 
 /* ---------------------------------------------------------------------
@@ -229,69 +221,6 @@ const capaReserva = L.geoJSON(
 );
 
 /* ---------------------------------------------------------------------
-   Capa 4: recorrido del centro de gravedad de la deforestación (2013-2024)
-   Centro medio ponderado por hectáreas deforestadas, con centroides
-   departamentales (ver metodología en capa_recorrido.js). Sincronizada
-   con el año activo: el tramo ya recorrido se dibuja en violeta pleno,
-   el resto atenuado, y el punto del año activo se resalta.
-   --------------------------------------------------------------------- */
-let capaRecorrido = null;
-
-function construirCapaRecorrido() {
-  const grupo = L.layerGroup();
-  const puntos = (typeof CAPA_RECORRIDO !== "undefined") ? CAPA_RECORRIDO : [];
-  const idxActivo = estado.idxAnio;
-
-  for (let i = 0; i < puntos.length - 1; i++) {
-    const a = puntos[i];
-    const b = puntos[i + 1];
-    const esRecorrido = (i + 1) <= idxActivo;
-    L.polyline([[a.lat, a.lon], [b.lat, b.lon]], {
-      color: COLOR_RECORRIDO,
-      weight: esRecorrido ? 2.2 : 1.4,
-      opacity: esRecorrido ? 0.9 : 0.28
-    }).addTo(grupo);
-  }
-
-  puntos.forEach((p, i) => {
-    const esActivo = i === idxActivo;
-    const yaRecorrido = i <= idxActivo;
-    const marcador = L.circleMarker([p.lat, p.lon], {
-      radius: esActivo ? 7 : 4,
-      color: COLOR_RECORRIDO,
-      weight: esActivo ? 2.5 : 1.2,
-      fillColor: COLOR_RECORRIDO,
-      fillOpacity: esActivo ? 0.95 : (yaRecorrido ? 0.7 : 0.3),
-      opacity: yaRecorrido ? 0.95 : 0.4
-    });
-    const cuerpo = p.distanciaKm === null
-      ? `${formatoCoord(p.lat, p.lon)}`
-      : `${formatoCoord(p.lat, p.lon)}<br>Se desplazó ${formatoKm(p.distanciaKm)} al ${p.rumbo} respecto a ${puntos[i - 1].anio}.`;
-    marcador.bindTooltip(
-      `<b style="color:${COLOR_RECORRIDO}">Centro de gravedad — ${p.anio}</b>${cuerpo}`,
-      { className: "tooltip-atlas", sticky: true }
-    );
-    marcador.bindPopup(
-      `<b style="color:${COLOR_RECORRIDO}">Centro de gravedad — ${p.anio}</b>${cuerpo}`
-    );
-    marcador.addTo(grupo);
-  });
-
-  return grupo;
-}
-
-function actualizarCapaRecorrido() {
-  if (capaRecorrido) mapa.removeLayer(capaRecorrido);
-  capaRecorrido = construirCapaRecorrido();
-  if (estado.capas.recorrido) capaRecorrido.addTo(mapa);
-}
-
-function actualizarNotaRecorrido() {
-  const tarjeta = document.getElementById("tarjeta-recorrido");
-  tarjeta.style.display = estado.capas.recorrido ? "block" : "none";
-}
-
-/* ---------------------------------------------------------------------
    Toggle de capas
    --------------------------------------------------------------------- */
 function alternarCapa(nombreCapa) {
@@ -299,9 +228,8 @@ function alternarCapa(nombreCapa) {
   const boton = document.querySelector(`.btn[data-capa="${nombreCapa}"]`);
   boton.classList.toggle("activo", estado.capas[nombreCapa]);
 
-  const capasLeaflet = { coropleta: capaCoropleta, runap: capaRunap, reserva: capaReserva, recorrido: capaRecorrido };
+  const capasLeaflet = { coropleta: capaCoropleta, runap: capaRunap, reserva: capaReserva };
   const capa = capasLeaflet[nombreCapa];
-  actualizarNotaRecorrido();
   if (!capa) return;
   if (estado.capas[nombreCapa]) capa.addTo(mapa);
   else mapa.removeLayer(capa);
@@ -462,7 +390,6 @@ function fijarAnio(idx) {
   slider.value = estado.idxAnio;
   renderCifras();
   actualizarCapaCoropleta();
-  actualizarCapaRecorrido();
   if (estado.deptoSeleccionado) {
     const serie = SERIE_DEPARTAMENTOS[estado.deptoSeleccionado];
     document.getElementById("depto-subtitulo").textContent =

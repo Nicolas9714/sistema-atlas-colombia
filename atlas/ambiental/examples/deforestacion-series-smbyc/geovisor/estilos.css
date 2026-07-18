@@ -15,12 +15,9 @@
   /* Colores secundarios por capa. */
   --color-runap: #38BDF8;
   --color-reserva: #F59E0B;
-  --color-recorrido: #C084FC;
-  --color-recorrido-texto: #C084FC; /* violeta usado sobre texto, ajustado por tema para AA */
 }
 :root[data-theme="claro"] {
   --acc-texto: #047857;
-  --color-recorrido-texto: #7C3AED; /* violeta oscurecido: >=4.5:1 sobre el panel claro real */
 
   --bg: #FBFBF9;
   --fg: #1F2937;             /* texto principal, modo claro */
@@ -105,6 +102,18 @@ html, body {
   align-items: center;
   gap: 8px;
   flex-wrap: wrap;
+}
+.fila-capas {
+  flex-direction: column;
+  align-items: stretch;
+  flex-wrap: nowrap;
+}
+.fila-capas .btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  text-align: left;
 }
 .btn {
   font-family: inherit;
@@ -342,11 +351,6 @@ html, body {
   background: rgba(245, 158, 11, 0.16);
   border: 1px dashed var(--color-reserva);
 }
-.swatch-recorrido {
-  background: var(--color-recorrido);
-  border-radius: 50%;
-}
-
 #lienzo-serie svg { display: block; width: 100%; height: auto; }
 #lienzo-serie text,
 svg text {
