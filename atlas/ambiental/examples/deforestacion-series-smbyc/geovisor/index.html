@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Geovisor de deforestación — Atlas de Navegación Ambiental de Colombia</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<div id="vista-mapa">
+
+<div id="lienzo-mapa"></div>
+
+<div id="controles-izq">
+  <button id="btn-colapsar-capas" aria-expanded="true" aria-controls="contenido-controles">
+    <span class="titulo-control"><span aria-hidden="true">▱</span> Capas del mapa</span>
+    <span class="chevron-control" aria-hidden="true">⌃</span>
+  </button>
+  <div id="contenido-controles">
+    <div class="fila-controles">
+      <button id="btn-capa-coropleta" class="btn activo" data-capa="coropleta"><span class="swatch swatch-coropleta"></span>Deforestación</button>
+      <button id="btn-capa-runap" class="btn" data-capa="runap"><span class="swatch swatch-runap"></span>Áreas protegidas</button>
+      <button id="btn-capa-reserva" class="btn" data-capa="reserva"><span class="swatch swatch-reserva"></span>Reserva forestal</button>
+      <button id="btn-capa-recorrido" class="btn" data-capa="recorrido"><span class="swatch swatch-recorrido"></span>Recorrido del centro de gravedad</button>
+    </div>
+    <div class="fila-controles fila-anio">
+      <button id="btn-reproducir" aria-label="Reproducir animación de años">▶</button>
+      <input type="range" id="slider-anio" min="0" max="11" step="1" value="0">
+      <span class="etiqueta-slider" id="etiqueta-slider">2013</span>
+    </div>
+    <div class="fila-controles">
+      <button id="modo-tema">Modo claro</button>
+    </div>
+  </div>
+</div>
+
+<aside id="sidebar">
+  <header id="sidebar-header">
+    <h1>Geovisor de deforestación — Atlas de Navegación Ambiental de Colombia</h1>
+    <button id="btn-colapsar-sidebar" aria-label="Colapsar panel">−</button>
+  </header>
+
+  <div class="contenido-sidebar" id="contenido-sidebar">
+    <div class="tarjeta">
+      <h2>Cifras del año activo</h2>
+      <p class="fila-cifra"><span class="etq-cifra">Año</span><span class="num-cifra" id="cifra-anio">2013</span></p>
+      <p class="fila-cifra"><span class="etq-cifra">Deforestación nacional oficial (SMByC-IDEAM)</span><span class="num-cifra num-cifra--destacado" id="cifra-nacional">—</span></p>
+      <p class="fila-cifra"><span class="etq-cifra">Participación de la región amazónica</span><span class="num-cifra" id="cifra-amazonia">—</span></p>
+    </div>
+
+    <div class="tarjeta" id="tarjeta-leyenda">
+      <h2>Capas y escala</h2>
+      <div class="leyenda-capas">
+        <span class="chip-leyenda"><span class="swatch swatch-coropleta"></span>Deforestación</span>
+        <span class="chip-leyenda"><span class="swatch swatch-runap"></span>Áreas protegidas</span>
+        <span class="chip-leyenda"><span class="swatch swatch-reserva"></span>Reserva forestal</span>
+        <span class="chip-leyenda"><span class="swatch swatch-recorrido"></span>Recorrido del centro de gravedad</span>
+      </div>
+      <p class="nota-tarjeta" id="leyenda-titulo">Hectáreas deforestadas por departamento — cuantiles de 6 grupos, recalculados cada año.</p>
+      <div class="escala-leyenda" id="escala-leyenda"></div>
+    </div>
+
+    <div class="tarjeta" id="tarjeta-departamento">
+      <h2 id="depto-titulo">Serie histórica</h2>
+      <p class="nota-tarjeta" id="depto-subtitulo">Haga clic en un departamento del mapa para ver su serie 2013-2024.</p>
+      <div id="lienzo-serie"></div>
+    </div>
+
+    <div class="tarjeta" id="tarjeta-recorrido" style="display:none">
+      <h2>Recorrido del centro de gravedad</h2>
+      <p class="nota-tarjeta">Centro medio ponderado por hectáreas deforestadas; resolución departamental — indica tendencia regional, no el frente exacto.</p>
+    </div>
+  </div>
+
+  <footer id="pie-sidebar">
+    Fuentes: SMByC — IDEAM (anexos al 31 de octubre de 2025) · RUNAP — Parques Nacionales Naturales · Reserva forestal Ley 2ª — MinAmbiente.
+  </footer>
+</aside>
+
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="datos.js"></script>
+<script src="capa_areas_protegidas.js"></script>
+<script src="capa_reserva_forestal.js"></script>
+<script src="capa_recorrido.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

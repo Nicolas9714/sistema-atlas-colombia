@@ -44,6 +44,18 @@ La sección de datos abiertos del IDEAM, «Resultados del monitoreo de bosques»
 - Python con `pandas`, `openpyxl` y `plotly`.
 - `deforestacion_smbyc.ipynb` — notebook con el flujo completo: lectura de hojas anuales, serie nacional oficial, agrupación amazónica, exportación y gráfica.
 - `deforestacion_departamentos.csv` — salida generada: hectáreas deforestadas (SD) por departamento (filas, 33 departamentos) y año 2013-2024 (columnas).
+- `geovisor/` — geovisor interactivo construido sobre estos datos (ver sección siguiente).
+
+## Geovisor
+
+La carpeta `geovisor/` contiene un geovisor interactivo construido con Leaflet sobre estos datos: mapa base a pantalla completa con cuatro capas conmutables en un control colapsable, slider de año 2013-2024 con animación, tooltip con hectáreas y ranking nacional, y panel lateral con las cifras del año activo y la serie completa de cada departamento al hacer clic.
+
+- **Capas:** coropleta de deforestación departamental (SMByC — IDEAM), áreas protegidas del RUNAP (Parques Nacionales Naturales, 1.889 áreas descargadas del servicio geográfico oficial de la entidad), las 7 zonas de la reserva forestal de la Ley 2ª de 1959 (MinAmbiente) y el recorrido del centro de gravedad de la deforestación 2013-2024. Las capas de cruce permiten leer la presión de la deforestación sobre suelo protegido y de vocación forestal.
+- **Recorrido del centro de gravedad:** por cada año se calcula el centro medio ponderado (*weighted mean center*) — el promedio de los centroides departamentales ponderado por hectáreas deforestadas — y los 12 centros se conectan como trayectoria sobre el mapa, sincronizada con el slider, con la distancia y el rumbo de cada desplazamiento anual. Es la técnica clásica de estadística espacial para observar la migración de los focos de un fenómeno. Con resolución departamental el recorrido indica la tendencia regional, no la ubicación exacta del frente de deforestación.
+- Se abre con doble clic en `geovisor/index.html`. Requiere conexión a internet: el mapa base (tiles de CartoDB) y la librería Leaflet se cargan por CDN.
+- Arquitectura distribuida: `index.html` (estructura), `estilos.css` (estilos), `app.js` (lógica), `datos.js` (series y departamentos) y una capa por archivo (`capa_areas_protegidas.js`, `capa_reserva_forestal.js`). Actualizar cifras o una capa solo toca su archivo.
+- Los datos embebidos provienen del CSV y de la serie nacional oficial de este caso; el contorno departamental proviene del Marco Geoestadístico Nacional (MGN 2018, DANE), simplificado; las capas de cruce se descargaron de los servicios ArcGIS oficiales de Parques Nacionales Naturales y MinAmbiente y se simplificaron para uso web.
+- Escala de color por cuantiles (6 grupos, recalculados por año) con una rampa secuencial amarillo–naranja–marrón (ColorBrewer YlOrBr): tonos más oscuros indican mayor deforestación. La interfaz conserva el verde esmeralda de la identidad del Atlas, separado del color temático del mapa, con modo oscuro por defecto y alterne a modo claro.
 
 ## Resultado
 
