@@ -25,7 +25,7 @@
 Sistema Atlas Colombia es un proyecto abierto que busca democratizar el acceso a la información pública de Colombia. Este proyecto parte de la convicción de que hacer pública la información también implica hacer públicas sus rutas y conexiones. La información ya es pública en portales, micrositios, sistemas de información, geovisores, entre otros. Saber navegar esta información — dónde buscar, qué priorizar, qué ignorar, qué fuente contrastar — es un conocimiento práctico que suele permanecer invisible, acumulado en la experiencia de quienes conocen cada sector. Cada Atlas de Navegación convierte ese saber en una estructura abierta, documentada y reutilizable que opera directamente en herramientas de IA.
 
 
-El Sistema representa el nodo que articula y coordina los Atlas de Navegación sectoriales de Colombia: define el estándar que comparten, registra qué atlas existen y qué entidades cubre cada uno, y orquesta las intersecciones y consultas que cruzan de un sector a otro.
+El Sistema Atlas representa el nodo que articula y coordina los Atlas de Navegación sectoriales de Colombia: define el estándar que comparten, registra qué atlas existen y qué entidades cubre cada uno, y orquesta las intersecciones y consultas que cruzan de un sector a otro.
 
 
 ## Cómo funciona
