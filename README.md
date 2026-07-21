@@ -1,4 +1,4 @@
-é<div align="center">
+<div align="center">
   <img src="assets/Logo_sistema_atlas.svg" width="250" alt="Sistema Atlas Colombia">
   <h1>Sistema Atlas Colombia</h1>
   <p><em>Marco común y registro abierto de atlas sectoriales: el sistema que conecta las rutas hacia la información pública de Colombia.</em></p>
