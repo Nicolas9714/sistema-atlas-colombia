@@ -1,4 +1,4 @@
-﻿<div align="center">
+<div align="center">
   <img src="assets/logo-atlas-minero-energetico.svg" width="250" alt="Atlas de Navegación Minero Energético de Colombia">
   <h1>Atlas de Navegación Minero Energético de Colombia</h1>
   <p><em>Colección abierta de skills para encontrar, usar y apropiar la información pública del sector minero energético colombiano.</em></p>
@@ -8,13 +8,13 @@
 
 ## El problema que resuelve
 
-La información del sector minero-energético colombiano está distribuida entre múltiples sitios institucionales, micrositios, sistemas de información, geovisores, portales de datos, normas y documentos. Aunque gran parte de esta información es pública, encontrarla, interpretarla y utilizarla no siempre es sencillo. Cada entidad organiza sus contenidos de manera diferente y muchas fuentes permanecen ocultas en subdominios, plataformas externas, menús poco claros o rutas difíciles de identificar.
+La información del sector minero energético colombiano está distribuida entre múltiples sitios institucionales, micrositios, sistemas de información, geovisores, portales de datos, normas y documentos. Aunque gran parte de esta información es pública, encontrarla, interpretarla y utilizarla no siempre es sencillo. Cada entidad organiza sus contenidos de manera diferente y muchas fuentes permanecen ocultas en subdominios, plataformas externas, menús poco claros o rutas difíciles de identificar.
 
-Este atlas parte de la convicción de que hacer pública la información también implica hacer públicas sus rutas y conexiones. Saber navegar en este ecosistema conlleva saber dónde buscar, qué ignorar, qué ruta seguir, qué portal priorizar, qué entidad consultar, qué sección omitir y qué fuente contrastar. Ese saber constituye una forma de conocimiento práctico que suele permanecer invisible, acumulado en la experiencia de quienes conocen el sector y sus sistemas de información. 
+Este atlas parte de la convicción de que hacer pública la información también implica hacer públicas sus rutas y conexiones. Saber navegar en este ecosistema conlleva saber dónde buscar, qué ignorar, qué ruta seguir, qué portal priorizar, qué entidad consultar, qué sección omitir y qué fuente contrastar. Ese saber constituye una forma de conocimiento práctico que suele permanecer invisible, acumulado en la experiencia de quienes conocen el sector y sus sistemas de información.
 
-Así, el atlas convierte ese conocimiento disperso en una primera estructura abierta, documentada y reutilizable. A través de sus skills, permite identificar dónde buscar, qué fuentes priorizar y cómo orientarse dentro del complejo ecosistema institucional del sector minero-energético colombiano.
+Así, el atlas convierte ese conocimiento disperso en una primera estructura abierta, documentada y reutilizable. A través de sus skills, permite identificar dónde buscar, qué fuentes priorizar y cómo orientarse dentro del complejo ecosistema institucional del sector minero energético colombiano.
 
-Este atlas es complementario al [Atlas de Navegación Ambiental de Colombia](https://github.com/Nicolas9714/atlas-ambiental-colombia), y sigue la misma estructura y convenciones.
+Este atlas hace parte del [Sistema Atlas Colombia](https://github.com/Nicolas9714/sistema-atlas-colombia) y cumple la versión v0.1 de su [especificación](https://github.com/Nicolas9714/sistema-atlas-colombia/blob/main/estandar/especificacion.md).
 
 ## Cómo usar las skills
 
@@ -22,13 +22,11 @@ Las skills por entidad contienen tres archivos Markdown que cubren navegación, 
 
 La forma recomendada es mantener este Atlas como un repositorio fuente, clonado junto al proyecto donde vas a trabajar, y copiar al proyecto solo las skills que necesitas. Así el Atlas queda separado del proyecto y cada proyecto conserva solo las skills que usa.
 
-Otra alternativa es descargar del repositorio solo las skills de interés.
-
-Flujo básico recomendado:
+Flujo básico:
 
 1. Descarga este Atlas.
 2. Ubícalo junto al proyecto donde vas a trabajar.
-3. Copia el Atlas completo o solo las skills que necesitas a la carpeta de skills de tu herramienta (Claude Code, Codex, Open Code, etc.).
+3. Copia el Atlas completo o solo las skills que necesitas a la carpeta de skills de tu herramienta (Claude Code, Codex, OpenCode, etc.).
 
 Para instalar varios atlas a la vez (con la orquestadora nacional incluida), usa el script `instalar.ps1` / `instalar.sh` del [Sistema Atlas Colombia](https://github.com/Nicolas9714/sistema-atlas-colombia).
 
@@ -55,10 +53,11 @@ proyectos/
 ### 2. Elige tu herramienta
 
 | Herramienta | Ruta de instalación |
-| --- | --- | 
+| --- | --- |
 | Claude Code | `.claude/skills/` |
 | Codex | `.agents/skills/` |
-| Claude.ai, ChatGPT, Gemini u otro | Adjunta los archivos o agrégalos al proyecto |
+| OpenCode | `.opencode/skills/` |
+| Claude.ai, ChatGPT u otro | Adjunta los archivos o agrégalos al proyecto |
 
 ---
 
@@ -80,6 +79,15 @@ mkdir -p .agents/skills
 cp -r ../atlas-minero-energetico-colombia/skills/* .agents/skills/
 ```
 
+En OpenCode:
+
+```bash
+mkdir -p .opencode/skills
+cp -r ../atlas-minero-energetico-colombia/skills/* .opencode/skills/
+```
+
+> Si ya tenés skills en `.claude/skills/`, OpenCode también los lee — no hace falta duplicar. Usá `.opencode/skills/` solo para skills nuevas o específicas de OpenCode.
+
 En Windows, usa PowerShell:
 
 ```powershell
@@ -89,7 +97,7 @@ Copy-Item -Recurse -Force `
   ".claude\skills\"
 ```
 
-Cambia `.claude\skills` por `.agents\skills` si estás usando Codex.
+Cambia `.claude\skills` por `.agents\skills` (Codex) u `.opencode\skills` (OpenCode) según tu herramienta.
 
 ### 4. Instala solo una entidad
 
@@ -109,6 +117,13 @@ mkdir -p .agents/skills
 cp -r ../atlas-minero-energetico-colombia/skills/navegar-creg .agents/skills/
 ```
 
+En OpenCode:
+
+```bash
+mkdir -p .opencode/skills
+cp -r ../atlas-minero-energetico-colombia/skills/navegar-creg .opencode/skills/
+```
+
 Reemplaza `navegar-creg` por la entidad que quieras instalar.
 
 En Windows, usa PowerShell:
@@ -120,7 +135,7 @@ Copy-Item -Recurse -Force `
   ".claude\skills\"
 ```
 
-Cambia `.claude\skills` por `.agents\skills` si estás usando Codex.
+Cambia `.claude\skills` por `.agents\skills` (Codex) u `.opencode\skills` (OpenCode) según tu herramienta.
 
 ### 5. Verifica la instalación
 
@@ -134,9 +149,14 @@ En Codex, inicia la herramienta desde la raíz del proyecto y menciona directame
 
 ---
 
-### Modelos de chat 
+### Claude.ai / ChatGPT (no recomendada)
 
-En Claude.ai, ChatGPT, Gemini u otras plataformas compatibles, puedes adjuntar la carpeta de una entidad o agregar sus archivos al proyecto correspondiente.
+Solo como referencia:
+
+- Claude.ai: *Personalizar* → *Skills* → *Añadir* → *Cargar una habilidad*
+- ChatGPT: *Complementos* → *Habilidades* → *Subir desde tu ordenador*
+
+> En ChatGPT, si no reconoce la skill en el chat normal, cambiá a modo *Work*.
 
 Cada skill incluye un `SKILL.md` como archivo principal. Las skills por entidad incluyen además `mapa-web.md` y `fuentes-prioritarias.md`.
 
@@ -149,6 +169,7 @@ Para usar las skills en todos tus proyectos, instálalas en las rutas globales d
 ```text
 Claude Code: ~/.claude/skills/
 Codex:       ~/.agents/skills/
+OpenCode:    ~/.opencode/skills/
 ```
 
 En Windows, "~" corresponde a "$env:USERPROFILE".
