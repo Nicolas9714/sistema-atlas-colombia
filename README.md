@@ -22,29 +22,21 @@
 
 ---
 
-Sistema Atlas Colombia es un proyecto abierto que busca democratizar el acceso a la información pública de Colombia. Este proyecto parte de la convicción de que hacer pública la información también implica hacer públicas sus rutas y conexiones. La información ya es pública en portales, micrositios, sistemas de información, geovisores, entre otros. Saber navegar esta información — dónde buscar, qué priorizar, qué ignorar, qué fuente contrastar — es un conocimiento práctico que suele permanecer invisible, acumulado en la experiencia de quienes conocen cada sector. Cada Atlas de Navegación convierte ese saber en una estructura abierta, documentada y reutilizable que opera directamente en herramientas de IA.
+Sistema Atlas Colombia es un proyecto abierto que busca democratizar el acceso a la información pública de Colombia. Este proyecto parte de la convicción de que hacer pública la información también implica hacer públicas sus rutas y conexiones. 
 
-
-El Sistema Atlas representa el nodo que articula y coordina los Atlas de Navegación sectoriales de Colombia: define el estándar que comparten, registra qué atlas existen y qué entidades cubre cada uno, y orquesta las intersecciones y consultas que cruzan de un sector a otro.
-
+Gran parte de la información ya es accesible en portales web, micrositios, sistemas de información, geovisores, entre otros. Pero ese saber navegar esta información — dónde buscar, qué priorizar, qué ignorar, qué fuente contrastar — es un conocimiento práctico que suele permanecer invisible, acumulado en la experiencia de quienes conocen cada sector. Cada Atlas de Navegación convierte ese saber en una estructura abierta, documentada y reutilizable que opera directamente en herramientas y modelos de IA.
 
 ## Cómo funciona
 
-Cada Atlas de Navegación es una colección abierta de skills — archivos Markdown instalables en agentes y herramientas de IA para código (Claude Code, Codex, entre otras) — que documentan cómo encontrar, usar y apropiar la información pública de un sector. Una skill por entidad, más una skill orquestadora que coordina las consultas que cruzan entidades del sector. 
+El Sistema Atlas representa el nodo que articula y coordina los Atlas de Navegación sectoriales de Colombia: define el estándar que comparten, registra qué atlas existen y qué entidades cubre cada uno, y orquesta las consultas que cruzan de un sector a otro.
 
-Este repositorio agrega la capa siguiente: la skill que coordina las consultas que cruzan atlas. Cómo se construye cada skill está definido en la [especificación](estandar/especificacion.md).
+Cada Atlas de Navegación es una colección abierta de skills que documentan y sistematizan cómo encontrar, usar y apropiar la información pública de un sector.
 
-El mismo patrón se repite en tres escalas: una unidad funciona sola, y una orquestadora opcional conecta varias.
+A cada entidad le corresponde una skill, y a cada atlas una skill orquestadora que coordina las consultas que cruzan entidades de un mismo sector. Este repositorio agrega una capa adicional: la skill que coordina las consultas que cruzan atlas (inter-atlas). Cómo se construye cada skill está definido en la [especificación](estandar/especificacion.md).
 
-| Escala | Unidad | Orquestadora | Qué resuelve |
-| --- | --- | --- | --- |
-| Entidad | Skill `navegar-*` (3 archivos: orientación, mapa web, fuentes) | — | «¿Dónde consulto los expedientes de la ANLA?» |
-| Atlas | Colección de skills de un sector | `atlas-orquestador-<sector>` del atlas | «¿Qué entidad del sector ambiental tiene los datos de calidad del agua?» |
-| Sistema | Los atlas registrados | `atlas-orquestador-colombia` (este repo) | «¿Qué títulos mineros hay en la zona y qué restricciones ambientales la limitan?» |
+Esta estructura permite que las skills por entidad y los atlas puedan funcionar de forma modular e independiente, y, además, de forma integrada.  
 
-Cada nivel enruta hacia abajo sin reemplazar lo de abajo: la respuesta específica siempre vive en la skill de la entidad. Si solo tienes un atlas instalado, todo sigue funcionando — el atlas resuelve su sector y te señala dónde vive el resto.
-
-Tres piezas de este repositorio sostienen el Sistema: el estándar define la forma común que hace interoperables los atlas, el registro sistematiza qué atlas existen y dónde termina la competencia de cada sector, y la skill orquestadora nacional pone esa estructura a operar enrutando cada tramo de una consulta al atlas que puede responderlo.
+Cada nivel enruta hacia abajo sin reemplazarlo. La respuesta e información específica siempre vive en la skill de la entidad. Si solo tienes un atlas instalado, todo sigue funcionando — el atlas resuelve su sector y te señala dónde vive el resto.
 
 ## Atlas registrados
 
@@ -131,8 +123,8 @@ Las rutas esperadas de estas consultas viven en [`examples/consultas-de-ejemplo.
 ## Para quién
 
 - investigadores y estudiantes que cruzan sectores en un mismo análisis
-- analistas y consultores de proyectos con componentes técnicos y ambientales
-- funcionarios públicos que coordinan entre entidades
+- analistas y consultores de proyectos con componentes técnicos 
+- funcionarios públicos que coordinan información entre entidades
 - equipos y personas que quieran construir un atlas nuevo sobre el estándar
 
 ## Cómo crear un atlas nuevo
@@ -141,7 +133,9 @@ Las rutas esperadas de estas consultas viven en [`examples/consultas-de-ejemplo.
 2. Usa las plantillas de [`estandar/templates/`](estandar/templates/) para las skills de entidad, y los dos atlas registrados como referencia de buenas prácticas.
 3. Cuando el atlas esté publicado, propón su registro con un pull request a [`registro.md`](registro.md), declarando la versión del estándar que cumple y agregando su tarjeta al banner de este README.
 
-La información pública se organiza según las competencias de las instituciones que la producen, y los problemas reales suelen abarcar varias: por eso cada atlas nuevo amplía lo que el Sistema puede responder. El estándar aplica a cualquier sector — agro, salud, transporte — y a cualquier país: un nodo nacional de otro país usa esta misma forma sin pedir permiso ni coordinación central, y los sistemas nacionales que comparten el estándar forman, entre sí, una red.
+El Sistema Atlas Colombia de este repositorio captura el hecho de que la información pública se organiza según las competencias de las instituciones que la producen, y los problemas reales suelen abarcar varias: por eso cada atlas nuevo amplía lo que el Sistema puede responder.
+
+El estándar aplica a cualquier sector — agro, salud, transporte — y a cualquier país: un nodo nacional de otro país puede usar esta misma estructura y los sistemas nacionales que comparten el estándar formarían, entre sí, una red.
 
 ## Contribuir
 
