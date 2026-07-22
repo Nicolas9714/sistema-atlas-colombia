@@ -71,7 +71,7 @@ sistema-atlas-colombia/
 
 Con los repos clonados junto a tu proyecto, un solo comando ejecutado desde la raíz del proyecto instala los atlas que pidas — y, si son dos o más, agrega automáticamente la orquestadora nacional:
 
-> El repo clonado y la copia en tu proyecto cumplen roles distintos: el clon es la fuente, que actualizas con `git pull`; la copia en tu carpeta de skills es la instalación, que tu proyecto controla y que solo cambia cuando decides reinstalar. Un mismo clon puede alimentar varios proyectos.
+> El repo clonado y la copia en tu proyecto cumplen roles distintos: el clon es la fuente, que actualizas con `git pull`; la copia en tu carpeta de skills es la instalación, que tu proyecto controla y que solo cambia cuando decides reinstalar. 
 
 ```powershell
 # Windows (PowerShell)
@@ -83,7 +83,14 @@ Con los repos clonados junto a tu proyecto, un solo comando ejecutado desde la r
 ../sistema-atlas-colombia/instalar.sh --atlas todos
 ```
 
-Opciones: `-Atlas ambiental,minero-energetico` elige atlas específicos; `-Destino .agents\skills` instala para Codex; `-Entidad navegar-anla` instala una sola skill; `-Global` instala en tu carpeta de usuario; `-Actualizar` hace `git pull` en los repos fuente antes de copiar. En bash las opciones son las mismas en minúscula (`--atlas`, `--destino`, `--entidad`, `--global`, `--actualizar`).
+Opciones: 
+
+-Elige atlas específicos: `"Atlas ambiental,minero-energetico,<nombre del atlas>`
+-Instala para Codex: `-Destino .agents\skills` 
+-Instala una sola skill: `-Entidad navegar-anla` 
+-Instala en tu carpeta de usuario:`-Global` 
+
+`-Actualizar` hace `git pull` en los repos fuente antes de copiar. En bash las opciones son las mismas en minúscula (`--atlas`, `--destino`, `--entidad`, `--global`, `--actualizar`).
 
 Los pasos siguientes muestran la instalación manual equivalente.
 
@@ -93,14 +100,23 @@ Sigue el README de cada atlas ([Atlas de Navegación Minero Energético de Colom
 
 ### 2. Agrega la orquestadora nacional
 
-Clona este repositorio junto a los atlas y copia la skill:
+Clona este repositorio junto a los atlas:
 
 ```bash
 git clone https://github.com/Nicolas9714/sistema-atlas-colombia.git
+```
+
+Copia la skill a la carpeta de skills de tu herramienta.
+
+**Claude Code**
+
+macOS / Linux / Git Bash:
+
+```bash
 cp -r ../sistema-atlas-colombia/skills/atlas-orquestador-colombia .claude/skills/
 ```
 
-En Windows, usa PowerShell:
+Windows (PowerShell):
 
 ```powershell
 Copy-Item -Recurse -Force `
@@ -108,7 +124,34 @@ Copy-Item -Recurse -Force `
   ".claude\skills\"
 ```
 
-Cambia `.claude\skills` por `.agents\skills` si estás usando Codex. En Claude.ai, ChatGPT, Gemini u otras plataformas, adjunta el `SKILL.md` de la skill o agrégalo al proyecto junto con los archivos de los atlas.
+**Codex**
+
+macOS / Linux / Git Bash:
+
+```bash
+cp -r ../sistema-atlas-colombia/skills/atlas-orquestador-colombia .agents/skills/
+```
+
+Windows (PowerShell):
+
+```powershell
+Copy-Item -Recurse -Force `
+  "..\sistema-atlas-colombia\skills\atlas-orquestador-colombia" `
+  ".agents\skills\"
+```
+
+**OpenCode**
+
+Usa `.opencode/skills/` con el mismo comando de copia; si ya tenés skills en `.claude/skills/`, OpenCode también los lee, sin necesidad de duplicar.
+
+**Claude.ai / ChatGPT (no recomendada)**
+
+Solo como referencia:
+
+- Claude.ai: *Personalizar* → *Skills* → *Añadir* → *Cargar una habilidad*
+- ChatGPT: *Complementos* → *Habilidades* → *Subir desde tu ordenador*
+
+> En ChatGPT, si no reconoce la skill en el chat normal, cambiá a modo *Work*.
 
 ### 3. Pregunta en lenguaje natural
 

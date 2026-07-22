@@ -84,6 +84,6 @@
   <g class="nodo entidad"><title>IDEAM</title><circle cx="895" cy="576" r="5"/><text x="913" y="581">IDEAM</text></g>
   <g class="nodo entidad"><title>IAvH</title><circle cx="895" cy="619" r="5"/><text x="913" y="624">IAvH</text></g>
   <g class="nodo entidad"><title>INVEMAR</title><circle cx="895" cy="662" r="5"/><text x="913" y="667">INVEMAR</text></g>
-  <g class="nodo entidad"><title>Parques Nacionales Naturales</title><circle cx="895" cy="705" r="5"/><text x="913" y="710">Parques Nacionales Naturales</text></g>
+  <g class="nodo entidad"><title>PNN</title><circle cx="895" cy="705" r="5"/><text x="913" y="710">PNN</text></g>
   <g class="nodo entidad"><title>UNGRD</title><circle cx="895" cy="748" r="5"/><text x="913" y="753">UNGRD</text></g>
 </svg>
