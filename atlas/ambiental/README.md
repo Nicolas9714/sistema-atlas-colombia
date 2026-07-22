@@ -14,7 +14,7 @@ Este atlas parte de la convicción de que hacer pública la información tambié
 
 Así, el atlas convierte ese conocimiento disperso en una primera estructura abierta, documentada y reutilizable. A través de sus skills, permite identificar dónde buscar, qué fuentes priorizar y cómo orientarse dentro del complejo ecosistema institucional del sector ambiental colombiano.
 
-Este atlas es complementario al [Atlas de Navegación Minero Energético de Colombia](https://github.com/Nicolas9714/atlas-minero-energetico-colombia), y sigue la misma estructura y convenciones.
+Este atlas hace parte del [Sistema Atlas Colombia](https://github.com/Nicolas9714/sistema-atlas-colombia) y cumple la versión v0.1 de su [especificación](https://github.com/Nicolas9714/sistema-atlas-colombia/blob/main/estandar/especificacion.md).
 
 ## Cómo usar las skills
 
@@ -26,7 +26,7 @@ Flujo básico:
 
 1. Descarga este Atlas.
 2. Ubícalo junto al proyecto donde vas a trabajar.
-3. Copia el Atlas completo o solo las skills que necesitas a la carpeta de skills de tu herramienta (Claude Code, Codex, Open Code, etc.).
+3. Copia el Atlas completo o solo las skills que necesitas a la carpeta de skills de tu herramienta (Claude Code, Codex, OpenCode, etc.).
 
 Para instalar varios atlas a la vez (con la orquestadora nacional incluida), usa el script `instalar.ps1` / `instalar.sh` del [Sistema Atlas Colombia](https://github.com/Nicolas9714/sistema-atlas-colombia).
 
@@ -56,7 +56,8 @@ proyectos/
 | --- | --- |
 | Claude Code | `.claude/skills/` |
 | Codex | `.agents/skills/` |
-| Claude.ai, ChatGPT, Gemini u otro | Adjunta los archivos o agrégalos al proyecto |
+| OpenCode | `.opencode/skills/` |
+| Claude.ai, ChatGPT u otro | Adjunta los archivos o agrégalos al proyecto |
 
 ---
 
@@ -78,6 +79,15 @@ mkdir -p .agents/skills
 cp -r ../atlas-ambiental-colombia/skills/* .agents/skills/
 ```
 
+En OpenCode:
+
+```bash
+mkdir -p .opencode/skills
+cp -r ../atlas-ambiental-colombia/skills/* .opencode/skills/
+```
+
+> Si ya tenés skills en `.claude/skills/`, OpenCode también los lee — no hace falta duplicar. Usá `.opencode/skills/` solo para skills nuevas o específicas de OpenCode.
+
 En Windows, usa PowerShell:
 
 ```powershell
@@ -87,7 +97,7 @@ Copy-Item -Recurse -Force `
   ".claude\skills\"
 ```
 
-Cambia `.claude\skills` por `.agents\skills` si estás usando Codex.
+Cambia `.claude\skills` por `.agents\skills` (Codex) u `.opencode\skills` (OpenCode) según tu herramienta.
 
 ### 4. Instala solo una entidad
 
@@ -107,6 +117,13 @@ mkdir -p .agents/skills
 cp -r ../atlas-ambiental-colombia/skills/navegar-minambiente .agents/skills/
 ```
 
+En OpenCode:
+
+```bash
+mkdir -p .opencode/skills
+cp -r ../atlas-ambiental-colombia/skills/navegar-minambiente .opencode/skills/
+```
+
 Reemplaza `navegar-minambiente` por la entidad que quieras instalar.
 
 En Windows, usa PowerShell:
@@ -118,7 +135,7 @@ Copy-Item -Recurse -Force `
   ".claude\skills\"
 ```
 
-Cambia `.claude\skills` por `.agents\skills` si estás usando Codex.
+Cambia `.claude\skills` por `.agents\skills` (Codex) u `.opencode\skills` (OpenCode) según tu herramienta.
 
 ### 5. Verifica la instalación
 
@@ -132,9 +149,14 @@ En Codex, inicia la herramienta desde la raíz del proyecto y menciona directame
 
 ---
 
-### Modelos de chat
+### Claude.ai / ChatGPT (no recomendada)
 
-En Claude.ai, ChatGPT, Gemini u otras plataformas compatibles, puedes adjuntar la carpeta de una entidad o agregar sus archivos al proyecto correspondiente.
+Solo como referencia:
+
+- Claude.ai: *Personalizar* → *Skills* → *Añadir* → *Cargar una habilidad*
+- ChatGPT: *Complementos* → *Habilidades* → *Subir desde tu ordenador*
+
+> En ChatGPT, si no reconoce la skill en el chat normal, cambiá a modo *Work*.
 
 Cada skill incluye un `SKILL.md` como archivo principal. Las skills por entidad incluyen además `mapa-web.md` y `fuentes-prioritarias.md`.
 
@@ -147,6 +169,7 @@ Para usar las skills en todos tus proyectos, instálalas en las rutas globales d
 ```text
 Claude Code: ~/.claude/skills/
 Codex:       ~/.agents/skills/
+OpenCode:    ~/.opencode/skills/
 ```
 
 En Windows, "~" corresponde a "$env:USERPROFILE".
