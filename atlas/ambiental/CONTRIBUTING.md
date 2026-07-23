@@ -28,7 +28,7 @@ Si encontraste un enlace desactualizado, una fuente nueva o un ejemplo aplicado 
 
 Si una entidad del sector ambiental no está cubierta:
 
-1. Crea `skills/navegar-<nueva-entidad>/` con los tres archivos base — `SKILL.md`, `mapa-web.md` y `fuentes-prioritarias.md` — usando como punto de partida las plantillas del [Sistema Atlas Colombia](https://github.com/Nicolas9714/sistema-atlas-colombia/tree/main/estandar/templates). La estructura de tres archivos y el nombre `navegar-*` son parte de la [especificación](https://github.com/Nicolas9714/sistema-atlas-colombia/blob/main/estandar/especificacion.md) que este atlas cumple.
+1. Crea `skills/navegar-<nueva-entidad>/` con los tres archivos base — `SKILL.md`, `mapa-web.md` y `fuentes-prioritarias.md` — usando como punto de partida las plantillas del [Sistema Atlas Colombia](../../estandar/templates). La estructura de tres archivos y el nombre `navegar-*` son parte de la [especificación](../../estandar/especificacion.md) que este atlas cumple.
 2. Completa el `SKILL.md` con el front matter (`name`, `description`) y la descripción de la entidad.
 3. Verifica que las fuentes citadas estén activas y accesibles, y registra la fecha de verificación (ver convenciones).
 4. Agrega la entidad a la tabla de "Entidades cubiertas" del `README.md`.

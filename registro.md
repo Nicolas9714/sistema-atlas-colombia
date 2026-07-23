@@ -6,8 +6,8 @@
 
 | Atlas | Sector | Repositorio | Estándar declarado |
 | --- | --- | --- | --- |
-| Atlas de Navegación Minero Energético de Colombia | Minero energético | [atlas-minero-energetico-colombia](https://github.com/Nicolas9714/atlas-minero-energetico-colombia) | v0.1 |
-| Atlas de Navegación Ambiental de Colombia | Ambiental | [atlas-ambiental-colombia](https://github.com/Nicolas9714/atlas-ambiental-colombia) | v0.1 |
+| Atlas de Navegación Minero Energético de Colombia | Minero energético | [`atlas/minero-energetico/`](atlas/minero-energetico/) | v0.1 |
+| Atlas de Navegación Ambiental de Colombia | Ambiental | [`atlas/ambiental/`](atlas/ambiental/) | v0.1 |
 
 ## Entidades por atlas
 

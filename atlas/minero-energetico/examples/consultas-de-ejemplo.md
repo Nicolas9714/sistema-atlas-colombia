@@ -18,13 +18,13 @@ Ruta esperada: UPME (BECO y tableros de indicadores) → MinEnergía (IntegraME)
 
 **«¿Qué títulos y solicitudes mineras existen en el suroeste de Antioquia, qué potencial geológico tiene la zona y qué restricciones ambientales la limitan?»**
 
-Ruta esperada: ANM (AnnA Minería: cuadrícula y títulos) → SGC (mapa geológico MIIG y SIMMA). El tramo de restricciones ambientales vive en el [Atlas de Navegación Ambiental de Colombia](https://github.com/Nicolas9714/atlas-ambiental-colombia); el enrutamiento entre atlas, en [Sistema Atlas Colombia](https://github.com/Nicolas9714/sistema-atlas-colombia).
+Ruta esperada: ANM (AnnA Minería: cuadrícula y títulos) → SGC (mapa geológico MIIG y SIMMA). El tramo de restricciones ambientales vive en el Atlas de Navegación Ambiental de Colombia; el enrutamiento entre atlas, en [Sistema Atlas Colombia](../../../examples/consultas-de-ejemplo.md).
 
 ---
 
 **«¿Qué proyectos de hidrocarburos con licencia activa operan en el Magdalena Medio, qué obligaciones ambientales tienen y qué muestra el monitoreo de sus cuencas?»**
 
-Ruta esperada: ANH (mapa de tierras y normativa sectorial: contratos y áreas asignadas). Los tramos de licencias, seguimiento y monitoreo de cuencas viven en el [Atlas de Navegación Ambiental de Colombia](https://github.com/Nicolas9714/atlas-ambiental-colombia); el enrutamiento entre atlas, en [Sistema Atlas Colombia](https://github.com/Nicolas9714/sistema-atlas-colombia).
+Ruta esperada: ANH (mapa de tierras y normativa sectorial: contratos y áreas asignadas). Los tramos de licencias, seguimiento y monitoreo de cuencas viven en el Atlas de Navegación Ambiental de Colombia; el enrutamiento entre atlas, en [Sistema Atlas Colombia](../../../examples/consultas-de-ejemplo.md).
 
 ---
 
@@ -48,4 +48,4 @@ Ruta esperada: CREG (Gestor Normativo: fórmula tarifaria y componentes) → Sup
 
 **«¿Cuánta capacidad solar y eólica entró en operación frente a la meta 6GW, qué proyectos siguen en licenciamiento y cuánto generan los que ya operan?»**
 
-Ruta esperada: UPME (Plan 6GW+: monitoreo oficial, enlazado desde la home de MinEnergía) → XM (SIMEM: generación horaria por fuente) → UPME (plan de expansión y potencial energético). El tramo de licenciamiento vive en el [Atlas de Navegación Ambiental de Colombia](https://github.com/Nicolas9714/atlas-ambiental-colombia); el enrutamiento entre atlas, en [Sistema Atlas Colombia](https://github.com/Nicolas9714/sistema-atlas-colombia).
+Ruta esperada: UPME (Plan 6GW+: monitoreo oficial, enlazado desde la home de MinEnergía) → XM (SIMEM: generación horaria por fuente) → UPME (plan de expansión y potencial energético). El tramo de licenciamiento vive en el Atlas de Navegación Ambiental de Colombia; el enrutamiento entre atlas, en [Sistema Atlas Colombia](../../../examples/consultas-de-ejemplo.md).

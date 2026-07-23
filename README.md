@@ -5,13 +5,13 @@
   <table>
     <tr>
       <td align="center" width="180">
-        <a href="https://github.com/Nicolas9714/atlas-minero-energetico-colombia">
+        <a href="atlas/minero-energetico/">
           <img src="atlas/minero-energetico/assets/logo-atlas-minero-energetico.svg" width="90" alt="Atlas de Navegación Minero Energético de Colombia"><br>
           <strong>Atlas de Navegación<br>Minero Energético<br>de Colombia</strong>
         </a>
       </td>
       <td align="center" width="180">
-        <a href="https://github.com/Nicolas9714/atlas-ambiental-colombia">
+        <a href="atlas/ambiental/">
           <img src="atlas/ambiental/assets/logo-atlas-ambiental.svg" width="90" alt="Atlas de Navegación Ambiental de Colombia"><br>
           <strong>Atlas de Navegación<br>Ambiental<br>de Colombia</strong>
         </a>
@@ -42,8 +42,8 @@ Cada nivel enruta hacia abajo sin reemplazarlo. La respuesta e información espe
 
 | Atlas | Sector | Entidades | Repositorio |
 | --- | --- | --- | --- |
-| Atlas de Navegación Minero Energético de Colombia | Minero energético | 12 | [atlas-minero-energetico-colombia](https://github.com/Nicolas9714/atlas-minero-energetico-colombia) |
-| Atlas de Navegación Ambiental de Colombia | Ambiental | 7 | [atlas-ambiental-colombia](https://github.com/Nicolas9714/atlas-ambiental-colombia) |
+| Atlas de Navegación Minero Energético de Colombia | Minero energético | 12 | [`atlas/minero-energetico/`](atlas/minero-energetico/) |
+| Atlas de Navegación Ambiental de Colombia | Ambiental | 7 | [`atlas/ambiental/`](atlas/ambiental/) |
 
 <img src="assets/estructura-sistema-atlas.svg" width="100%" alt="Árbol de la estructura del Sistema Atlas Colombia">
 
