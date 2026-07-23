@@ -1,6 +1,6 @@
 # Guía de contribución
 
-Gracias por querer mejorar el Sistema Atlas Colombia. Aquí se explica cómo proponer cambios. Si tu contribución es sobre el contenido de un sector (una fuente nueva, un enlace roto, una entidad sin cubrir), el lugar correcto es el repositorio del atlas correspondiente — ver [Atlas registrados](README.md#atlas-registrados); este repositorio recibe contribuciones sobre las piezas del Sistema: el registro, el estándar y la orquestadora nacional.
+Gracias por querer mejorar el Sistema Atlas Colombia. Aquí se explica cómo proponer cambios. Si tu contribución es sobre el contenido de un sector (una fuente nueva, un enlace roto, una entidad sin cubrir), ubícala en la subcarpeta del atlas correspondiente — ver [Atlas registrados](README.md#atlas-registrados). El mismo monorepo recibe cambios al contenido sectorial y a las piezas compartidas del Sistema: registro, estándar, instaladores y orquestadora nacional.
 
 ## Cómo enviar un cambio
 
@@ -21,7 +21,7 @@ Si construiste un atlas compatible con el estándar (ver [Cómo crear un atlas n
 
 1. Agrega su fila en la tabla de atlas de [`registro.md`](registro.md), declarando la versión de la especificación que cumple.
 2. Agrega su tabla de entidades y las fronteras temáticas nuevas que introduce, en el mismo `registro.md`.
-3. Agrega su fila en la tabla «Atlas registrados» del `README.md` y su tarjeta en el banner (logo en `assets/` + nombre del atlas enlazado).
+3. Agrega su fila en la tabla «Atlas registrados» del `README.md` y su tarjeta en el banner. Si el atlas vive en este monorepo, el logo va en `atlas/<sector>/assets/`; si es externo, permanece en el `assets/` de su propio repositorio.
 
 ### 2. Proponer cambios al estándar
 

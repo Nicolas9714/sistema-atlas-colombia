@@ -1,0 +1,35 @@
+# Herramientas y configuración local
+.agents/
+.claude/
+.opencode/
+.vscode/
+.idea/
+
+# Python y entornos
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.env
+.env.*
+!.env.example
+
+# Cachés, logs y temporales
+.cache/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.log
+logs/
+*.tmp
+*.bak
+*.swp
+*.swo
+*~
+.audit-*/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini

@@ -58,8 +58,8 @@ examples/balance-energetico-consumo-final/*.xlk
 
 # templates/lineamiento-profundidad-mapa.md, templates/briefing-*.md,
 # templates/herramientas-de-exploracion.md, templates/pruebas-skills.md,
-# internal_tools/ y sesiones/ ya no viven en este repo — se movieron a
-# ../atlas-toolkit/ (carpeta hermana, compartida con Atlas Ambiental, sin remoto en GitHub)
+# internal_tools/ y sesiones/ no forman parte del atlas publicable; viven en
+# atlas-toolkit, un espacio de trabajo local externo al monorepo.
 
 # Frontend en desarrollo (uso interno)
 red_interactiva/
