@@ -55,7 +55,7 @@ Más ejemplos:
 
 ## Instalación
 
-Las skills de este atlas se instalan con el instalador del Sistema — un solo comando para uno, varios o todos los atlas. Ver [instalación en el README del Sistema Atlas Colombia](../../README.md).
+Las skills de este atlas se instalan con el instalador del Sistema — un solo comando para uno, varios o todos los atlas. Ver [instalación en el README del Sistema Atlas Colombia](../../README.md#instalación).
 
 ## Contribuir
 

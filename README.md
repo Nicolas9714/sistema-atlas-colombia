@@ -54,31 +54,34 @@ El detalle de entidades y fronteras temáticas vive en [`registro.md`](registro.
 ```text
 sistema-atlas-colombia/
 ├── registro.md       → Atlas existentes, entidades de cada uno, fronteras temáticas
-├── skills/
-│   └── atlas-orquestador-colombia/  → Skill que enruta consultas entre atlas
+├── instalar.ps1 / instalar.sh       → Instalador de skills (misma CLI en ambos)
 ├── estandar/
 │   ├── especificacion.md            → El estándar de los atlas (versionado)
 │   └── templates/                   → Plantillas para construir nuevas skills
+├── atlas/
+│   ├── nacional/         → Nodo nacional: atlas-orquestador-colombia (enruta ENTRE atlas)
+│   ├── ambiental/        → Atlas ambiental: README propio + skills/ + examples/
+│   ├── minero-energetico/ → Atlas minero energético: README propio + skills/ + examples/
+│   └── intersectorial/   → Entidades transversales (DANE, DNP, …)
 └── examples/
     └── consultas-de-ejemplo.md      → Consultas que cruzan atlas, con su ruta esperada
 ```
 
-## Cómo usar la skill orquestadora nacional
+## Instalación
 
-`atlas-orquestador-colombia` solo es útil si tienes instalados dos o más atlas. Cada atlas funciona completo por sí solo; esta skill agrega el enrutamiento entre ellos.
+Instala uno, varios o todos los atlas con un solo comando. Cada atlas funciona completo por sí solo; al instalar dos o más, se agrega automáticamente `atlas-orquestador-colombia`, la skill que enruta las consultas entre atlas.
 
 ### Instalación con script
 
-Clona los repos de los atlas junto a tu proyecto:
+Clona el monorepo junto a tu proyecto:
 
 ```bash
-git clone https://github.com/Nicolas9714/atlas-minero-energetico-colombia.git
-git clone https://github.com/Nicolas9714/atlas-ambiental-colombia.git
+git clone https://github.com/Nicolas9714/sistema-atlas-colombia.git
 ```
 
-Con los repos clonados, un solo comando ejecutado desde la raíz del proyecto instala los atlas que pidas — y, si son dos o más, agrega automáticamente la orquestadora nacional:
+Un solo comando ejecutado desde la raíz de tu proyecto instala los atlas que pidas — y, si son dos o más, agrega automáticamente la orquestadora nacional:
 
-> El repo clonado y la copia en tu proyecto cumplen roles distintos: el clon es la fuente, que actualizas con `git pull`; la copia en tu carpeta de skills es la instalación, que tu proyecto controla y que solo cambia cuando decides reinstalar.
+> El repo clonado y la copia en tu proyecto cumplen roles distintos: el clon es la fuente, que actualizas con `git pull` (o con `-Actualizar` / `--actualizar` al instalar); la copia en tu carpeta de skills es la instalación, que tu proyecto controla y que solo cambia cuando decides reinstalar.
 
 ```powershell
 # Windows (PowerShell)
@@ -98,72 +101,43 @@ Con los repos clonados, un solo comando ejecutado desde la raíz del proyecto in
 | Instala una sola skill de entidad | `-Entidad navegar-anla` | `--entidad navegar-anla` |
 | Instala para Codex en vez de Claude Code | `-Destino .agents\skills` | `--destino .agents/skills` |
 | Instala en tu carpeta de usuario (global) | `-Global` | `--global` |
-| Hace `git pull` en los repos fuente antes de copiar | `-Actualizar` | `--actualizar` |
+| Hace `git pull` del monorepo antes de copiar | `-Actualizar` | `--actualizar` |
 
 `-Entidad` / `--entidad` solo se puede usar con un único atlas en `-Atlas`.
 
 Los pasos siguientes muestran la instalación manual equivalente.
 
-### 1. Instala los atlas
+### Instalación manual
 
-Sigue el README de cada atlas ([Atlas de Navegación Minero Energético de Colombia](https://github.com/Nicolas9714/atlas-minero-energetico-colombia), [Atlas de Navegación Ambiental de Colombia](https://github.com/Nicolas9714/atlas-ambiental-colombia)): clonar el repo junto a tu proyecto y copiar sus skills a la carpeta de skills de tu herramienta.
-
-### 2. Agrega la orquestadora nacional
-
-Clona este repositorio junto a los atlas:
-
-```bash
-git clone https://github.com/Nicolas9714/sistema-atlas-colombia.git
-```
-
-Copia la skill a la carpeta de skills de tu herramienta.
-
-**Claude Code**
+Copia las skills de cada atlas desde su subcarpeta del monorepo a la carpeta de skills de tu herramienta. Para el atlas ambiental en Claude Code:
 
 macOS / Linux / Git Bash:
 
 ```bash
-cp -r ../sistema-atlas-colombia/skills/atlas-orquestador-colombia .claude/skills/
+cp -r sistema-atlas-colombia/atlas/ambiental/skills/* .claude/skills/
 ```
 
 Windows (PowerShell):
 
 ```powershell
 Copy-Item -Recurse -Force `
-  "..\sistema-atlas-colombia\skills\atlas-orquestador-colombia" `
+  "sistema-atlas-colombia\atlas\ambiental\skills\*" `
   ".claude\skills\"
 ```
 
-**Codex**
+Cambia `ambiental` por `minero-energetico` para el otro atlas, y `.claude\skills` por `.agents\skills` (Codex) u `.opencode\skills` (OpenCode) según tu herramienta. Si ya tenés skills en `.claude/skills/`, OpenCode también las lee, sin necesidad de duplicar.
 
-macOS / Linux / Git Bash:
+Si instalas dos o más atlas, agrega también la orquestadora nacional desde `atlas/nacional/`:
 
 ```bash
-cp -r ../sistema-atlas-colombia/skills/atlas-orquestador-colombia .agents/skills/
+cp -r sistema-atlas-colombia/atlas/nacional/skills/atlas-orquestador-colombia .claude/skills/
 ```
 
-Windows (PowerShell):
+Para instalación global, usa la carpeta del usuario en vez del proyecto (`~/.claude/skills/`, `~/.agents/skills/`, `~/.opencode/skills/`; en Windows `~` corresponde a `$env:USERPROFILE`).
 
-```powershell
-Copy-Item -Recurse -Force `
-  "..\sistema-atlas-colombia\skills\atlas-orquestador-colombia" `
-  ".agents\skills\"
-```
+> **Claude.ai / ChatGPT (no recomendada):** solo como referencia — Claude.ai: *Personalizar* → *Skills* → *Añadir* → *Cargar una habilidad*; ChatGPT: *Complementos* → *Habilidades* → *Subir desde tu ordenador* (si no reconoce la skill en el chat normal, cambiá a modo *Work*).
 
-**OpenCode**
-
-Usa `.opencode/skills/` con el mismo comando de copia; si ya tenés skills en `.claude/skills/`, OpenCode también los lee, sin necesidad de duplicar.
-
-**Claude.ai / ChatGPT (no recomendada)**
-
-Solo como referencia:
-
-- Claude.ai: *Personalizar* → *Skills* → *Añadir* → *Cargar una habilidad*
-- ChatGPT: *Complementos* → *Habilidades* → *Subir desde tu ordenador*
-
-> En ChatGPT, si no reconoce la skill en el chat normal, cambiá a modo *Work*.
-
-### 3. Pregunta en lenguaje natural
+### Pregunta en lenguaje natural
 
 Cuando la consulta cruce sectores, la skill identifica qué parte responde cada atlas y en qué orden:
 
