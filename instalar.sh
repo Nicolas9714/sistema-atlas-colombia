@@ -2,9 +2,9 @@
 #
 # Instala skills de los atlas sectoriales del Sistema Atlas Colombia.
 #
-# Copia las skills de uno o varios atlas hermanos (repos que viven junto a
-# este) hacia una carpeta destino, típicamente dentro del proyecto del
-# usuario (ej. .claude/skills para Claude Code, .agents/skills para Codex).
+# Copia las skills de uno o varios atlas sectoriales (subcarpetas atlas/<alias>
+# de este monorepo) hacia una carpeta destino, típicamente dentro del proyecto
+# del usuario (ej. .claude/skills para Claude Code, .agents/skills para Codex).
 #
 # Ejemplos:
 #   ./instalar.sh --atlas ambiental
@@ -13,11 +13,11 @@
 #
 set -euo pipefail
 
-# Tabla de atlas registrados: alias -> nombre de carpeta del repo hermano.
+# Tabla de atlas registrados: alias -> nombre de la subcarpeta bajo atlas/.
 # Al registrar un atlas nuevo, agregar una línea aquí.
 declare -A atlas_registrados=(
-    ["ambiental"]="atlas-ambiental-colombia"
-    ["minero-energetico"]="atlas-minero-energetico-colombia"
+    ["ambiental"]="ambiental"
+    ["minero-energetico"]="minero-energetico"
 )
 
 atlas_arg=""
@@ -73,8 +73,9 @@ if [ -z "$atlas_arg" ]; then
     exit 1
 fi
 
-raiz_repos="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 raiz_sistema="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# En el monorepo, las skills de cada atlas viven en atlas/<alias>/skills.
+raiz_atlas="$raiz_sistema/atlas"
 
 # --- Expandir "todos" y resolver alias pedidos ---
 IFS=',' read -r -a atlas_pedidos_raw <<< "$atlas_arg"
@@ -109,14 +110,13 @@ for a in "${alias_pedidos[@]}"; do
     fi
 done
 
-# --- Validación: repos hermanos existen ---
+# --- Validación: subcarpetas de atlas existen en el monorepo ---
 for a in "${alias_pedidos[@]}"; do
     carpeta="${atlas_registrados[$a]}"
-    ruta_repo="$raiz_repos/$carpeta"
-    if [ ! -d "$ruta_repo" ]; then
-        echo "Error: no se encontró el repo del atlas '$a' en $ruta_repo" >&2
-        echo "Clónalo primero, desde $raiz_repos, con:" >&2
-        echo "  git clone https://github.com/Nicolas9714/$carpeta.git" >&2
+    ruta_atlas="$raiz_atlas/$carpeta"
+    if [ ! -d "$ruta_atlas" ]; then
+        echo "Error: no se encontró la carpeta del atlas '$a' en $ruta_atlas" >&2
+        echo "Debería existir en este monorepo; verifica que el checkout esté completo." >&2
         exit 1
     fi
 done
@@ -134,7 +134,7 @@ fi
 # --- Validación: carpetas de --entidad existen dentro del atlas ---
 if [ -n "$entidad_arg" ]; then
     carpeta_atlas="${atlas_registrados[${alias_pedidos[0]}]}"
-    ruta_skills="$raiz_repos/$carpeta_atlas/skills"
+    ruta_skills="$raiz_atlas/$carpeta_atlas/skills"
     skills_disponibles="$(ls "$ruta_skills")"
     for e in "${entidades[@]}"; do
         if ! grep -qx "$e" <<< "$skills_disponibles"; then
@@ -154,15 +154,7 @@ fi
 
 # --- Actualizar repos fuente (y este repo) antes de copiar ---
 if [ "$actualizar" -eq 1 ]; then
-    for a in "${alias_pedidos[@]}"; do
-        carpeta="${atlas_registrados[$a]}"
-        ruta_repo="$raiz_repos/$carpeta"
-        echo "Actualizando $carpeta..."
-        if ! git -C "$ruta_repo" pull; then
-            echo "Advertencia: git pull falló en $ruta_repo, se continúa con la versión local." >&2
-        fi
-    done
-    echo "Actualizando este repo (Sistema Atlas Colombia)..."
+    echo "Actualizando el monorepo (Sistema Atlas Colombia)..."
     if ! git -C "$raiz_sistema" pull; then
         echo "Advertencia: git pull falló en $raiz_sistema, se continúa con la versión local." >&2
     fi
@@ -176,7 +168,7 @@ declare -a instaladas_atlas=()
 
 for a in "${alias_pedidos[@]}"; do
     carpeta="${atlas_registrados[$a]}"
-    ruta_skills="$raiz_repos/$carpeta/skills"
+    ruta_skills="$raiz_atlas/$carpeta/skills"
 
     if [ -n "$entidad_arg" ]; then
         for e in "${entidades[@]}"; do
@@ -196,7 +188,7 @@ done
 
 # --- Regla de composición: 2+ atlas => copiar también la orquestadora nacional ---
 if [ "${#alias_pedidos[@]}" -gt 1 ]; then
-    ruta_orquestador="$raiz_sistema/skills/atlas-orquestador-colombia"
+    ruta_orquestador="$raiz_sistema/atlas/nacional/skills/atlas-orquestador-colombia"
     cp -R "$ruta_orquestador" "$destino_efectivo/"
     instaladas_skill+=("atlas-orquestador-colombia")
     instaladas_atlas+=("sistema-atlas-colombia")
