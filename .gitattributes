@@ -1,0 +1,3 @@
+# Los scripts de shell deben conservar saltos de línea LF en todo sistema:
+# un .sh con CRLF falla al ejecutarse en Linux/macOS (y en CI).
+*.sh text eol=lf
