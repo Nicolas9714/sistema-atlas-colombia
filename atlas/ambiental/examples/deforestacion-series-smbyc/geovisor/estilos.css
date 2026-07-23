@@ -1,0 +1,407 @@
+:root {
+  /* Esmeralda: identidad del Atlas, títulos, controles y acentos. */
+  --acc: #3ECF8E;
+  --acc-texto: #3ECF8E;
+
+  /* Neutros: cuerpo de texto, etiquetas, valores, leyenda, tooltips, pie. */
+  --bg: #0F1512;
+  --fg: #E6E8EB;             /* texto principal, modo oscuro */
+  --fg-secundario: #9CA3AF;  /* texto secundario, modo oscuro */
+  --linea: rgba(230, 232, 235, 0.16);
+  --lienzo: #141C18;
+  --panel-fondo: rgba(17, 24, 39, 0.85);
+  --panel-borde: rgba(62, 207, 142, 0.22);
+
+  /* Colores secundarios por capa. */
+  --color-runap: #38BDF8;
+  --color-reserva: #F59E0B;
+}
+:root[data-theme="claro"] {
+  --acc-texto: #047857;
+
+  --bg: #FBFBF9;
+  --fg: #1F2937;             /* texto principal, modo claro */
+  --fg-secundario: #5B6472;  /* texto secundario, modo claro (AA sobre panel real) */
+  --linea: rgba(31, 41, 55, 0.16);
+  --lienzo: #ffffff;
+  --panel-fondo: rgba(255, 255, 255, 0.88);
+  --panel-borde: rgba(4, 120, 87, 0.2);
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  overflow: hidden;
+}
+
+#lienzo-mapa {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: var(--lienzo);
+}
+
+/* ---------------------------------------------------------------------
+   Panel de controles flotante, izquierda
+   --------------------------------------------------------------------- */
+#controles-izq {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  background: var(--panel-fondo);
+  border: 1px solid var(--panel-borde);
+  border-radius: 12px;
+  padding: 0;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+  min-width: 300px;
+  backdrop-filter: blur(6px);
+}
+#btn-colapsar-capas {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 10px 12px;
+  border: 0;
+  background: transparent;
+  color: var(--fg);
+  font-family: inherit;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: left;
+}
+#btn-colapsar-capas:hover { color: var(--acc-texto); }
+#btn-colapsar-capas:focus-visible {
+  outline: 2px solid var(--acc-texto);
+  outline-offset: -3px;
+}
+.titulo-control { display: inline-flex; align-items: center; gap: 7px; }
+.chevron-control { color: var(--fg-secundario); font-size: 0.95rem; }
+#contenido-controles {
+  display: grid;
+  gap: 10px;
+  padding: 0 12px 12px;
+  border-top: 1px solid var(--linea);
+  padding-top: 10px;
+}
+#controles-izq.colapsado { min-width: 0; }
+#controles-izq.colapsado #contenido-controles { display: none; }
+.fila-controles {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.fila-capas {
+  flex-direction: column;
+  align-items: stretch;
+  flex-wrap: nowrap;
+}
+.fila-capas .btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  text-align: left;
+}
+.btn {
+  font-family: inherit;
+  border: 1px solid var(--linea);
+  background: transparent;
+  color: var(--fg);
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.78rem;
+  white-space: nowrap;
+  transition: background 0.12s, border-color 0.12s, color 0.12s;
+}
+.btn:hover { border-color: var(--acc-texto); color: var(--acc-texto); }
+.btn:focus-visible {
+  outline: 2px solid var(--acc-texto);
+  outline-offset: 2px;
+}
+.btn.activo {
+  background: var(--acc);
+  border-color: var(--acc);
+  color: #0A140F;
+}
+
+.fila-anio { flex-wrap: nowrap; }
+#btn-reproducir {
+  font-family: inherit;
+  font-size: 0.85rem;
+  padding: 6px 10px;
+  border: 1px solid var(--linea);
+  background: transparent;
+  color: var(--fg);
+  border-radius: 6px;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.12s, border-color 0.12s, color 0.12s;
+}
+#btn-reproducir:hover { border-color: var(--acc-texto); color: var(--acc-texto); }
+#btn-reproducir:focus-visible {
+  outline: 2px solid var(--acc-texto);
+  outline-offset: 2px;
+}
+#btn-reproducir.activo {
+  border-color: var(--acc-texto);
+  color: var(--acc-texto);
+  background: rgba(62, 207, 142, 0.12);
+}
+#slider-anio {
+  flex: 1;
+  min-width: 130px;
+  accent-color: var(--acc-texto);
+}
+#slider-anio:focus-visible {
+  outline: 2px solid var(--acc-texto);
+  outline-offset: 3px;
+}
+.etiqueta-slider {
+  font-weight: 600;
+  font-size: 0.9rem;
+  min-width: 38px;
+  text-align: right;
+  color: var(--fg);
+  flex-shrink: 0;
+}
+#modo-tema {
+  font-family: inherit;
+  font-size: 0.76rem;
+  padding: 6px 12px;
+  border: 1px solid var(--linea);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--fg);
+  cursor: pointer;
+  white-space: nowrap;
+}
+#modo-tema:hover { border-color: var(--acc-texto); color: var(--acc-texto); }
+#modo-tema:focus-visible {
+  outline: 2px solid var(--acc-texto);
+  outline-offset: 2px;
+}
+
+/* ---------------------------------------------------------------------
+   Sidebar flotante, derecha
+   --------------------------------------------------------------------- */
+#sidebar {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 1000;
+  width: 340px;
+  max-height: calc(100vh - 32px);
+  display: flex;
+  flex-direction: column;
+  background: var(--panel-fondo);
+  border: 1px solid var(--panel-borde);
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(6px);
+  overflow: hidden;
+}
+#sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 14px 14px 12px;
+  border-bottom: 1px solid var(--linea);
+}
+#sidebar-header h1 {
+  font-size: 0.98rem;
+  font-weight: 600;
+  line-height: 1.35;
+  margin: 0;
+  letter-spacing: 0.01em;
+  color: var(--acc-texto);
+}
+#btn-colapsar-sidebar {
+  flex-shrink: 0;
+  border: 1px solid var(--linea);
+  background: transparent;
+  color: var(--fg);
+  border-radius: 6px;
+  width: 24px;
+  height: 24px;
+  line-height: 1;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+#btn-colapsar-sidebar:hover { border-color: var(--acc-texto); color: var(--acc-texto); }
+#btn-colapsar-sidebar:focus-visible {
+  outline: 2px solid var(--acc-texto);
+  outline-offset: 2px;
+}
+
+.contenido-sidebar {
+  padding: 12px 14px;
+  overflow-y: auto;
+  display: grid;
+  gap: 12px;
+}
+.tarjeta {
+  border: 1px solid var(--linea);
+  border-radius: 10px;
+  padding: 12px 13px;
+  background: rgba(255, 255, 255, 0.015);
+}
+.tarjeta h2 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin: 0 0 8px;
+  color: var(--acc-texto);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+.nota-tarjeta {
+  font-size: 0.76rem;
+  color: var(--fg-secundario);
+  line-height: 1.5;
+  margin: 0 0 8px;
+}
+.fila-cifra {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+  margin: 0 0 8px;
+  font-size: 0.78rem;
+}
+.fila-cifra:last-child { margin-bottom: 0; }
+.etq-cifra { color: var(--fg-secundario); }
+.num-cifra { font-weight: 600; color: var(--fg); text-align: right; white-space: nowrap; }
+.num-cifra.num-cifra--destacado { color: var(--acc-texto); }
+
+.escala-leyenda {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.leyenda-direccion {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.66rem;
+  color: var(--fg-secundario);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 2px;
+}
+.escala-leyenda .bloque-leyenda {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.74rem;
+  color: var(--fg-secundario);
+}
+.escala-leyenda .muestra-leyenda {
+  width: 18px;
+  height: 12px;
+  border-radius: 2px;
+  border: 1px solid var(--linea);
+  flex-shrink: 0;
+}
+
+/* ---------------------------------------------------------------------
+   Leyenda compacta de capas (junto a los botones de capa)
+   --------------------------------------------------------------------- */
+.leyenda-capas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+  margin: 0 0 10px;
+}
+.chip-leyenda {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.72rem;
+  color: var(--fg-secundario);
+}
+.swatch {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+.swatch-coropleta {
+  background: linear-gradient(90deg, #FFFFD4, #FEE391, #FEC44F, #FE9929, #D95F0E, #993404);
+}
+.swatch-runap {
+  background: rgba(56, 189, 248, 0.18);
+  border: 1px dashed var(--color-runap);
+}
+.swatch-reserva {
+  background: rgba(245, 158, 11, 0.16);
+  border: 1px dashed var(--color-reserva);
+}
+#lienzo-serie svg { display: block; width: 100%; height: auto; }
+#lienzo-serie text,
+svg text {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  fill: var(--fg);
+}
+
+#pie-sidebar {
+  padding: 10px 14px;
+  border-top: 1px solid var(--linea);
+  font-size: 0.68rem;
+  line-height: 1.5;
+  color: var(--fg-secundario);
+}
+
+/* ---------------------------------------------------------------------
+   Leaflet: tooltips y popups con la identidad del atlas
+   (fondo oscuro fijo, independiente del tema, por legibilidad sobre el mapa)
+   --------------------------------------------------------------------- */
+.leaflet-tooltip.tooltip-atlas {
+  background: rgba(10, 16, 13, 0.92);
+  color: #E6E8EB;
+  border: 1px solid rgba(62, 207, 142, 0.4);
+  border-radius: 6px;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  padding: 7px 10px;
+}
+/* Título de la coropleta (marca): esmeralda. Los popups de RUNAP y reserva
+   forestal fijan su propio color de acento por capa en linea (ver app.js). */
+.leaflet-tooltip.tooltip-atlas b { display: block; margin-bottom: 2px; color: #3ECF8E; }
+.leaflet-popup-content-wrapper {
+  background: rgba(10, 16, 13, 0.95);
+  color: #E6E8EB;
+  border-radius: 8px;
+}
+.leaflet-popup-content {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+.leaflet-popup-content b { display: block; margin-bottom: 2px; color: #3ECF8E; }
+.leaflet-popup-tip { background: rgba(10, 16, 13, 0.95); }
+.leaflet-control-attribution {
+  background: rgba(10, 16, 13, 0.6) !important;
+  color: rgba(231, 239, 233, 0.6) !important;
+}
+.leaflet-control-attribution a { color: rgba(62, 207, 142, 0.8) !important; }
+
+@media (max-width: 720px) {
+  #controles-izq { min-width: 0; max-width: calc(100vw - 32px); }
+  #sidebar { width: calc(100vw - 32px); }
+}

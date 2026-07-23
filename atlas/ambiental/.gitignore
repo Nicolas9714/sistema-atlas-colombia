@@ -1,0 +1,94 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+sdist/
+develop-eggs/
+.installed.cfg
+lib/
+lib64/
+.eggs/
+
+# Entornos virtuales
+.venv/
+venv/
+env/
+ENV/
+.env
+.env.*
+!.env.example
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Datos internos (no publicar)
+data/
+skills-lock.json
+
+# Archivos de configuración interna
+CLAUDE.md
+ROADMAP.md
+seguimiento-cambios.md
+presentacion-socializacion.md
+
+# Notas internas de navegación por skill (no publicar)
+skills/*/notas-internas.md
+
+# Casos de uso
+examples/*
+!examples/README.md
+!examples/consultas-de-ejemplo.md
+
+# Caso de análisis deforestación SMByC: se publica la subcarpeta completa (README,
+# notebook y CSV de salida), pero no los Excel crudos del IDEAM, que el usuario descarga
+!examples/deforestacion-series-smbyc/
+!examples/deforestacion-series-smbyc/**
+examples/deforestacion-series-smbyc/*.xlsx
+
+# templates/lineamiento-profundidad-mapa.md, templates/briefing-*.md,
+# templates/herramientas-de-exploracion.md, templates/pruebas-skills.md,
+# internal_tools/ y sesiones/ ya no viven en este repo — se movieron a
+# ../atlas-toolkit/ (carpeta hermana, compartida con el ANMEC, sin remoto en GitHub)
+
+# Configuración de agentes y entorno local
+.agents/
+.claude/
+
+# Archivos temporales y del sistema
+*.tmp
+*.bak
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDEs y editores
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+*.log
+logs/
+
+# Caché
+.cache/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Superpowers brainstorming (mockups y sesiones locales)
+.superpowers/
