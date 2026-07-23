@@ -146,7 +146,9 @@ if [ -n "$entidad_arg" ]; then
 fi
 
 # --- Resolver destino efectivo ---
-if [ "$modo_global" -eq 1 ]; then
+if [[ "$destino" = /* ]]; then
+    destino_efectivo="$destino"
+elif [ "$modo_global" -eq 1 ]; then
     destino_efectivo="$HOME/$destino"
 else
     destino_efectivo="$(pwd)/$destino"
@@ -163,6 +165,17 @@ fi
 # --- Copia ---
 mkdir -p "$destino_efectivo"
 
+copiar_skill_exacta() {
+    local origen="$1" nombre="$2" destino_skill
+    if ! [[ "$nombre" =~ ^[a-z0-9-]+$ ]]; then
+        echo "Error: nombre de skill no seguro '$nombre'." >&2
+        exit 1
+    fi
+    destino_skill="$destino_efectivo/$nombre"
+    rm -rf -- "$destino_skill"
+    cp -R -- "$origen" "$destino_skill"
+}
+
 declare -a instaladas_skill=()
 declare -a instaladas_atlas=()
 
@@ -172,14 +185,14 @@ for a in "${alias_pedidos[@]}"; do
 
     if [ -n "$entidad_arg" ]; then
         for e in "${entidades[@]}"; do
-            cp -R "$ruta_skills/$e" "$destino_efectivo/"
+            copiar_skill_exacta "$ruta_skills/$e" "$e"
             instaladas_skill+=("$e")
             instaladas_atlas+=("$a")
         done
     else
         for dir in "$ruta_skills"/*/; do
             nombre="$(basename "$dir")"
-            cp -R "$dir" "$destino_efectivo/"
+            copiar_skill_exacta "$dir" "$nombre"
             instaladas_skill+=("$nombre")
             instaladas_atlas+=("$a")
         done
@@ -189,7 +202,7 @@ done
 # --- Regla de composición: 2+ atlas => copiar también la orquestadora nacional ---
 if [ "${#alias_pedidos[@]}" -gt 1 ]; then
     ruta_orquestador="$raiz_sistema/atlas/nacional/skills/atlas-orquestador-colombia"
-    cp -R "$ruta_orquestador" "$destino_efectivo/"
+    copiar_skill_exacta "$ruta_orquestador" "atlas-orquestador-colombia"
     instaladas_skill+=("atlas-orquestador-colombia")
     instaladas_atlas+=("sistema-atlas-colombia")
 fi

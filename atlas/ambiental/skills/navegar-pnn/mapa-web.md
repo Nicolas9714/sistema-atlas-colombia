@@ -127,11 +127,9 @@ parquesnacionales.gov.co/
 │   ├── recursos-conjuntos-de-datos
 │   └── recursos-servicios-ogc
 │
-├── sinap.parquesnacionales.gov.co/
-│
 └── cert.parquesnacionales.gov.co/
 ```
 
 ## Última verificación
 
-Verificado: 2026-06-15
+Verificado: 2026-07-23

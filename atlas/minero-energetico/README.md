@@ -32,7 +32,7 @@ Este atlas hace parte del [Sistema Atlas Colombia](../../README.md) y cumple la 
 | `navegar-superservicios` | Superservicios | Vigilancia de servicios públicos |
 | `navegar-ipse` | IPSE | Energía en zonas no interconectadas |
 | `navegar-fenoge` | FENOGE | Energías no convencionales y eficiencia |
-| `navegar-ecopetrol` | Ecopetrol | Cadena de Hidrocarburos e información corporativa sectorial |
+| `navegar-ecopetrol` | Ecopetrol | Cadena de hidrocarburos e información corporativa sectorial |
 | `navegar-bec` | BEC | Gestor del mercado de gas natural |
 
 Cada skill de entidad contiene `SKILL.md`, `mapa-web.md` y `fuentes-prioritarias.md`; la orquestadora contiene solo `SKILL.md`.

@@ -95,7 +95,9 @@ if ($Entidad) {
 }
 
 # --- Resolver destino efectivo ---
-if ($Global) {
+if ([IO.Path]::IsPathRooted($Destino)) {
+    $destinoEfectivo = [IO.Path]::GetFullPath($Destino)
+} elseif ($Global) {
     $destinoEfectivo = Join-Path $env:USERPROFILE $Destino
 } else {
     $destinoEfectivo = Join-Path (Get-Location) $Destino
@@ -115,6 +117,23 @@ if (-not (Test-Path $destinoEfectivo)) {
     New-Item -ItemType Directory -Force -Path $destinoEfectivo | Out-Null
 }
 
+function Copy-SkillExacta {
+    param(
+        [Parameter(Mandatory)] [string] $Origen,
+        [Parameter(Mandatory)] [string] $Nombre
+    )
+
+    if ($Nombre -notmatch '^[a-z0-9-]+$') {
+        throw "Nombre de skill no seguro: '$Nombre'."
+    }
+
+    $destinoSkill = Join-Path $destinoEfectivo $Nombre
+    if (Test-Path -LiteralPath $destinoSkill) {
+        Remove-Item -LiteralPath $destinoSkill -Recurse -Force
+    }
+    Copy-Item -LiteralPath $Origen -Destination $destinoSkill -Recurse -Force
+}
+
 $instaladas = @()
 
 foreach ($a in $aliasPedidos) {
@@ -124,12 +143,12 @@ foreach ($a in $aliasPedidos) {
     if ($Entidad) {
         foreach ($e in $Entidad) {
             $origen = Join-Path $rutaSkills $e
-            Copy-Item -Path $origen -Destination $destinoEfectivo -Recurse -Force
+            Copy-SkillExacta -Origen $origen -Nombre $e
             $instaladas += [PSCustomObject]@{ Skill = $e; Atlas = $a }
         }
     } else {
         Get-ChildItem -Path $rutaSkills -Directory | ForEach-Object {
-            Copy-Item -Path $_.FullName -Destination $destinoEfectivo -Recurse -Force
+            Copy-SkillExacta -Origen $_.FullName -Nombre $_.Name
             $instaladas += [PSCustomObject]@{ Skill = $_.Name; Atlas = $a }
         }
     }
@@ -138,7 +157,7 @@ foreach ($a in $aliasPedidos) {
 # --- Regla de composición: 2+ atlas => copiar también la orquestadora nacional ---
 if ($aliasPedidos.Count -gt 1) {
     $rutaOrquestador = Join-Path $PSScriptRoot "atlas\nacional\skills\atlas-orquestador-colombia"
-    Copy-Item -Path $rutaOrquestador -Destination $destinoEfectivo -Recurse -Force
+    Copy-SkillExacta -Origen $rutaOrquestador -Nombre "atlas-orquestador-colombia"
     $instaladas += [PSCustomObject]@{ Skill = "atlas-orquestador-colombia"; Atlas = "sistema-atlas-colombia" }
 }
 

@@ -7,7 +7,7 @@
 | Nombre | URL | Descripción | Verificado |
 |---|---|---|---|
 | RUNAP — Registro Único Nacional de Áreas Protegidas | https://runap.parquesnacionales.gov.co/ | Registro oficial de todas las áreas protegidas de Colombia: nacionales, regionales y locales. Incluye cifras consolidadas, visor geográfico con shapefile descargable, y reportes. Total: 1.882 áreas, 50,2 millones de hectáreas (geográficas). | 2026-06-15 |
-| SINAP — Portal del Sistema Nacional de Áreas Protegidas | https://sinap.parquesnacionales.gov.co/inicio | Portal del sistema nacional con subsistemas regionales, análisis de representatividad ecológica y documentos de política. ECONNREFUSED al momento de verificación. | 2026-06-15 |
+| SINAP — Sistema Nacional de Áreas Protegidas | https://www.parquesnacionales.gov.co/sistema-nacional-de-areas-protegidas/ | Página institucional vigente con definición, categorías, representatividad, plan de acción y subsistemas regionales del SINAP. | 2026-07-23 |
 | Certificador SINAP | https://cert.parquesnacionales.gov.co/auth | Herramienta de certificación de áreas protegidas para el SINAP. Requiere autenticación; manuales disponibles públicamente. | 2026-06-15 |
 
 ---
@@ -27,7 +27,6 @@
 |---|---|---|---|
 | Herencia Colombia | https://www.parquesnacionales.gov.co/herencia-colombia/ | Programa de financiamiento para la permanencia del SINAP: 42 millones de hectáreas, 5 mosaicos regionales, alianzas con Moore Foundation, WWF, CI, WCS y Bezos Earth Fund. | 2026-06-15 |
 | SIRAP Orinoquía | https://www.parquesnacionales.gov.co/home/sirap-orinoquia/ | Subsistema Regional de Áreas Protegidas de la Orinoquía, con documentos y mapas del subsistema. | 2026-06-15 |
-| SIRAP Eje Cafetero | https://www.sirapejecaferero.org/ | Portal externo del subsistema regional del Eje Cafetero. | 2026-06-15 |
 
 ---
 
@@ -65,7 +64,7 @@
 | Sección | Nota |
 |---|---|
 | `runap.parquesnacionales.gov.co` | SPA JavaScript. Estructura verificada con browser: raíz (inicio + estadísticas), `/cifras` (tabla por ámbito/categoría: 1.882 áreas, 50,2 M ha geográficas; gráfico por departamento; shapefile descargable), menú `Reportes` abre submenú con `Reportes actuales` → `https://runapadmin.parquesnacionales.gov.co/reportes` y `Reportes históricos` → Google Sites externo. Actualización shapefile: 12/06/2026. |
-| `sinap.parquesnacionales.gov.co` | DNS no resuelve (ERR_NAME_NOT_RESOLVED) en Fase B con browser (2026-06-15). Dominio inactivo. El contenido del SINAP disponible en `parquesnacionales.gov.co/sistema-nacional-de-areas-protegidas/`. |
+| SINAP | El antiguo dominio `sinap.parquesnacionales.gov.co` está inactivo. La fuente institucional vigente es `parquesnacionales.gov.co/sistema-nacional-de-areas-protegidas/`; RUNAP conserva el registro y las cifras oficiales. |
 | `mapas.parquesnacionales.gov.co` | Redirige permanentemente (301) a `https://pnnc.maps.arcgis.com/apps/webappviewer/index.html?id=2fb3250f7f494b209a300c3fb027211e`. Visor ArcGIS Web AppBuilder con 2 capas: Registro Único de Áreas Protegidas - RUNAP (activa por defecto) y Límites Parques Nacionales. Herramientas: filtro por área protegida, medición, selección, impresión, descarga de capas, recursos adicionales, galería de mapas base. |
 | `geonetwork.parquesnacionales.gov.co` | Accesible con browser (HTTP 403 solo a crawlers). URL real: `https://geonetwork.parquesnacionales.gov.co/geonetwork/srv/spa/catalog.search#/home`. 198 recursos totales: 182 conjuntos de datos, 11 servicios (10 OGC:WFS, 1 W3C:HTML). Temas INSPIRE: Límites (21), Cobertura tierra/imágenes (4), Medio ambiente (2). Motor: GeoNetwork 3.10.5. |
 | `cooperacion/` | Sección funcional con 8 anclas de contenido: resolución, datos de contacto, qué es la cooperación, oferta y demanda, ejes de trabajo, asuntos internacionales, webinar, galería. Tipos de cooperación: técnica, cultural, triangular, sur-sur, donaciones en especie. No es sección institucional estándar; contiene información sobre convenios activos y ejes de trabajo. |

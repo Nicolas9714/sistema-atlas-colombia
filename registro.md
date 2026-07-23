@@ -19,18 +19,18 @@
 
 | Skill | Entidad | Rol principal |
 | --- | --- | --- |
-| `navegar-minenergia` | MinEnergía | Política energética nacional |
-| `navegar-upme` | UPME | Planeación minero energética |
+| `navegar-minenergia` | MinEnergía | Política sectorial |
+| `navegar-upme` | UPME | Planeación minero-energética |
 | `navegar-creg` | CREG | Regulación de energía y gas |
-| `navegar-anh` | ANH | Hidrocarburos |
-| `navegar-anm` | ANM | Titulación minera |
-| `navegar-sgc` | SGC | Conocimiento geocientífico |
-| `navegar-xm` | XM | Operación del sistema eléctrico y mercado |
-| `navegar-ecopetrol` | Ecopetrol | Empresa nacional de hidrocarburos |
-| `navegar-ipse` | IPSE | Energización de zonas no interconectadas |
-| `navegar-fenoge` | FENOGE | Fondo de energías no convencionales |
+| `navegar-anh` | ANH | Administración de hidrocarburos |
+| `navegar-anm` | ANM | Administración minera |
+| `navegar-sgc` | SGC | Geología y recursos del subsuelo |
+| `navegar-xm` | XM | Operación del sistema eléctrico |
+| `navegar-ecopetrol` | Ecopetrol | Cadena de hidrocarburos e información corporativa sectorial |
+| `navegar-ipse` | IPSE | Energía en zonas no interconectadas |
+| `navegar-fenoge` | FENOGE | Energías no convencionales y eficiencia |
 | `navegar-superservicios` | Superservicios | Vigilancia de servicios públicos |
-| `navegar-bec` | BEC | Bolsa de energía de Colombia |
+| `navegar-bec` | BEC | Gestor del mercado de gas natural |
 
 ### Atlas de Navegación Ambiental de Colombia — 7 entidades
 
