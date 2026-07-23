@@ -42,4 +42,4 @@ Si solo hay un atlas instalado, resolver lo que su alcance permite y señalar en
 
 ## Registro
 
-La lista autorizada de atlas, entidades y fronteras vive en [`registro.md`](https://github.com/Nicolas9714/sistema-atlas-colombia/blob/main/registro.md). Esta tabla es su espejo compacto; ante divergencia, manda el registro.
+La lista autorizada de atlas, entidades y fronteras vive en [`registro.md`](../../../../registro.md). Esta tabla es su espejo compacto; ante divergencia, manda el registro.

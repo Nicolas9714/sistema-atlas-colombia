@@ -6,8 +6,12 @@
 
 | Atlas | Sector | Repositorio | Estándar declarado |
 | --- | --- | --- | --- |
-| Atlas de Navegación Minero Energético de Colombia | Minero energético | [atlas-minero-energetico-colombia](https://github.com/Nicolas9714/atlas-minero-energetico-colombia) | v0.1 |
-| Atlas de Navegación Ambiental de Colombia | Ambiental | [atlas-ambiental-colombia](https://github.com/Nicolas9714/atlas-ambiental-colombia) | v0.1 |
+| Atlas de Navegación Minero Energético de Colombia | Minero energético | [`atlas/minero-energetico/`](atlas/minero-energetico/) | v0.1 |
+| Atlas de Navegación Ambiental de Colombia | Ambiental | [`atlas/ambiental/`](atlas/ambiental/) | v0.1 |
+
+> La columna **Repositorio** es heterogénea: los atlas fundadores viven como subcarpetas de este monorepo (`atlas/<sector>/`), mientras que un atlas de un tercero puede vivir como repositorio propio y aparecería con su URL. Ambos layouts son conformes al estándar (ver [`estandar/especificacion.md`](estandar/especificacion.md), sección «Layout conforme»).
+
+**En construcción:** el Atlas Intersectorial (`atlas/intersectorial/`) alojará las entidades transversales que sirven a todos los sectores por igual (DANE, DNP y futuras). Aún no se registra: sus skills (`navegar-dane`, `navegar-dnp`) son marcadores sin poblar y todavía no existe su orquestadora `atlas-orquestador-intersectorial`, así que no cumple N1–N5.
 
 ## Entidades por atlas
 
@@ -56,4 +60,4 @@ Temas que cruzan atlas, con las entidades de cada lado. Punto de partida para el
 
 1. El atlas cumple la parte normativa de [`estandar/especificacion.md`](estandar/especificacion.md) y declara la versión que cumple.
 2. Pull request a este archivo: fila en la tabla de atlas registrados, tabla de entidades y las fronteras temáticas nuevas que introduce.
-3. El mismo pull request agrega la tarjeta del atlas al banner del `README.md` (logo en `assets/` + nombre del atlas enlazado) y su fila en la tabla de atlas del README.
+3. El mismo pull request agrega la tarjeta del atlas al banner del `README.md` (logo en `atlas/<sector>/assets/` si el atlas es subcarpeta del monorepo, o en el `assets/` de su propio repo si es externo; más el nombre del atlas enlazado) y su fila en la tabla de atlas del README.

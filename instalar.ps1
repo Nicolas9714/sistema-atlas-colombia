@@ -3,9 +3,9 @@
     Instala skills de los atlas sectoriales del Sistema Atlas Colombia.
 
 .DESCRIPTION
-    Copia las skills de uno o varios atlas hermanos (repos que viven junto a
-    este) hacia una carpeta destino, típicamente dentro del proyecto del
-    usuario (ej. .claude\skills para Claude Code, .agents\skills para Codex).
+    Copia las skills de uno o varios atlas sectoriales (subcarpetas atlas/<alias>
+    de este monorepo) hacia una carpeta destino, típicamente dentro del proyecto
+    del usuario (ej. .claude\skills para Claude Code, .agents\skills para Codex).
 
     Compatible con Windows PowerShell 5.1.
 
@@ -29,14 +29,16 @@ param(
 
 $ErrorActionPreference = "Stop"
 
-# Tabla de atlas registrados: alias -> nombre de carpeta del repo hermano.
+# Tabla de atlas registrados: alias -> nombre de la subcarpeta bajo atlas/.
 # Al registrar un atlas nuevo, agregar una línea aquí.
 $atlasRegistrados = @{
-    "ambiental"          = "atlas-ambiental-colombia"
-    "minero-energetico"  = "atlas-minero-energetico-colombia"
+    "ambiental"          = "ambiental"
+    "minero-energetico"  = "minero-energetico"
 }
 
-$raizRepos = Split-Path -Parent $PSScriptRoot
+# En el monorepo, las skills de cada atlas viven en atlas/<alias>/skills,
+# relativo a la raíz donde está este script.
+$raizAtlas = Join-Path $PSScriptRoot "atlas"
 
 # --- Expandir "todos" y resolver alias pedidos ---
 $aliasPedidos = @()
@@ -61,14 +63,13 @@ foreach ($a in $aliasPedidos) {
     }
 }
 
-# --- Validación: repos hermanos existen ---
+# --- Validación: subcarpetas de atlas existen en el monorepo ---
 foreach ($a in $aliasPedidos) {
     $carpeta = $atlasRegistrados[$a]
-    $rutaRepo = Join-Path $raizRepos $carpeta
-    if (-not (Test-Path $rutaRepo)) {
-        Write-Host "Error: no se encontró el repo del atlas '$a' en $rutaRepo" -ForegroundColor Red
-        Write-Host "Clónalo primero, desde $raizRepos, con:"
-        Write-Host "  git clone https://github.com/Nicolas9714/$carpeta.git"
+    $rutaAtlas = Join-Path $raizAtlas $carpeta
+    if (-not (Test-Path $rutaAtlas)) {
+        Write-Host "Error: no se encontró la carpeta del atlas '$a' en $rutaAtlas" -ForegroundColor Red
+        Write-Host "Debería existir en este monorepo; verifica que el checkout esté completo."
         exit 1
     }
 }
@@ -82,7 +83,7 @@ if ($Entidad -and $aliasPedidos.Count -gt 1) {
 # --- Validación: carpetas de -Entidad existen dentro del atlas ---
 if ($Entidad) {
     $carpetaAtlas = $atlasRegistrados[$aliasPedidos[0]]
-    $rutaSkills = Join-Path (Join-Path $raizRepos $carpetaAtlas) "skills"
+    $rutaSkills = Join-Path (Join-Path $raizAtlas $carpetaAtlas) "skills"
     $skillsDisponibles = Get-ChildItem -Path $rutaSkills -Directory | ForEach-Object { $_.Name }
     foreach ($e in $Entidad) {
         if ($skillsDisponibles -notcontains $e) {
@@ -102,16 +103,7 @@ if ($Global) {
 
 # --- Actualizar repos fuente (y este repo) antes de copiar ---
 if ($Actualizar) {
-    foreach ($a in $aliasPedidos) {
-        $carpeta = $atlasRegistrados[$a]
-        $rutaRepo = Join-Path $raizRepos $carpeta
-        Write-Host "Actualizando $carpeta..."
-        git -C $rutaRepo pull
-        if ($LASTEXITCODE -ne 0) {
-            Write-Host "Advertencia: git pull falló en $rutaRepo, se continúa con la versión local." -ForegroundColor Yellow
-        }
-    }
-    Write-Host "Actualizando este repo (Sistema Atlas Colombia)..."
+    Write-Host "Actualizando el monorepo (Sistema Atlas Colombia)..."
     git -C $PSScriptRoot pull
     if ($LASTEXITCODE -ne 0) {
         Write-Host "Advertencia: git pull falló en $PSScriptRoot, se continúa con la versión local." -ForegroundColor Yellow
@@ -127,7 +119,7 @@ $instaladas = @()
 
 foreach ($a in $aliasPedidos) {
     $carpeta = $atlasRegistrados[$a]
-    $rutaSkills = Join-Path (Join-Path $raizRepos $carpeta) "skills"
+    $rutaSkills = Join-Path (Join-Path $raizAtlas $carpeta) "skills"
 
     if ($Entidad) {
         foreach ($e in $Entidad) {
@@ -145,7 +137,7 @@ foreach ($a in $aliasPedidos) {
 
 # --- Regla de composición: 2+ atlas => copiar también la orquestadora nacional ---
 if ($aliasPedidos.Count -gt 1) {
-    $rutaOrquestador = Join-Path (Join-Path $PSScriptRoot "skills") "atlas-orquestador-colombia"
+    $rutaOrquestador = Join-Path $PSScriptRoot "atlas\nacional\skills\atlas-orquestador-colombia"
     Copy-Item -Path $rutaOrquestador -Destination $destinoEfectivo -Recurse -Force
     $instaladas += [PSCustomObject]@{ Skill = "atlas-orquestador-colombia"; Atlas = "sistema-atlas-colombia" }
 }

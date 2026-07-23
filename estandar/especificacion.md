@@ -2,12 +2,17 @@
 
 **Versión:** 0.1 · **Estado:** en incubación.
 **Versionado:** semántico (`mayor.menor.parche`). Mientras la versión mayor sea 0, la especificación está en incubación y cualquier cambio puede exigir ajustes a los atlas registrados.
+**Última actualización:** 2026-07-23 — se agregó la conformidad de layout (un atlas puede vivir como subcarpeta o como repositorio propio) y la regla de autocontención; N5 pasó a ser agnóstico del layout. El número se mantiene en v0.1 por estar el estándar en incubación y sin implementadores externos.
 
 Un Atlas de Navegación sistematiza las rutas hacia la información pública de un sector: qué entidad consultar, qué sistema priorizar, qué fuente contrastar. Esta especificación define la forma común que ese saber toma y qué debe cumplir un atlas para ser compatible con el Sistema y registrarse en él.
 
 ## Parte normativa
 
-Criterio: es normativo lo que rompe la interoperabilidad si falta. Un atlas que cumple estos cinco puntos es compatible, aunque no adopte ninguna recomendación.
+Criterio: es normativo lo que rompe la interoperabilidad si falta. Un atlas que cumple los cinco puntos N1–N5 y la regla de autocontención es compatible, aunque no adopte ninguna recomendación.
+
+### Layout conforme
+
+Un atlas es una unidad definida por su estructura (N1–N5), no por su frontera de repositorio. Es conforme tanto si vive como repositorio propio como si vive como subcarpeta de un sistema (`atlas/<sector>/` dentro del monorepo del Sistema). Ambos layouts son equivalentes para el estándar; el registro (`registro.md`) puede listar atlas de los dos tipos.
 
 ### N1 — Tres archivos por entidad
 
@@ -35,13 +40,17 @@ El orquestador de cada nivel no reemplaza a las unidades inferiores: solo enruta
 
 ### N5 — Línea vertical
 
-La skill orquestadora de cada atlas incluye una línea estandarizada apuntando al nodo nacional, para consultas que cruzan a otros sectores:
+La skill orquestadora de cada atlas incluye una línea estandarizada apuntando al nodo nacional del Sistema (`atlas/nacional/`), para consultas que cruzan a otros sectores. El enlace se resuelve según el layout: con la ruta relativa correcta al nodo nacional si el atlas vive como subcarpeta del monorepo, o con la URL del repositorio del Sistema si el atlas vive como repositorio propio.
 
-> Para consultas que cruzan a otros sectores, el enrutamiento entre atlas vive en [Sistema Atlas Colombia](https://github.com/Nicolas9714/sistema-atlas-colombia).
+> Para consultas que cruzan a otros sectores, el enrutamiento entre atlas vive en el nodo nacional Sistema Atlas Colombia.
+
+### Autocontención
+
+Nada dentro de la carpeta de un atlas referencia archivos de otro atlas. Toda frontera temática entre atlas se declara únicamente en `registro.md`, y el cruce entre sectores se resuelve por el nodo nacional (N5), nunca por un enlace directo de un atlas a los archivos de otro. La regla mantiene cada atlas extraíble y verificable de forma aislada, exista como subcarpeta o como repositorio propio.
 
 ### Prueba de compatibilidad
 
-Un tercero debe poder construir un atlas de otro sector — o de otro país — cumpliendo solo N1–N5, y sus skills deben poder convivir con las de los atlas registrados sin colisiones de nombres ni de competencias.
+Un tercero debe poder construir un atlas de otro sector — o de otro país — cumpliendo solo la parte normativa (N1–N5 y autocontención), y sus skills deben poder convivir con las de los atlas registrados sin colisiones de nombres ni de competencias. En un atlas que vive como repositorio propio la autocontención se satisface por construcción, al no haber otro atlas en el mismo árbol.
 
 ## Parte recomendada
 
