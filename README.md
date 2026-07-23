@@ -6,13 +6,13 @@
     <tr>
       <td align="center" width="180">
         <a href="https://github.com/Nicolas9714/atlas-minero-energetico-colombia">
-          <img src="assets/logo-atlas-minero-energetico.svg" width="90" alt="Atlas de Navegación Minero Energético de Colombia"><br>
+          <img src="atlas/minero-energetico/assets/logo-atlas-minero-energetico.svg" width="90" alt="Atlas de Navegación Minero Energético de Colombia"><br>
           <strong>Atlas de Navegación<br>Minero Energético<br>de Colombia</strong>
         </a>
       </td>
       <td align="center" width="180">
         <a href="https://github.com/Nicolas9714/atlas-ambiental-colombia">
-          <img src="assets/logo-atlas-ambiental.svg" width="90" alt="Atlas de Navegación Ambiental de Colombia"><br>
+          <img src="atlas/ambiental/assets/logo-atlas-ambiental.svg" width="90" alt="Atlas de Navegación Ambiental de Colombia"><br>
           <strong>Atlas de Navegación<br>Ambiental<br>de Colombia</strong>
         </a>
       </td>
