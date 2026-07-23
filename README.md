@@ -69,9 +69,16 @@ sistema-atlas-colombia/
 
 ### Instalación con script
 
-Con los repos clonados junto a tu proyecto, un solo comando ejecutado desde la raíz del proyecto instala los atlas que pidas — y, si son dos o más, agrega automáticamente la orquestadora nacional:
+Clona los repos de los atlas junto a tu proyecto:
 
-> El repo clonado y la copia en tu proyecto cumplen roles distintos: el clon es la fuente, que actualizas con `git pull`; la copia en tu carpeta de skills es la instalación, que tu proyecto controla y que solo cambia cuando decides reinstalar. 
+```bash
+git clone https://github.com/Nicolas9714/atlas-minero-energetico-colombia.git
+git clone https://github.com/Nicolas9714/atlas-ambiental-colombia.git
+```
+
+Con los repos clonados, un solo comando ejecutado desde la raíz del proyecto instala los atlas que pidas — y, si son dos o más, agrega automáticamente la orquestadora nacional:
+
+> El repo clonado y la copia en tu proyecto cumplen roles distintos: el clon es la fuente, que actualizas con `git pull`; la copia en tu carpeta de skills es la instalación, que tu proyecto controla y que solo cambia cuando decides reinstalar.
 
 ```powershell
 # Windows (PowerShell)
@@ -83,14 +90,17 @@ Con los repos clonados junto a tu proyecto, un solo comando ejecutado desde la r
 ../sistema-atlas-colombia/instalar.sh --atlas todos
 ```
 
-Opciones: 
+**Opciones** (PowerShell / bash):
 
--Elige atlas específicos: `"Atlas ambiental,minero-energetico,<nombre del atlas>`
--Instala para Codex: `-Destino .agents\skills` 
--Instala una sola skill: `-Entidad navegar-anla` 
--Instala en tu carpeta de usuario:`-Global` 
+| Qué hace | PowerShell | Bash |
+| --- | --- | --- |
+| Elige atlas específicos | `-Atlas ambiental,minero-energetico` | `--atlas ambiental,minero-energetico` |
+| Instala una sola skill de entidad | `-Entidad navegar-anla` | `--entidad navegar-anla` |
+| Instala para Codex en vez de Claude Code | `-Destino .agents\skills` | `--destino .agents/skills` |
+| Instala en tu carpeta de usuario (global) | `-Global` | `--global` |
+| Hace `git pull` en los repos fuente antes de copiar | `-Actualizar` | `--actualizar` |
 
-`-Actualizar` hace `git pull` en los repos fuente antes de copiar. En bash las opciones son las mismas en minúscula (`--atlas`, `--destino`, `--entidad`, `--global`, `--actualizar`).
+`-Entidad` / `--entidad` solo se puede usar con un único atlas en `-Atlas`.
 
 Los pasos siguientes muestran la instalación manual equivalente.
 
