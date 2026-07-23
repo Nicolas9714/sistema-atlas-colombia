@@ -6,21 +6,18 @@
 
 | Nombre | URL | Descripción | Verificado |
 |---|---|---|---|
-| SNIGRD — Sistema Nacional de Información para la Gestión del Riesgo de Desastres | `https://sni.gestiondelriesgo.gov.co/` | Portal SPA con los módulos funcionales de la entidad: geoportal, geovisores, MEGIR, PNGRD, fuentes de financiación, obras por impuestos, certificados RUD, registro de proveedores | 2026-07-03 |
-| Portal BI | `https://sni.gestiondelriesgo.gov.co/portal-bi` | Tableros de analítica: asistencia técnica, proyectos de infraestructura, control presupuestal, distribución territorial de eventos, agua potable y saneamiento, maquinaria amarilla | 2026-07-03 |
+| SNIGRD — Sistema Nacional de Información para la Gestión del Riesgo de Desastres | `https://sni.gestiondelriesgo.gov.co/` | Portal SPA con los módulos funcionales de la entidad: geoportal, geovisores, MEGIR, PNGRD, fuentes de financiación, obras por impuestos, certificados RUD, registro de proveedores | 2026-07-23 |
+| Portal BI | `https://sni.gestiondelriesgo.gov.co/` | Ruta interna `/portal-bi`. Tableros de analítica: asistencia técnica, proyectos de infraestructura, control presupuestal, distribución territorial de eventos, agua potable y saneamiento, maquinaria amarilla | 2026-07-23 |
 | BI Administrativo | `https://bi-us-east-1.alibabacloud.com/product/view.htm?module=dashboard&productId=163ec1ba-8572-4a2d-9e4e-618cef26c49a` | Tablero de gestión administrativa embebido en Alibaba Cloud BI | 2026-07-03 |
 | Financiamiento PNGRD | `https://busqueda.gestiondelriesgo.gov.co/` | Herramienta digital para identificar fondos de financiamiento (33 fondos: 6 nacionales, 8 territoriales, 19 internacionales) para proyectos de gestión del riesgo | 2026-07-03 |
 | Certificados RUD | `https://snigrd.gestiondelriesgo.gov.co/#/rud/generate-certificate` | Emisión y consulta de certificados del Registro Único de Damnificados | 2026-07-03 |
 | Registro de Proveedores | `https://snigrd.gestiondelriesgo.gov.co/#/auth/register` | Inscripción en el directorio de proveedores de la UNGRD | 2026-07-03 |
 | Registro Único de Damnificados (legado, IP directa) | `http://201.130.16.28:8080/HOME/HOME` | Sistema legado de registro de damnificados, accesible por IP directa sin dominio | 2026-07-03 |
-| Registro Único de Damnificados (legado, subdominio) | `http://rud.gestiondelriesgo.gov.co/` | Tercera variante del RUD encontrada, enlazada desde el sitio legado `www.gestiondelriesgo.gov.co/snigrd/` | 2026-07-03 |
 | Repositorio institucional (DSpace) | `http://repositorio.gestiondelriesgo.gov.co/` | Repositorio de documentos técnicos, estudios y publicaciones; navegable por comunidades (Álbum Fotográfico, Publicaciones UNGRD, Conocimiento del Riesgo, Publicaciones por regiones GRD, Oficina Asesora de Comunicaciones, Normatividad), con búsqueda (`/discover`) y listado de comunidades (`/community-list`) | 2026-07-03 |
 | Hemeroteca UNGRD | `http://repositorio.gestiondelriesgo.gov.co/page/map` | Archivo de prensa; nombre de ruta no coincide con el contenido real (`/page/map` no es un mapa) | 2026-07-03 |
 | Socios UNGRD | `http://repositorio.gestiondelriesgo.gov.co/page/partners` | Página de socios/aliados institucionales | 2026-07-03 |
-| CEDIR — Centro de Documentación | `http://cedir.gestiondelriesgo.gov.co/` | Centro de documentación especializado en gestión del riesgo. **Roto al 2026-07-03**: certificado SSL no confiable (`SEC_E_UNTRUSTED_ROOT`) y la página devuelve "Invalid Connection" incluso ignorando el error de certificado | 2026-07-03 |
-| Catálogo CEDIR | `http://cedir-catalogo.gestiondelriesgo.gov.co/` | Catálogo de búsqueda del Centro de Documentación. Redirige (301) pero no carga contenido al 2026-07-03 | 2026-07-03 |
 | SNIGRD (sitio legado) | `https://www.gestiondelriesgo.gov.co/snigrd/` | Portal legado con menú Comités (CNCR, CNRR, CNMD), Herramientas, SNGRD, Normatividad e Información geográfica; enlaza a Yo Reporto, visores ArcGIS legados y el RUD por subdominio | 2026-07-03 |
-| Yo Reporto | `http://gestiondelriesgo.gov.co/yoreporto/mapa.aspx` | Herramienta de reporte comunitario de eventos/riesgos sobre mapa, enlazada desde el sitio SNIGRD legado | 2026-07-03 |
+| Yo Reporto | `https://www.gestiondelriesgo.gov.co/yoreporto/Mapa.aspx` | Herramienta de reporte comunitario de eventos y riesgos sobre mapa, enlazada desde el sitio SNIGRD legado | 2026-07-23 |
 | SIGPAD (visor legado de emergencias) | `http://www.gestiondelriesgo.gov.co/sigpad/emergencias/temporada/MapD.aspx` | Sistema legado de visualización de emergencias por temporada; predecesor del Portal BI actual | 2026-07-03 |
 | Colombia Resiliente | `https://portal.gestiondelriesgo.gov.co/colombiaresiliente` | Sistema de información territorial base en GRD: métrica de gestión (MGB), documentos, visor y glosario por los 3 procesos (conocimiento, reducción, manejo) y 4 componentes | 2026-07-03 |
 | SIPNGRD — Reporte en línea (Marco Estratégico) | `https://pngrd.gestiondelriesgo.gov.co/` | Sistema de reporte de capacidades mínimas territoriales y sectoriales del Marco Estratégico; requiere autenticación con usuario y contraseña | 2026-07-03 |
@@ -31,14 +28,14 @@
 
 | Nombre | URL | Capas principales | Verificado |
 |---|---|---|---|
-| Geoportal UNGRD (lite) | `https://www.geoportalgestiondelriesgo.com/lite` | Información geográfica oficial en capas ráster y vectoriales para gestión del riesgo | 2026-07-03 |
-| Atlas de Riesgo 2019 (departamental) | `https://sni.gestiondelriesgo.gov.co/atlas-riesgo` | Mapa multiamenaza departamental: amenaza, vulnerabilidad y pérdidas anuales esperadas | 2026-07-03 |
-| Geovisor de riesgo implícito volcánico | `https://sni.gestiondelriesgo.gov.co/geovisores/riesgo-implicito-volcanico` | Riesgo implícito por amenaza volcánica a nivel nacional | 2026-07-03 |
-| Geovisor de erosión costera | `https://sni.gestiondelriesgo.gov.co/geovisores/erosion-costera` | Línea de costa actualizada a 2025 | 2026-07-03 |
-| Geovisor de eventos NATECH | `https://sni.gestiondelriesgo.gov.co/geovisores/natech-accidentes` | Accidentes tecnológicos desencadenados por eventos naturales | 2026-07-03 |
-| Geovisor de movimientos en masa | `https://sni.gestiondelriesgo.gov.co/geovisores/ip-movimientos-masa-departamental` | Índice de priorización por movimientos en masa, departamental y municipal | 2026-07-03 |
-| Geovisor de mapas comunitarios | `https://sni.gestiondelriesgo.gov.co/geovisores/riesgos-comunitarios` | Puntos críticos, capacidades y recursos desde percepción comunitaria | 2026-07-03 |
-| Geovisor de volcanes de lodo | `https://sni.gestiondelriesgo.gov.co/geovisores/volcanes-lodo-2025` | Volcanes de lodo actualizados a 2025 | 2026-07-03 |
+| Galería de geovisores SNIGRD | `https://sni.gestiondelriesgo.gov.co/` | Ruta interna `/geovisores`. Catálogo vigente de mapas y capas oficiales para gestión del riesgo | 2026-07-23 |
+| Atlas de Riesgo 2019 (departamental) | `https://sni.gestiondelriesgo.gov.co/` | Ruta interna `/atlas-riesgo`. Mapa multiamenaza departamental: amenaza, vulnerabilidad y pérdidas anuales esperadas | 2026-07-23 |
+| Geovisor de riesgo implícito volcánico | `https://sni.gestiondelriesgo.gov.co/` | Ruta interna `/geovisores/riesgo-implicito-volcanico`. Riesgo implícito por amenaza volcánica a nivel nacional | 2026-07-23 |
+| Geovisor de erosión costera | `https://sni.gestiondelriesgo.gov.co/` | Ruta interna `/geovisores/erosion-costera`. Línea de costa actualizada a 2025 | 2026-07-23 |
+| Geovisor de eventos NATECH | `https://sni.gestiondelriesgo.gov.co/` | Ruta interna `/geovisores/natech-accidentes`. Accidentes tecnológicos desencadenados por eventos naturales | 2026-07-23 |
+| Geovisor de movimientos en masa | `https://sni.gestiondelriesgo.gov.co/` | Ruta interna `/geovisores/ip-movimientos-masa-departamental`. Índice de priorización por movimientos en masa, departamental y municipal | 2026-07-23 |
+| Geovisor de mapas comunitarios | `https://sni.gestiondelriesgo.gov.co/` | Ruta interna `/geovisores/riesgos-comunitarios`. Puntos críticos, capacidades y recursos desde percepción comunitaria | 2026-07-23 |
+| Geovisor de volcanes de lodo | `https://sni.gestiondelriesgo.gov.co/` | Ruta interna `/geovisores/volcanes-lodo-2025`. Volcanes de lodo actualizados a 2025 | 2026-07-23 |
 | Mapa Interactivo (mapa-rdc) | `https://portal.gestiondelriesgo.gov.co/Paginas/mapa-rdc.aspx` | Mapa regional por departamentos y macro-regiones (Caribe, Pacífico, Andina, Orinoquía, Amazonas, La Mojana) | 2026-07-03 |
 | Colombia Resiliente — Dashboard y Geoportal | `https://ungrd.maps.arcgis.com/apps/dashboards/c0152d9b81a5459ebcbc3626e249f9fa` | Dashboard ArcGIS de la Métrica de Gestión Base (MGB), enlazado desde Colombia Resiliente / Visor | 2026-07-03 |
 | Colombia Resiliente — Geoportal Nacional | `https://ungrd.maps.arcgis.com/apps/webappviewer/index.html?id=68b2cec033d34e03b1c4f7e1ad7d1f0b` | Visor ArcGIS nacional, enlazado desde Colombia Resiliente / Visor | 2026-07-03 |
@@ -55,10 +52,10 @@
 
 | Nombre | URL | Descripción | Verificado |
 |---|---|---|---|
-| Datos abiertos SNIGRD | `https://sni.gestiondelriesgo.gov.co/datos-abiertos` | 9 datasets filtrables por categoría (Amenaza, Institucional, NATECH, Riesgo): sedes institucionales, riesgos comunitarios, empresas NATECH, accidentes NATECH, IP municipal/departamental, erosión costera, atlas de riesgo municipal/departamental | 2026-07-03 |
-| Acciones e inversiones | `https://sni.gestiondelriesgo.gov.co/acciones-inversiones` | Ficha analítica: $4,94 billones en inversión para gestión del riesgo desde 2022 | 2026-07-03 |
-| Maquinaria amarilla | `https://sni.gestiondelriesgo.gov.co/maquinaria-amarilla` | Seguimiento de 389 órdenes operativas de maquinaria pesada desde 2022 | 2026-07-03 |
-| Obras de infraestructura | `https://sni.gestiondelriesgo.gov.co/proyectos-infraestructura` | Ficha analítica de obras de reducción del riesgo financiadas por el FNGRD | 2026-07-03 |
+| Datos abiertos SNIGRD | `https://sni.gestiondelriesgo.gov.co/` | Ruta interna `/datos-abiertos`. 9 datasets filtrables por categoría: Amenaza, Institucional, NATECH y Riesgo | 2026-07-23 |
+| Acciones e inversiones | `https://sni.gestiondelriesgo.gov.co/` | Ruta interna `/acciones-inversiones`. Ficha analítica de inversión para gestión del riesgo desde 2022 | 2026-07-23 |
+| Maquinaria amarilla | `https://sni.gestiondelriesgo.gov.co/` | Ruta interna `/maquinaria-amarilla`. Seguimiento de órdenes operativas de maquinaria pesada | 2026-07-23 |
+| Obras de infraestructura | `https://sni.gestiondelriesgo.gov.co/` | Ruta interna `/proyectos-infraestructura`. Ficha analítica de obras de reducción del riesgo financiadas por el FNGRD | 2026-07-23 |
 
 ---
 
@@ -88,10 +85,10 @@
 | Nombre | Tipo | URL | Verificado |
 |---|---|---|---|
 | Plan Nacional de Gestión del Riesgo de Desastres | Plan | `https://portal.gestiondelriesgo.gov.co/Paginas/Plan-Nacional-Gestion-Riesgo-de-Desastres.aspx` | 2026-07-03 |
-| PNGRD — módulo de seguimiento (SNIGRD) | Sistema de seguimiento | `https://sni.gestiondelriesgo.gov.co/pngrd` | 2026-07-03 |
-| MEGIR — Marco Estratégico de Gestión Integral del Riesgo | Marco estratégico | `https://sni.gestiondelriesgo.gov.co/megir` | 2026-07-03 |
+| PNGRD — módulo de seguimiento (SNIGRD) | Sistema de seguimiento; ruta interna `/pngrd` | `https://sni.gestiondelriesgo.gov.co/` | 2026-07-23 |
+| MEGIR — Marco Estratégico de Gestión Integral del Riesgo | Marco estratégico; ruta interna `/megir` | `https://sni.gestiondelriesgo.gov.co/` | 2026-07-23 |
 | Marco Estratégico (sitio institucional) | Micrositio | `https://portal.gestiondelriesgo.gov.co/marcoestrategico` | 2026-07-03 |
-| Fenómeno El Niño 2023-2024 | Módulo de seguimiento institucional | `https://sni.gestiondelriesgo.gov.co/fenomeno-el-nino` | 2026-07-03 |
+| Fenómeno El Niño 2023-2024 | Módulo de seguimiento institucional; ruta interna `/fenomeno-el-nino` | `https://sni.gestiondelriesgo.gov.co/` | 2026-07-23 |
 | La Variabilidad Climática | Micrositio informativo | `https://portal.gestiondelriesgo.gov.co/variabilidad` | 2026-07-03 |
 | SATREPS Colombia | Proyecto de cooperación científica | `https://portal.gestiondelriesgo.gov.co/satreps` | 2026-07-03 |
 | MCR2030 Colombia | Iniciativa internacional (UNDRR) | `https://portal.gestiondelriesgo.gov.co/mcr2030` | 2026-07-03 |
@@ -129,19 +126,20 @@ Nota: la lista completa de enlaces (más de 15) vive en `satreps/sismos`, `satre
 
 | Sección | Nota |
 |---|---|
-| `sni.gestiondelriesgo.gov.co` | Portal SPA (JS-rendered); el crawler solo captura la URL raíz. Toda la navegación estructural requirió agent-browser. Reúne los sistemas operativos actuales de la entidad (geoportal, geovisores, PNGRD, MEGIR, financiación); es la fuente prioritaria por encima del portal institucional clásico para datos técnicos y geoespaciales. |
+| `sni.gestiondelriesgo.gov.co` | Portal SPA con rutas internas confirmadas en el bundle oficial. El servidor devuelve 404 al abrir directamente varias rutas profundas; por eso las tablas enlazan la raíz estable y conservan la ruta interna en la descripción para navegar desde el portal. Reúne geoportal, geovisores, PNGRD, MEGIR y financiación. |
 | `sni.gestiondelriesgo.gov.co/megir` | Herramienta interactiva de una sola página; los 4 ejes estratégicos (Territorial, Sectorial, Participación Social, Público-Privado) son pestañas internas sin URL propia, no sub-páginas. |
 | `sni.gestiondelriesgo.gov.co/pngrd` | Tiene 5 sub-URLs propias (`que-es`, `formulacion`, `seguimiento`, `evaluacion`, `consultas-especificas`), a diferencia de MEGIR. |
 | `sni.gestiondelriesgo.gov.co/fenomeno-el-nino` | Módulo interactivo de una sola página; las 8 secciones (Presentación, Marco normativo, Monitoreo, Identificación, Sectorial, Asistencia técnica, Comunicaciones, Plan de acción) son pestañas internas sin URL propia. Relevante para el sector ambiental por su enfoque en variabilidad climática. |
 | `sni.gestiondelriesgo.gov.co/portal-bi` | Tiene filtros de categoría (Conocimiento del riesgo / Reducción del riesgo / Manejo de desastres) que no segmentan tableros distintos de forma clara — se comportan como controles de una misma lista, no como secciones diferenciadas; no se incluyeron como nodos. |
-| `geoportalgestiondelriesgo.com` | Dominio externo distinto de `gestiondelriesgo.gov.co` (sin `.gov.co`); es el geoportal oficial de capas geográficas, enlazado desde SNIGRD como "Geoportal UNGRD". |
+| `geoportalgestiondelriesgo.com` | Servicio geográfico externo usado históricamente por módulos embebidos. Su acceso directo presentó timeout en la revisión de 2026-07-23; para navegación pública se prioriza la galería `/geovisores` del SNIGRD. |
 | `busqueda.gestiondelriesgo.gov.co` | Subdominio propio para la herramienta de búsqueda de fondos de financiamiento del PNGRD; nombre de subdominio no descriptivo del contenido real (buscador de financiación, no buscador general). |
 | `snigrd.gestiondelriesgo.gov.co` | SPA con hash-routing (`/#/ruta`); aloja trámites transaccionales (certificados RUD, registro de proveedores) separados del portal informativo SNIGRD (`sni.gestiondelriesgo.gov.co`, sin la "g"). Los dos subdominios son fácilmente confundibles por el nombre. |
 | `portal.gestiondelriesgo.gov.co` | Sitio SharePoint 2013 clásico (`/Paginas/*.aspx`); el crawler cubre bien la profundidad 1-2 pero no distingue contenido JS-dependiente de algunas páginas (títulos vacíos en varias `/Paginas/*.aspx` verificadas por curl). |
 | `portal.gestiondelriesgo.gov.co/mrr`, `/marcoestrategico`, `/colombiaresiliente`, `/mcr2030`, `/satreps`, `/variabilidad`, `/magma` | Microsites SharePoint independientes bajo el dominio principal; cada uno resuelve con 200 o redirige (302) a su propia página de inicio (`_layouts/15/start.aspx` o `SitePages/Inicio.aspx`), patrón estándar de subsitios SharePoint, no un error. |
 | Registro Único de Damnificados (legado) | URL por IP directa (`http://201.130.16.28:8080/HOME/HOME`), sin dominio ni HTTPS; enlazado activamente desde el home del portal pese a su forma atípica. |
 | `repositorio.gestiondelriesgo.gov.co` | La versión HTTPS redirige (301) al puerto `:8443`, que el browser bloquea (`ERR_CONNECTION_TIMED_OUT`); la versión HTTP en el puerto 80 responde 200 y es la que se usó para verificar la estructura real (DSpace: `/discover`, `/community-list`, `/page/map`, `/page/partners`, comunidades por `handle/20.500.11762/`). |
-| `cedir.gestiondelriesgo.gov.co` | HTTPS falla con certificado no confiable (`SEC_E_UNTRUSTED_ROOT`); forzando la conexión igual devuelve "Invalid Connection" — el sitio está roto al 2026-07-03, no es un problema de exploración. |
+| `cedir.gestiondelriesgo.gov.co` | HTTPS falla con certificado no confiable y el servicio no carga — seguía roto en la revisión de 2026-07-23, por lo que se retiró de fuentes prioritarias. |
+| `cedir-catalogo.gestiondelriesgo.gov.co` | El catálogo redirige pero responde con error del servidor; se retiró de fuentes prioritarias junto con CEDIR hasta que la UNGRD restablezca el servicio. |
 | `portal.gestiondelriesgo.gov.co/marcoestrategico` | Sitio legado del MEGIR (predecesor de `sni.gestiondelriesgo.gov.co/megir`); a diferencia de la versión nueva, tiene profundidad real: secciones ancladas (¿Qué es?, Objetivo, Tableros de control, Ejes, Capacidades Mínimas, Resultados) y una sub-página propia `/marcoestrategico/Paginas/MEGIR-sectorial.aspx`. Las fichas PDF por departamento bajo "Capacidades Mínimas" no se listaron individualmente en el árbol (33 documentos). |
 | `portal.gestiondelriesgo.gov.co/colombiaresiliente` | Tiene profundidad real con páginas propias: `/Paginas/procesos.aspx` (3 procesos GRD + 4 componentes, por ancla), `/Paginas/metrica.aspx`, `/Paginas/estadistica.aspx` (documentos), `/Paginas/visor.aspx` (geovisor territorial) y `/Paginas/glosario.aspx`. El visor se agregó a la tabla de Geovisores y mapas. |
 | `sni.gestiondelriesgo.gov.co/aula-virtual` | Solo el curso "Recorrido guiado por el Módulo MEGIR" tiene enlace activo (`/aula-virtual/megir`); los otros 6 cursos listados (Portal BI, Geoportal, Geovisores, Fuentes de Financiación, Certificados RUD, Registro de Proveedores) son encabezados sin `href` — aún no publicados como curso navegable. |
@@ -151,6 +149,7 @@ Nota: la lista completa de enlaces (más de 15) vive en `satreps/sismos`, `satre
 | `portal.gestiondelriesgo.gov.co/mcr2030` | Los botones "Evaluación de etapa" e "Inscripción territorios" llevan a herramientas de UNDRR en dominio internacional (`mcr2030.undrr.org`, `mcr2030dashboard.undrr.org`); "Plantilla carta de compromiso" es una descarga `.doc` individual, no se agregó como nodo. |
 | `portal.gestiondelriesgo.gov.co/marcoestrategico` | El botón "Reporte en línea" lleva a `pngrd.gestiondelriesgo.gov.co`, un subdominio no descubierto en la primera pasada — sistema de reporte con muro de autenticación (usuario/contraseña), sin acceso público de consulta. |
 | `www.gestiondelriesgo.gov.co/snigrd/` | Sitio legado descubierto en el menú SNGRD del home ("Sistema Nacional de Información"), distinto de `sni.gestiondelriesgo.gov.co` (SPA actual) y de `portal.gestiondelriesgo.gov.co`. Profundizado: menú con 5 categorías reales (Comités, Herramientas, SNGRD, Normatividad, Información geográfica) más Contáctenos; enlaza a un tercer subdominio del RUD (`rud.gestiondelriesgo.gov.co`) y a sistemas legados (Yo Reporto, SIGPAD) no descubiertos en pasadas anteriores. |
+| `rud.gestiondelriesgo.gov.co` | Variante legada del Registro Único de Damnificados sin respuesta en la revisión de 2026-07-23; se retiró de fuentes prioritarias. Se conservan la emisión de certificados del SNIGRD y la variante por IP mientras sigan disponibles. |
 | `sni.gestiondelriesgo.gov.co/atlas-riesgo` | No es un simple embed decorativo: el iframe carga un dashboard interactivo completo (geoportalgestiondelriesgo.com) con selector de indicador, capas departamental/municipal, ranking de 33 departamentos, distribución del riesgo por nivel y pérdida esperada por tipo de amenaza (sismo, inundación, huracán, tsunami) — se agregaron como nodos hijos. |
 | `portal.gestiondelriesgo.gov.co/Paginas/fonbuenaventura.aspx` | 4 acordeones reales con contenido propio: Boletines informativos, Documentos de interés, Convocatorias, Contratación directa. Las convocatorias y contrataciones individuales (con número y año) no se listaron por ser contenido fechado — solo la categoría contenedora. |
 | `portal.gestiondelriesgo.gov.co/todossomospazcifico/` | Requiere autenticación SharePoint (redirige a `_login/default.aspx`); no es un micrositio público, a diferencia de los demás proyectos especiales. Se deja como hoja sin profundizar. |

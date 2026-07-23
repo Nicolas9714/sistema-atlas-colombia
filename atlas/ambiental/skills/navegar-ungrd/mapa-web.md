@@ -310,6 +310,8 @@ portal.gestiondelriesgo.gov.co/
         └── contactenos
 ```
 
+> Las rutas bajo `sni.gestiondelriesgo.gov.co` pertenecen a una SPA. Como el servidor puede devolver 404 al abrir una ruta profunda directamente, entra por la raíz del portal y navega al módulo indicado por este árbol.
+
 ## Última verificación
 
-Verificado: 2026-07-03
+Verificado: 2026-07-23

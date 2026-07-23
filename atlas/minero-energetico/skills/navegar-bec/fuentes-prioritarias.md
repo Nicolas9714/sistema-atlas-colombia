@@ -45,9 +45,9 @@
 |---|---|---|---|
 | Comité del Mercado de Gas Natural — presentaciones trimestrales (PDF) | Informe | https://www.bmcbec.com.co/publicaciones/comite-de-mercado-de-gas-natural | 2026-06-03 |
 | Informes de mercado (declaraciones, resultados, radiografía, outlook) | Informe | https://www.bmcbec.com.co/informes/informes-de-mercado | 2026-06-03 |
-| Proceso de comercialización de suministro (historial 2016–2026) | Informe | https://www.bmcbec.com.co/proceso-de-comercializacion | 2026-06-03 |
+| Proceso de comercialización de suministro (historial 2016–2026) | Informe | https://www.bmcbec.com.co/informaci%C3%B3n-transaccional/mercado-primario/proceso-de-comercializaci%C3%B3n | 2026-07-23 |
 | Indicadores CREG MP y MS — Resolución CREG 102 015 de 2025 | Informe/Resolución | https://www.bmcbec.com.co/informacion-transaccional/mercado-primario/indicadores-creg-mp-y-ms-publico | 2026-06-03 |
-| Publicación información Proyectos IPAT — Resolución CREG 102 012 de 2024 | Resolución | https://www.bmcbec.com.co/informacion-transaccional/Comercializacion-de-Transporte/proyectos-ipat | 2026-06-03 |
+| Publicación información Proyectos IPAT — Resolución CREG 102 012 de 2024 | Resolución | https://www.bmcbec.com.co/node/5997 | 2026-07-23 |
 
 ---
 
@@ -57,7 +57,7 @@
 |---|---|---|---|
 | Resoluciones BEC | Resoluciones | https://www.bmcbec.com.co/normatividad/resoluciones | 2026-06-03 |
 | Contratos Marco | Proformas | https://www.bmcbec.com.co/normatividad/contratos-marco | 2026-06-03 |
-| Boletines normativos | Boletines | https://www.bmcbec.com.co/boletines | 2026-06-03 |
+| Boletines normativos | Boletines | https://www.bmcbec.com.co/boletines | 2026-07-23 |
 | Documentos de registro ante el Gestor | Formularios | https://www.bmcbec.com.co/normatividad/documentos-de-registro-ante-el-gestor | 2026-06-03 |
 
 ---
@@ -72,7 +72,7 @@
 | `informes/informes-de-mercado/` | Organizado por año (2015–2026); 4 tipos de informe dentro de cada año: declaraciones de producción, resultados proceso de comercialización, radiografía del mercado y outlook. Descarga en PDF y Excel. |
 | `informacion-transaccional/` y `informacion-operativa/` | Los datos de cada sección se visualizan mediante reportes **Power BI embebidos** (`app.powerbi.com/reportEmbed`), no como tablas HTML descargables. Para acceder a los datos crudos se requiere la plataforma BI Gas (login) o las descargas disponibles en `informes/`. |
 | `informacion-transaccional/` | El sitio usa dos formas de URL equivalentes: con tilde (`informaci%C3%B3n-transaccional`) y sin tilde (`informacion-transaccional`). Ambas apuntan al mismo contenido. |
-| `proceso-de-comercializacion/` | Historial por semestre desde 2016 hasta 2026-III; sub-páginas con URLs `node/XXXX`. Los nodos con nombre semántico en el mapa tienen sus URLs reales en notas-internas.md. |
+| `información-transaccional/mercado-primario/proceso-de-comercialización/` | Historial trimestral desde 2016 hasta 2026-III; cada periodo abre una subpágina `node/XXXX` con cronograma, normativa, actividades y documentos. |
 | `normatividad/contratos-marco/` | Referencia la Resolución CREG 089 de 2013 como base de las proformas de contratos marco del mercado. |
 | `informacion-transaccional/mercado-primario/indicadores-creg-mp/` | Cubre la Resolución CREG 186 de 2020. La versión más reciente de indicadores públicos está en `indicadores-creg-mp-y-ms-publico/` (Res. CREG 102 015 de 2025). |
 | `publicaciones/` | Aparece como "Información Relevante" en el menú del sitio. Incluye publicaciones sobre el Comité del Mercado de Gas Natural, interrupciones de servicio y criterios de idoneidad para participantes. |
