@@ -22,6 +22,9 @@ raiz_atlas="$raiz/atlas"
 # Alias del nodo nacional: caso especial, no es un atlas sectorial.
 NACIONAL="nacional"
 
+# Único atlas autorizado a permanecer incompleto sin romper CI.
+EN_CONSTRUCCION=("intersectorial")
+
 # Contadores globales
 conformes=0
 en_construccion=0
@@ -32,12 +35,48 @@ fallas_atlas=()
 
 falla() { fallas_atlas+=("$1"); }
 
+leer_name() {
+    local archivo="$1" valor
+    valor="$(awk '
+        /^name:[[:space:]]*/ {
+            sub(/^name:[[:space:]]*/, "")
+            print
+            exit
+        }
+    ' "$archivo" 2>/dev/null)"
+    valor="${valor#\"}"; valor="${valor%\"}"
+    valor="${valor#\'}"; valor="${valor%\'}"
+    printf '%s' "$valor"
+}
+
+validar_name() {
+    local archivo="$1" esperado="$2" etiqueta="$3" declarado
+    declarado="$(leer_name "$archivo")"
+    if [ -z "$declarado" ]; then
+        falla "$etiqueta: falta el campo name en ${archivo#"$raiz"/}"
+    elif [ "$declarado" != "$esperado" ]; then
+        falla "$etiqueta: name '$declarado' no coincide con la carpeta '$esperado'"
+    fi
+}
+
+es_alias_en_construccion() {
+    local alias="$1" permitido
+    for permitido in "${EN_CONSTRUCCION[@]}"; do
+        [ "$alias" = "$permitido" ] && return 0
+    done
+    return 1
+}
+
 # --- Chequeos N sobre un atlas sectorial ya poblado ---
 # $1 = alias, $2 = ruta al atlas
 verificar_sectorial() {
     local alias="$1" ruta="$2"
     local skills="$ruta/skills"
     fallas_atlas=()
+
+    if [ ! -d "$skills" ]; then
+        falla "N1/N3: falta la carpeta skills/"
+    fi
 
     # Recolectar carpetas de skills
     local orquestadoras=() entidades=()
@@ -65,6 +104,7 @@ verificar_sectorial() {
         fi
         orq_skill="$skills/$orq/SKILL.md"
         [ -f "$orq_skill" ] || { falla "N3: falta $orq/SKILL.md"; orq_skill=""; }
+        [ -n "$orq_skill" ] && validar_name "$orq_skill" "$orq" "N3"
     fi
 
     # --- N1 + N2 por entidad ---
@@ -82,12 +122,16 @@ verificar_sectorial() {
         done
         if [ "$tiene" -eq 3 ]; then
             pobladas=$((pobladas+1))
+            validar_name "$skills/$e/SKILL.md" "$e" "N2"
         elif [ "$tiene" -eq 0 ]; then
             pendientes+=("$e")
         else
             falla "N1: '$e' incompleta, faltan:$faltan"
         fi
     done
+    if [ "${#entidades[@]}" -eq 0 ]; then
+        falla "N1: el atlas no contiene ninguna skill de entidad navegar-*"
+    fi
 
     # --- N4: la orquestadora no reproduce verbatim líneas largas / URLs de las entidades ---
     # Un solo awk extrae las líneas significativas (>80 chars o con URL, sin
@@ -103,9 +147,12 @@ verificar_sectorial() {
             l=="" { next }
             l ~ /^#/ || l ~ /^\|/ || l ~ /^```/ || l ~ /^>/ { next }
             length(l) > 80 { print l }
-        ' "$skills"/navegar-*/mapa-web.md "$skills"/navegar-*/fuentes-prioritarias.md 2>/dev/null > "$tmp_sig"
+        ' "$skills"/navegar-*/SKILL.md "$skills"/navegar-*/mapa-web.md \
+          "$skills"/navegar-*/fuentes-prioritarias.md 2>/dev/null > "$tmp_sig"
         # (b) URLs de las entidades: la orquestadora no debe reproducir ninguna
-        grep -hoE 'https?://[^ )"'"'"'<>]+' "$skills"/navegar-*/mapa-web.md "$skills"/navegar-*/fuentes-prioritarias.md 2>/dev/null >> "$tmp_sig"
+        grep -hoE 'https?://[^ )"'"'"'<>]+' "$skills"/navegar-*/SKILL.md \
+          "$skills"/navegar-*/mapa-web.md "$skills"/navegar-*/fuentes-prioritarias.md \
+          2>/dev/null >> "$tmp_sig"
         sort -u "$tmp_sig" -o "$tmp_sig"
         if [ -s "$tmp_sig" ]; then
             dup="$(grep -Ff "$tmp_sig" "$orq_skill" 2>/dev/null | head -1)"
@@ -119,8 +166,10 @@ verificar_sectorial() {
 
     # --- N5: la orquestadora referencia el nodo nacional ---
     if [ -n "$orq_skill" ]; then
-        if ! grep -qi 'nacional' "$orq_skill"; then
-            falla "N5: la orquestadora no referencia el nodo nacional (atlas/nacional/)"
+        if ! grep -qiE 'consultas que cruzan a otros sectores.*enrutamiento entre atlas.*nodo nacional' "$orq_skill"; then
+            falla "N5: falta la línea estandarizada hacia el nodo nacional"
+        elif ! grep -qiE 'nacional/|sistema-atlas-colombia' "$orq_skill"; then
+            falla "N5: la línea vertical no enlaza al nodo nacional"
         fi
     fi
 
@@ -131,7 +180,11 @@ verificar_sectorial() {
         [ "$y" = "$alias" ] && continue
         [ "$y" = "$NACIONAL" ] && continue   # referenciar el nodo nacional está permitido (N5)
         local ac
-        ac="$(grep -rIl -e "atlas/$y/" -e "$y-colombia" "$ruta" 2>/dev/null)"
+        ac="$(grep -rIlE \
+            -e "atlas/$y/" \
+            -e "(\\.\\./)+$y/" \
+            -e "$y-colombia" \
+            "$ruta" 2>/dev/null)"
         if [ -n "$ac" ]; then
             local arch
             while IFS= read -r arch; do
@@ -167,6 +220,8 @@ verificar_nacional() {
         falla "N3: falta skills/atlas-orquestador-colombia"
     elif [ ! -f "$orq/SKILL.md" ]; then
         falla "N3: falta atlas-orquestador-colombia/SKILL.md"
+    else
+        validar_name "$orq/SKILL.md" "atlas-orquestador-colombia" "N3"
     fi
     if [ "${#fallas_atlas[@]}" -eq 0 ]; then
         printf '  N3 orquestadora nacional ...... OK (atlas-orquestador-colombia)\n'
@@ -197,6 +252,46 @@ esta_poblado() {
     return 1
 }
 
+verificar_construccion() {
+    local alias="$1" ruta="$2" skills="$ruta/skills"
+    local marcadores=0 d nombre tiene req
+    fallas_atlas=()
+
+    if [ ! -d "$skills" ]; then
+        falla "Construcción: falta la carpeta skills/"
+    else
+        for d in "$skills"/*/; do
+            [ -d "$d" ] || continue
+            nombre="$(basename "$d")"
+            if ! [[ "$nombre" =~ ^navegar-[a-z0-9-]+$ ]]; then
+                falla "Construcción: carpeta marcador inválida '$nombre'"
+                continue
+            fi
+            marcadores=$((marcadores+1))
+            tiene=0
+            for req in SKILL.md mapa-web.md fuentes-prioritarias.md; do
+                [ -f "$d/$req" ] && tiene=$((tiene+1))
+            done
+            if [ "$tiene" -ne 0 ]; then
+                falla "Construcción: '$nombre' está parcialmente poblada ($tiene de 3 archivos N1)"
+            fi
+        done
+        [ "$marcadores" -gt 0 ] || falla "Construcción: no hay skills marcador navegar-*"
+    fi
+
+    printf '\natlas/%s/  [EN CONSTRUCCIÓN]\n' "$alias"
+    if [ "${#fallas_atlas[@]}" -eq 0 ]; then
+        printf '  Marcadores estructurales válidos; atlas aún no registrado.\n'
+        printf '  -> OMITIDO (pendiente de poblar)\n'
+        en_construccion=$((en_construccion+1))
+    else
+        local msg
+        for msg in "${fallas_atlas[@]}"; do printf '  FALLA %s\n' "$msg"; done
+        printf '  -> NO CONFORME\n'
+        con_fallas=$((con_fallas+1))
+    fi
+}
+
 verificar_atlas() {
     local alias="$1"
     local ruta="$raiz_atlas/$alias"
@@ -211,11 +306,10 @@ verificar_atlas() {
     fi
     if esta_poblado "$ruta"; then
         verificar_sectorial "$alias" "$ruta"
+    elif es_alias_en_construccion "$alias"; then
+        verificar_construccion "$alias" "$ruta"
     else
-        printf '\natlas/%s/  [EN CONSTRUCCIÓN]\n' "$alias"
-        printf '  Sin orquestadora y sin entidades pobladas; skills marcador a la espera.\n'
-        printf '  -> OMITIDO (pendiente de poblar)\n'
-        en_construccion=$((en_construccion+1))
+        verificar_sectorial "$alias" "$ruta"
     fi
 }
 

@@ -6,8 +6,9 @@ name: Conformidad de atlas
 
 on:
   push:
-    branches: ["**"]
+    branches: [main]
   pull_request:
+    branches: [main]
 
 jobs:
   conformidad:
@@ -17,3 +18,5 @@ jobs:
         uses: actions/checkout@v4
       - name: Verificar conformidad N1-N5 + autocontención
         run: bash verificar-conformidad.sh
+      - name: Probar falsos negativos conocidos
+        run: bash tests/probar-verificar-conformidad.sh
