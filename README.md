@@ -54,7 +54,7 @@ El detalle de entidades y fronteras temáticas vive en [`registro.md`](registro.
 ```text
 sistema-atlas-colombia/
 ├── registro.md       → Atlas existentes, entidades de cada uno, fronteras temáticas
-├── instalar.ps1 / instalar.sh       → Instalador de skills (misma CLI en ambos)
+├── instalar.ps1 / instalar.sh       → Instaladores de skills (interfaces equivalentes)
 ├── estandar/
 │   ├── especificacion.md            → El estándar de los atlas (versionado)
 │   └── templates/                   → Plantillas para construir nuevas skills
@@ -82,6 +82,8 @@ git clone https://github.com/Nicolas9714/sistema-atlas-colombia.git
 Un solo comando ejecutado desde la raíz de tu proyecto instala los atlas que pidas — y, si son dos o más, agrega automáticamente la orquestadora nacional:
 
 > El repo clonado y la copia en tu proyecto cumplen roles distintos: el clon es la fuente, que actualizas con `git pull` (o con `-Actualizar` / `--actualizar` al instalar); la copia en tu carpeta de skills es la instalación, que tu proyecto controla y que solo cambia cuando decides reinstalar.
+>
+> Al reinstalar, cada skill solicitada se reemplaza de forma exacta para retirar archivos obsoletos. Conserva tus personalizaciones fuera de las carpetas instaladas o respáldalas antes de ejecutar nuevamente el instalador.
 
 ```powershell
 # Windows (PowerShell)
