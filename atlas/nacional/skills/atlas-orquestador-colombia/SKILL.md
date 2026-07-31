@@ -38,7 +38,7 @@ Temas cuya respuesta cruza atlas. La entrada indica por dónde empezar; el detal
 
 ## Degradación
 
-Si solo hay un atlas instalado, resuelve lo que está a su alcance permite y señala en qué atlas vive el resto de la respuesta (tabla de atlas). Es el mismo comportamiento de una skill de entidad ante una consulta multi-entidad: alcance propio + referencia.
+Si solo hay un atlas instalado, resuelve lo que su alcance permite y señala en qué atlas vive el resto de la respuesta (tabla de atlas). Es el mismo comportamiento de una skill de entidad ante una consulta multi-entidad: alcance propio + referencia.
 
 ## Registro
 
