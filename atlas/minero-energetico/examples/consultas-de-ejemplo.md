@@ -1,6 +1,6 @@
 # Consultas de ejemplo
 
-Consultas de demostración: cada una es un prompt que puedes hacerle al agente con las skills del Atlas instaladas, junto con la ruta que debería responderte. Sirven como vitrina de lo que resuelve el Atlas y como referencia para validar que las skills funcionan. Las URLs exactas de cada sistema viven en `fuentes-prioritarias.md` de la skill correspondiente.
+Consultas de demostración: cada una es un prompt que puedes hacerle al agente con las skills del Atlas instaladas, junto con la ruta que debería responderte. Sirven como vitrina de lo que resuelve el Atlas y como referencia para validar que las skills funcionan. Las URLs exactas de cada sistema viven en `fuentes.md` de la skill correspondiente.
 
 ---
 

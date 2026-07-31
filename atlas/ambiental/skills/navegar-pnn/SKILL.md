@@ -25,7 +25,7 @@ PNN es la entidad adscrita al Ministerio de Ambiente y Desarrollo Sostenible enc
 ## Cómo usar esta skill
 
 1. Consulta `mapa-web.md` para ubicar la sección relevante dentro del sitio y sus subdominios.
-2. Consulta `fuentes-prioritarias.md` para acceder directamente al RUNAP, GeoNetwork, geovisor, estadísticas de visitantes y planes de manejo.
+2. Consulta `fuentes.md` para acceder directamente al RUNAP, GeoNetwork, geovisor, estadísticas de visitantes y planes de manejo.
 3. En el repositorio del Atlas, la carpeta `examples/` reúne casos de análisis reproducibles y consultas de ejemplo con su ruta esperada.
 
 ## Notas de navegación

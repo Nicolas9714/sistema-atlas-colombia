@@ -1,4 +1,4 @@
-# Fuentes prioritarias — SGC
+# Fuentes — SGC
 
 ---
 

@@ -23,11 +23,11 @@ El IPSE es una entidad adscrita al Ministerio de Minas y Energía. Se encarga de
 ## Cómo usar esta skill
 
 1. Consulta `mapa-web.md` para ubicar el geovisor, los boletines del CNM, los proyectos o la normativa ZNI.
-2. Consulta `fuentes-prioritarias.md` para acceder directamente al SIGIPSE, CNM, datasets o guías de proyectos.
+2. Consulta `fuentes.md` para acceder directamente al SIGIPSE, CNM, datasets o guías de proyectos.
 3. En el repositorio del Atlas, la carpeta `examples/` reúne casos de análisis reproducibles y consultas de ejemplo con su ruta esperada.
 
 ## Notas de navegación
 
-- SIGIPSE (`sigipse.ipse.gov.co`) es el sistema de geovisores y datos de las ZNI; los enlaces directos a cada visor están en `fuentes-prioritarias.md`.
+- SIGIPSE (`sigipse.ipse.gov.co`) es el sistema de geovisores y datos de las ZNI; los enlaces directos a cada visor están en `fuentes.md`.
 - El CNM publica boletines anuales — no es un sistema transaccional sino un repositorio de informes de estado del servicio.
 - El normograma está organizado por etapa del ciclo del proyecto energético ZNI, lo que facilita la consulta según la fase en que se encuentre el proyecto.

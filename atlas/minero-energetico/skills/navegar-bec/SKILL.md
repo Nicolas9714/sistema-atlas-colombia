@@ -25,7 +25,7 @@ BEC es el gestor del mercado de gas natural en Colombia, operado por la Bolsa Me
 ## Cómo usar esta skill
 
 1. Consulta `mapa-web.md` para ubicar la sección relevante dentro del sitio.
-2. Consulta `fuentes-prioritarias.md` para acceder directamente a sistemas, portales y documentos clave.
+2. Consulta `fuentes.md` para acceder directamente a sistemas, portales y documentos clave.
 3. En el repositorio del Atlas, la carpeta `examples/` reúne casos de análisis reproducibles y consultas de ejemplo con su ruta esperada.
 
 ## Notas de navegación

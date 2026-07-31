@@ -1,4 +1,4 @@
-# Fuentes prioritarias — XM
+# Fuentes — XM
 
 ---
 

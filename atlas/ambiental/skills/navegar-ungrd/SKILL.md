@@ -26,7 +26,7 @@ La UNGRD es la entidad del Estado colombiano que coordina el Sistema Nacional de
 ## Cómo usar esta skill
 
 1. Consulta `mapa-web.md` para ubicar la sección relevante dentro del sitio o sus subdominios.
-2. Consulta `fuentes-prioritarias.md` para acceder directamente a sistemas, geovisores, portales de datos y documentos clave.
+2. Consulta `fuentes.md` para acceder directamente a sistemas, geovisores, portales de datos y documentos clave.
 3. En el repositorio del Atlas, la carpeta `examples/` reúne casos de análisis reproducibles y consultas de ejemplo con su ruta esperada.
 
 ## Notas de navegación

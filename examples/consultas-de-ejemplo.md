@@ -1,6 +1,6 @@
 # Consultas de ejemplo — entre atlas
 
-Consultas de demostración de la capa del Sistema: cada una es un prompt que cruza sectores, junto con la ruta que debería responderte con `atlas-orquestador-colombia` y los dos atlas instalados. La ruta se anota por atlas; las URLs exactas viven en `fuentes-prioritarias.md` de la skill correspondiente.
+Consultas de demostración de la capa del Sistema: cada una es un prompt que cruza sectores, junto con la ruta que debería responderte con `atlas-orquestador-colombia` y los dos atlas instalados. La ruta se anota por atlas; las URLs exactas viven en `fuentes.md` de la skill correspondiente.
 
 ---
 

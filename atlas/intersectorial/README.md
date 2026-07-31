@@ -12,7 +12,7 @@ Actualmente contiene cinco marcadores, todavía sin contenido normativo N1:
 | `navegar-funcion-publica` | Función Pública | Gestión pública, empleo, trámites y desempeño institucional |
 | `navegar-ancp` | Colombia Compra Eficiente | Contratación y compra pública |
 
-El atlas aún no está registrado ni se incluye en los instaladores porque no tiene orquestadora y sus entidades no cuentan con `SKILL.md`, `mapa-web.md` y `fuentes-prioritarias.md`.
+El atlas aún no está registrado ni se incluye en los instaladores porque no tiene orquestadora y sus entidades no cuentan con `SKILL.md`, `mapa-web.md` y `fuentes.md`.
 
 Para pasar a estado conforme deberá:
 

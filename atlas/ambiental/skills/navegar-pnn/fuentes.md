@@ -1,4 +1,4 @@
-# Fuentes prioritarias — Parques Nacionales Naturales de Colombia (PNN)
+# Fuentes — Parques Nacionales Naturales de Colombia (PNN)
 
 ---
 

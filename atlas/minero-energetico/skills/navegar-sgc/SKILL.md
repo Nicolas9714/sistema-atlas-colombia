@@ -24,11 +24,11 @@ El SGC es una entidad adscrita al Ministerio de Ciencia, Tecnología e Innovaci�
 ## Cómo usar esta skill
 
 1. Consulta `mapa-web.md` para ubicar el sistema, geovisor o publicación relevante.
-2. Consulta `fuentes-prioritarias.md` para acceder directamente al MIIG, catálogo sísmico, SIMMA o datos abiertos.
+2. Consulta `fuentes.md` para acceder directamente al MIIG, catálogo sísmico, SIMMA o datos abiertos.
 3. En el repositorio del Atlas, la carpeta `examples/` reúne casos de análisis reproducibles y consultas de ejemplo con su ruta esperada.
 
 ## Notas de navegación
 
-- El sitio principal del SGC está en `www2.sgc.gov.co`; `sgc.gov.co` es la página de entrada. Los sistemas especializados (MIIG, SIMMA, GeoRED, datos abiertos) tienen subdominios propios listados en `fuentes-prioritarias.md`.
+- El sitio principal del SGC está en `www2.sgc.gov.co`; `sgc.gov.co` es la página de entrada. Los sistemas especializados (MIIG, SIMMA, GeoRED, datos abiertos) tienen subdominios propios listados en `fuentes.md`.
 - El MIIG (`miig.sgc.gov.co`) es acceso público sin login y es el punto de entrada recomendado para datos geocientíficos descargables.
 - El monitoreo de volcanes y sismicidad en tiempo real está en `sgc.gov.co/volcanes` y `sgc.gov.co/sismos`.

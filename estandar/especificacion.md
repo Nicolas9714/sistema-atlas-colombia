@@ -22,7 +22,7 @@ Cada entidad cubierta se documenta en tres archivos Markdown con roles definidos
 | --- | --- |
 | `SKILL.md` | Descripción de la entidad y orientación general de navegación |
 | `mapa-web.md` | Árbol curado del sitio oficial, reducido a su contenido misional y estratégico |
-| `fuentes-prioritarias.md` | Inventario de sistemas, geovisores, portales, publicaciones y documentos clave |
+| `fuentes.md` | Inventario de sistemas, geovisores, portales, publicaciones y documentos clave |
 
 ### N2 — Convención de nombres
 

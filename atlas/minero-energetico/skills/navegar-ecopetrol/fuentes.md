@@ -1,4 +1,4 @@
-# Fuentes prioritarias — Ecopetrol S.A.
+# Fuentes — Ecopetrol S.A.
 
 ---
 

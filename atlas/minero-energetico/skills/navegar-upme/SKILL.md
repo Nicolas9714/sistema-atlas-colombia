@@ -25,12 +25,12 @@ La UPME es una Unidad Administrativa Especial adscrita al Ministerio de Minas y 
 ## Cómo usar esta skill
 
 1. Consulta `mapa-web.md` para ubicar el subsistema SIMEC, geovisor o sección relevante.
-2. Consulta `fuentes-prioritarias.md` para acceder directamente al SIMEC, geovisores, convocatorias, CIO sectorial o Biblioteca Digital.
+2. Consulta `fuentes.md` para acceder directamente al SIMEC, geovisores, convocatorias, CIO sectorial o Biblioteca Digital.
 3. En el repositorio del Atlas, la carpeta `examples/` reúne casos de análisis reproducibles y consultas de ejemplo con su ruta esperada.
 
 ## Notas de navegación
 
 - El SIMEC es el portal central de la UPME; casi toda la información sectorial está organizada bajo `simec/`. Conviene navegar desde ahí antes de buscar en el sitio general.
-- Los geovisores, la Biblioteca Digital y el sistema Argo GPL operan en subdominios propios; los enlaces directos están en `fuentes-prioritarias.md`.
+- Los geovisores, la Biblioteca Digital y el sistema Argo GPL operan en subdominios propios; los enlaces directos están en `fuentes.md`.
 - El SIMEM (`simem.co`) es un portal de datos conjunto entre UPME y XM; se documenta en la skill `navegar-xm`.
 - La UPME ejerce como CIO del sector minero-energético colombiano: los lineamientos de gobernanza de datos que publica aplican a todas las entidades del sector, no solo a la UPME.

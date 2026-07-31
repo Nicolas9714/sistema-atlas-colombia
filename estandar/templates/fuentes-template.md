@@ -1,4 +1,4 @@
-# Fuentes prioritarias — <Nombre Entidad>
+# Fuentes — <Nombre Entidad>
 
 ---
 

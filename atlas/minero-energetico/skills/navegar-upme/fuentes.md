@@ -1,4 +1,4 @@
-# Fuentes prioritarias — UPME
+# Fuentes — UPME
 
 ---
 
@@ -117,6 +117,6 @@
 | `nosotros/biblioteca-juridica/circulares-upme/circulares-upme-energia-electrica` | Circulares externas del subsector eléctrico; publicación frecuente (varias por mes) |
 | `home/convocatorias/convocatorias-de-transmision` | Convocatorias UPME activas para nuevas líneas y subestaciones del STN; documentos técnicos descargables |
 | `ventanilla-unica-servicios/fondos-apoyo-financiero` | Radicación y seguimiento de proyectos que solicitan recursos de FAZNI, FAER, PRONE o FENOGE |
-| SIMEM | El portal SIMEM (`simem.co`) es operado conjuntamente por UPME y XM; se documenta en `navegar-xm/fuentes-prioritarias.md` |
+| SIMEM | El portal SIMEM (`simem.co`) es operado conjuntamente por UPME y XM; se documenta en `navegar-xm/fuentes.md` |
 | `cio-upme/` | Los documentos del CIO UPME están alojados en `docs.upme.gov.co/CIO-UPME/Lineamientos/`; incluyen los planes BECO (balance energético), ICEE y hojas de ruta estadísticas |
 | `cio-sectorial/` | La UPME ejerce como CIO del sector minero-energético colombiano; esta página define las políticas y metodologías de gobernanza de datos que aplican a todas las entidades del sector |

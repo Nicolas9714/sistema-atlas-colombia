@@ -1,4 +1,4 @@
-# Fuentes prioritarias — MinEnergía
+# Fuentes — MinEnergía
 
 ---
 

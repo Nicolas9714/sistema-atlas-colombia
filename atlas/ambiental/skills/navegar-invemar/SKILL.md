@@ -24,13 +24,13 @@ INVEMAR es el instituto científico de referencia del Estado colombiano para la 
 ## Cómo usar esta skill
 
 1. Consulta `mapa-web.md` para ubicar la sección o subdominio relevante dentro del sitio y los sistemas del SIAM.
-2. Consulta `fuentes-prioritarias.md` para acceder directamente al SIAM, las operaciones estadísticas, el Geovisor, el Catálogo HUB o las colecciones del museo.
+2. Consulta `fuentes.md` para acceder directamente al SIAM, las operaciones estadísticas, el Geovisor, el Catálogo HUB o las colecciones del museo.
 3. En el repositorio del Atlas, la carpeta `examples/` reúne casos de análisis reproducibles y consultas de ejemplo con su ruta esperada.
 
 ## Notas de navegación
 
 - El SIAM (`siam.invemar.org.co`) es el portal central de datos; estaba en renovación parcial al momento de la verificación. Conviene navegar desde ahí antes de buscar en el sitio general.
-- Las cuatro operaciones estadísticas (EPPA, ICAM, ICTAC, IECC) son portales ArcGIS Hub independientes con datasets descargables; los enlaces directos están en `fuentes-prioritarias.md`.
+- Las cuatro operaciones estadísticas (EPPA, ICAM, ICTAC, IECC) son portales ArcGIS Hub independientes con datasets descargables; los enlaces directos están en `fuentes.md`.
 - `centrodocumentacion.invemar.org.co` presentó error SSL el 2026-06-15; acceder al CDO desde la sección de servicios del sitio principal.
 - `boletin.invemar.org.co/ojs/index.php/boletin` devuelve 404 (2026-06-15); buscar la revista en Redalyc o SciELO como alternativa.
 - El SAMP (Subsistema de Áreas Marinas Protegidas) está accesible en `siam.invemar.org.co/samp` al 2026-07-04; la ruta anterior `cinto.invemar.org.co/samp` devuelve 404.

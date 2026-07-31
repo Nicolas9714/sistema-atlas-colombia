@@ -1,4 +1,4 @@
-# Fuentes prioritarias — BEC (Gestor del Mercado de Gas Natural)
+# Fuentes — BEC (Gestor del Mercado de Gas Natural)
 
 ---
 

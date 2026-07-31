@@ -23,7 +23,7 @@ description: Guía para navegar el sitio oficial de <Nombre Entidad> y encontrar
 ## Cómo usar esta skill
 
 1. Consulta `mapa-web.md` para ubicar la sección relevante dentro del sitio.
-2. Consulta `fuentes-prioritarias.md` para acceder directamente a sistemas, portales y documentos clave.
+2. Consulta `fuentes.md` para acceder directamente a sistemas, portales y documentos clave.
 3. Ver `examples/` para casos de uso y consultas de ejemplo.
 
 ## Notas de navegación

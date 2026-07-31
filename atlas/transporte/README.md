@@ -13,7 +13,7 @@ Actualmente contiene seis marcadores, todavía sin contenido normativo N1:
 | `navegar-supertransporte` | Superintendencia de Transporte | Vigilancia de la prestación del servicio de transporte |
 | `navegar-ansv` | Agencia Nacional de Seguridad Vial (ANSV) | Seguridad vial y siniestralidad |
 
-El atlas aún no está registrado ni se incluye en los instaladores porque no tiene orquestadora y sus entidades no cuentan con `SKILL.md`, `mapa-web.md` y `fuentes-prioritarias.md`.
+El atlas aún no está registrado ni se incluye en los instaladores porque no tiene orquestadora y sus entidades no cuentan con `SKILL.md`, `mapa-web.md` y `fuentes.md`.
 
 Para pasar a estado conforme deberá:
 

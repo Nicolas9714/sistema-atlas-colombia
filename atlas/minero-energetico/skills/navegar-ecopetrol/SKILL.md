@@ -24,12 +24,12 @@ Ecopetrol S.A. es la principal empresa de petróleo y gas de Colombia y una de l
 ## Cómo usar esta skill
 
 1. Consulta `mapa-web.md` para ubicar la sección relevante dentro del sitio.
-2. Consulta `fuentes-prioritarias.md` para acceder directamente a informes, estados financieros, precios, portales y documentos clave.
+2. Consulta `fuentes.md` para acceder directamente a informes, estados financieros, precios, portales y documentos clave.
 3. En el repositorio del Atlas, la carpeta `examples/` reúne casos de análisis reproducibles y consultas de ejemplo con su ruta esperada.
 
 ## Notas de navegación
 
-- Los documentos más importantes (informes anuales, TCFD, SASB, CDP) se descargan desde `files.ecopetrol.com.co`, que actúa como CDN de documentos; los enlaces directos están en `fuentes-prioritarias.md`.
+- Los documentos más importantes (informes anuales, TCFD, SASB, CDP) se descargan desde `files.ecopetrol.com.co`, que actúa como CDN de documentos; los enlaces directos están en `fuentes.md`.
 - Algunas URLs del portal principal redirigen con código 302 al subdominio `nuevoportal.ecopetrol.com.co`; el contenido es equivalente; ambas rutas funcionan.
 - El portal comercial (precios, portafolio e información comercial de GLP, gas natural, energía y crudo) opera bajo la ruta `/multisitios/comercial/` dentro del mismo dominio.
 - El Grupo Ecopetrol incluye filiales con sitios propios: ISA (`isa.co`), Cenit (`cenit-transporte.com`), Reficar (`reficar.com.co`), Hocol (`hocol.com.co`), entre otras; el portal de Ecopetrol enlaza a cada una desde la sección Grupo Ecopetrol.

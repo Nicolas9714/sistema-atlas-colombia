@@ -35,7 +35,7 @@ Este atlas hace parte del [Sistema Atlas Colombia](../../README.md) y cumple la 
 | `navegar-ecopetrol` | Ecopetrol | Cadena de hidrocarburos e información corporativa sectorial |
 | `navegar-bec` | BEC | Gestor del mercado de gas natural |
 
-Cada skill de entidad contiene `SKILL.md`, `mapa-web.md` y `fuentes-prioritarias.md`; la orquestadora contiene solo `SKILL.md`.
+Cada skill de entidad contiene `SKILL.md`, `mapa-web.md` y `fuentes.md`; la orquestadora contiene solo `SKILL.md`.
 
 ## Ejemplos
 

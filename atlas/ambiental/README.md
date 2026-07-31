@@ -30,7 +30,7 @@ Este atlas hace parte del [Sistema Atlas Colombia](../../README.md) y cumple la 
 | `navegar-pnn` | Parques Nacionales Naturales | Áreas protegidas |
 | `navegar-ungrd` | UNGRD | Gestión del riesgo de desastres |
 
-Cada skill de entidad contiene `SKILL.md`, `mapa-web.md` y `fuentes-prioritarias.md`; la orquestadora contiene solo `SKILL.md`.
+Cada skill de entidad contiene `SKILL.md`, `mapa-web.md` y `fuentes.md`; la orquestadora contiene solo `SKILL.md`.
 
 ## Ejemplos
 

@@ -117,7 +117,7 @@ verificar_sectorial() {
         fi
         # N1: tres archivos. 0 de 3 = marcador (pendiente); 1-2 = roto; 3 = ok
         tiene=0; faltan=""
-        for req in SKILL.md mapa-web.md fuentes-prioritarias.md; do
+        for req in SKILL.md mapa-web.md fuentes.md; do
             if [ -f "$skills/$e/$req" ]; then tiene=$((tiene+1)); else faltan="$faltan $req"; fi
         done
         if [ "$tiene" -eq 3 ]; then
@@ -148,10 +148,10 @@ verificar_sectorial() {
             l ~ /^#/ || l ~ /^\|/ || l ~ /^```/ || l ~ /^>/ { next }
             length(l) > 80 { print l }
         ' "$skills"/navegar-*/SKILL.md "$skills"/navegar-*/mapa-web.md \
-          "$skills"/navegar-*/fuentes-prioritarias.md 2>/dev/null > "$tmp_sig"
+          "$skills"/navegar-*/fuentes.md 2>/dev/null > "$tmp_sig"
         # (b) URLs de las entidades: la orquestadora no debe reproducir ninguna
         grep -hoE 'https?://[^ )"'"'"'<>]+' "$skills"/navegar-*/SKILL.md \
-          "$skills"/navegar-*/mapa-web.md "$skills"/navegar-*/fuentes-prioritarias.md \
+          "$skills"/navegar-*/mapa-web.md "$skills"/navegar-*/fuentes.md \
           2>/dev/null >> "$tmp_sig"
         sort -u "$tmp_sig" -o "$tmp_sig"
         if [ -s "$tmp_sig" ]; then
@@ -245,7 +245,7 @@ esta_poblado() {
     local e
     for e in "$skills"/navegar-*/; do
         [ -d "$e" ] || continue
-        if [ -f "$e/SKILL.md" ] && [ -f "$e/mapa-web.md" ] && [ -f "$e/fuentes-prioritarias.md" ]; then
+        if [ -f "$e/SKILL.md" ] && [ -f "$e/mapa-web.md" ] && [ -f "$e/fuentes.md" ]; then
             return 0
         fi
     done
@@ -269,7 +269,7 @@ verificar_construccion() {
             fi
             marcadores=$((marcadores+1))
             tiene=0
-            for req in SKILL.md mapa-web.md fuentes-prioritarias.md; do
+            for req in SKILL.md mapa-web.md fuentes.md; do
                 [ -f "$d/$req" ] && tiene=$((tiene+1))
             done
             if [ "$tiene" -ne 0 ]; then

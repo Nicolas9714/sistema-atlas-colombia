@@ -22,7 +22,7 @@ FENOGE es un fondo adscrito al Ministerio de Minas y Energía creado por la Ley 
 ## Cómo usar esta skill
 
 1. Consulta `mapa-web.md` para ubicar convocatorias, proyectos o el PTEP.
-2. Consulta `fuentes-prioritarias.md` para acceder directamente a las convocatorias activas, el portafolio de proyectos o la normativa.
+2. Consulta `fuentes.md` para acceder directamente a las convocatorias activas, el portafolio de proyectos o la normativa.
 3. En el repositorio del Atlas, la carpeta `examples/` reúne casos de análisis reproducibles y consultas de ejemplo con su ruta esperada.
 
 ## Notas de navegación
