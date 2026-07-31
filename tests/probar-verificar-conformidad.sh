@@ -51,4 +51,12 @@ mkdir -p "$temporal/caso/atlas/ambiental/skills"
 debe_fallar "atlas registrado vaciado" \
     "$temporal/caso/verificar-conformidad.sh" ambiental
 
+# Una entidad en construcción vale con 0 de 3 archivos N1 (marcador) o con los
+# 3 (poblada). Quedarse a medias es el estado que debe delatarse.
+preparar
+printf -- '---\nname: navegar-invias\n---\n\n# INVÍAS\n' \
+    > "$temporal/caso/atlas/transporte/skills/navegar-invias/SKILL.md"
+debe_fallar "entidad en construcción a medio poblar" \
+    "$temporal/caso/verificar-conformidad.sh" transporte
+
 printf 'Pruebas adversariales de conformidad: OK\n'
