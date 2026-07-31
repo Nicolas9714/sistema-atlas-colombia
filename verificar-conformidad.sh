@@ -22,8 +22,11 @@ raiz_atlas="$raiz/atlas"
 # Alias del nodo nacional: caso especial, no es un atlas sectorial.
 NACIONAL="nacional"
 
-# Único atlas autorizado a permanecer incompleto sin romper CI.
-EN_CONSTRUCCION=("intersectorial")
+# Atlas autorizados a permanecer incompletos sin romper CI. La lista es
+# explícita a propósito: un atlas que se despueble por error debe fallar,
+# no pasar por «en construcción». Al sumar un atlas nuevo, añadirlo aquí y
+# retirarlo cuando quede poblado y registrado en registro.md.
+EN_CONSTRUCCION=("intersectorial" "transporte")
 
 # Contadores globales
 conformes=0
