@@ -52,6 +52,8 @@ Nada dentro de la carpeta de un atlas referencia archivos de otro atlas. Toda fr
 
 Un tercero debe poder construir un atlas de otro sector — o de otro país — cumpliendo solo la parte normativa (N1–N5 y autocontención), y sus skills deben poder convivir con las de los atlas registrados sin colisiones de nombres ni de competencias. En un atlas que vive como repositorio propio la autocontención se satisface por construcción, al no haber otro atlas en el mismo árbol.
 
+Esta especificación tiene una implementación de referencia que la verifica: [`../verificar-conformidad.sh`](../verificar-conformidad.sh), que comprueba N1–N5 y la autocontención tratando cada atlas como la raíz de su propio repositorio. Correrlo sobre un atlas candidato responde la pregunta de si es compatible. La parte recomendada queda fuera de su alcance. El README del Sistema explica sus modos de evaluación y cómo se ejecuta.
+
 ## Parte recomendada
 
 Buenas prácticas de los atlas fundadores (el Atlas de Navegación Minero Energético de Colombia y el Atlas de Navegación Ambiental de Colombia). Mejoran la calidad; su ausencia no rompe la compatibilidad.
