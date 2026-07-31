@@ -10,7 +10,7 @@ Actualmente contiene cinco marcadores, todavía sin contenido normativo N1:
 | `navegar-dnp` | DNP | Planeación, inversión y evaluación de políticas públicas |
 | `navegar-igac` | IGAC | Información geográfica, catastral y agrológica |
 | `navegar-funcion-publica` | Función Pública | Gestión pública, empleo, trámites y desempeño institucional |
-| `navegar-colombia-compra` | Colombia Compra Eficiente | Contratación y compra pública |
+| `navegar-ancp` | Colombia Compra Eficiente | Contratación y compra pública |
 
 El atlas aún no está registrado ni se incluye en los instaladores porque no tiene orquestadora y sus entidades no cuentan con `SKILL.md`, `mapa-web.md` y `fuentes-prioritarias.md`.
 
