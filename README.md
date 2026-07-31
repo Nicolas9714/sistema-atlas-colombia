@@ -47,6 +47,8 @@ Cada nivel enruta hacia abajo sin reemplazarlo. La respuesta e información espe
 
 <img src="assets/estructura-sistema-atlas.svg" width="100%" alt="Árbol de la estructura del Sistema Atlas Colombia">
 
+El trazo discontinuo marca los atlas en construcción: el Intersectorial y el de Transporte tienen sus entidades definidas, pero todavía no sus skills ni su orquestadora, así que aún no se registran arriba.
+
 El detalle de entidades y fronteras temáticas vive en [`registro.md`](registro.md).
 
 ## Qué contiene este repositorio
@@ -62,7 +64,8 @@ sistema-atlas-colombia/
 │   ├── nacional/         → Nodo nacional: atlas-orquestador-colombia (enruta ENTRE atlas)
 │   ├── ambiental/        → Atlas ambiental: README propio + skills/ + examples/
 │   ├── minero-energetico/ → Atlas minero energético: README propio + skills/ + examples/
-│   └── intersectorial/   → Entidades transversales (DANE, DNP, …)
+│   ├── intersectorial/   → Entidades transversales (DANE, DNP, …) — en construcción
+│   └── transporte/       → Sector transporte (MinTransporte, ANI, INVÍAS, …) — en construcción
 └── examples/
     └── consultas-de-ejemplo.md      → Consultas que cruzan atlas, con su ruta esperada
 ```

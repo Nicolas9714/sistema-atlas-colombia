@@ -13,6 +13,8 @@
 
 **En construcción:** el Atlas Intersectorial (`atlas/intersectorial/`) alojará las entidades transversales que sirven a todos los sectores por igual (DANE, DNP y futuras). Aún no se registra: sus skills (`navegar-dane`, `navegar-dnp`) son marcadores sin poblar y todavía no existe su orquestadora `atlas-orquestador-intersectorial`, así que no cumple N1–N5.
 
+**En construcción:** el Atlas Transporte (`atlas/transporte/`) alojará al Ministerio de Transporte, la ANI, INVÍAS, Aerocivil, Supertransporte y la ANSV. Sus seis skills son marcadores sin poblar y todavía no existe su orquestadora `atlas-orquestador-transporte`, así que tampoco cumple N1–N5.
+
 ## Entidades por atlas
 
 ### Atlas de Navegación Minero Energético de Colombia — 12 entidades

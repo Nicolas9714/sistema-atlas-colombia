@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 800" role="img" aria-labelledby="titulo descripcion">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 1264" role="img" aria-labelledby="titulo descripcion">
 <title id="titulo">Estructura del Sistema Atlas Colombia</title>
-<desc id="descripcion">&#193;rbol del sistema nacional, los atlas sectoriales, sus skills orquestadoras y las entidades registradas.</desc>
+<desc id="descripcion">Árbol del sistema nacional, los 4 atlas sectoriales, sus skills orquestadoras y las 30 entidades registradas.</desc>
 <style>
   .fondo { fill: #0D1117; stroke: #30363D; stroke-width: 2; }
   text { font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif; fill: #E6EDF3; paint-order: stroke; stroke: #0D1117; stroke-width: 5px; stroke-linejoin: round; }
@@ -12,78 +12,122 @@
   .atlas circle { stroke-width: 2.2; }
   .orquestadora polygon { stroke-width: 2; }
   .entidad circle { stroke-width: 1.7; }
+  /* Lo que sigue en construcción se dibuja punteado: la rama existe, sus
+     skills todavía no. */
+  .conexion.construccion, .construccion circle, .construccion polygon { stroke-dasharray: 4 4; opacity: .6; }
   .titulo { font-size: 20px; font-weight: 650; }
   .skill { font-size: 11px; fill: #8B949E; }
   .entidad text { font-size: 14px; font-weight: 560; }
   .etiqueta-atlas { font-size: 17px; font-weight: 650; text-anchor: end; }
-  .etiqueta-orq { font-size: 12px; font-weight: 600; text-anchor: middle; }
-  .nodo:hover circle, .nodo:hover polygon { fill: #163B2B; stroke-width: 3; }
+  .etiqueta-orq { font-size: 12px; font-weight: 600; text-anchor: middle; fill: #8B949E; }
 </style>
-<rect class="fondo" x="1" y="1" width="1238" height="798" rx="18"/>
-  <path d="M 159 400 C 281.0 400, 281.0 225, 403 225" class="conexion"/>
-  <path d="M 159 400 C 281.0 400, 281.0 595, 403 595" class="conexion"/>
-  <path d="M 427 225 C 542.5 225, 542.5 225, 658 225" class="conexion"/>
-  <path d="M 427 595 C 542.5 595, 542.5 595, 658 595" class="conexion"/>
-  <path d="M 682 225 C 786.0 225, 786.0 35, 890 35" class="conexion"/>
-  <path d="M 682 225 C 786.0 225, 786.0 69, 890 69" class="conexion"/>
-  <path d="M 682 225 C 786.0 225, 786.0 103, 890 103" class="conexion"/>
-  <path d="M 682 225 C 786.0 225, 786.0 137, 890 137" class="conexion"/>
-  <path d="M 682 225 C 786.0 225, 786.0 171, 890 171" class="conexion"/>
-  <path d="M 682 225 C 786.0 225, 786.0 205, 890 205" class="conexion"/>
-  <path d="M 682 225 C 786.0 225, 786.0 239, 890 239" class="conexion"/>
-  <path d="M 682 225 C 786.0 225, 786.0 273, 890 273" class="conexion"/>
-  <path d="M 682 225 C 786.0 225, 786.0 307, 890 307" class="conexion"/>
-  <path d="M 682 225 C 786.0 225, 786.0 341, 890 341" class="conexion"/>
-  <path d="M 682 225 C 786.0 225, 786.0 375, 890 375" class="conexion"/>
-  <path d="M 682 225 C 786.0 225, 786.0 409, 890 409" class="conexion"/>
-  <path d="M 682 595 C 786.0 595, 786.0 490, 890 490" class="conexion"/>
-  <path d="M 682 595 C 786.0 595, 786.0 533, 890 533" class="conexion"/>
-  <path d="M 682 595 C 786.0 595, 786.0 576, 890 576" class="conexion"/>
-  <path d="M 682 595 C 786.0 595, 786.0 619, 890 619" class="conexion"/>
-  <path d="M 682 595 C 786.0 595, 786.0 662, 890 662" class="conexion"/>
-  <path d="M 682 595 C 786.0 595, 786.0 705, 890 705" class="conexion"/>
-  <path d="M 682 595 C 786.0 595, 786.0 748, 890 748" class="conexion"/>
+  <rect class="fondo" x="1" y="1" width="1238" height="1262" rx="18"/>
+  <path d="M 159 632 C 285.88 632, 285.88 233, 403 233" class="conexion"/>
+  <path d="M 427 233 H 658" class="conexion"/>
+  <path d="M 682 233 C 790.16 233, 790.16 46, 890 46" class="conexion"/>
+  <path d="M 682 233 C 790.16 233, 790.16 80, 890 80" class="conexion"/>
+  <path d="M 682 233 C 790.16 233, 790.16 114, 890 114" class="conexion"/>
+  <path d="M 682 233 C 790.16 233, 790.16 148, 890 148" class="conexion"/>
+  <path d="M 682 233 C 790.16 233, 790.16 182, 890 182" class="conexion"/>
+  <path d="M 682 233 C 790.16 233, 790.16 216, 890 216" class="conexion"/>
+  <path d="M 682 233 C 790.16 233, 790.16 250, 890 250" class="conexion"/>
+  <path d="M 682 233 C 790.16 233, 790.16 284, 890 284" class="conexion"/>
+  <path d="M 682 233 C 790.16 233, 790.16 318, 890 318" class="conexion"/>
+  <path d="M 682 233 C 790.16 233, 790.16 352, 890 352" class="conexion"/>
+  <path d="M 682 233 C 790.16 233, 790.16 386, 890 386" class="conexion"/>
+  <path d="M 682 233 C 790.16 233, 790.16 420, 890 420" class="conexion"/>
+  <path d="M 159 632 C 285.88 632, 285.88 618, 403 618" class="conexion"/>
+  <path d="M 427 618 H 658" class="conexion"/>
+  <path d="M 682 618 C 790.16 618, 790.16 516, 890 516" class="conexion"/>
+  <path d="M 682 618 C 790.16 618, 790.16 550, 890 550" class="conexion"/>
+  <path d="M 682 618 C 790.16 618, 790.16 584, 890 584" class="conexion"/>
+  <path d="M 682 618 C 790.16 618, 790.16 618, 890 618" class="conexion"/>
+  <path d="M 682 618 C 790.16 618, 790.16 652, 890 652" class="conexion"/>
+  <path d="M 682 618 C 790.16 618, 790.16 686, 890 686" class="conexion"/>
+  <path d="M 682 618 C 790.16 618, 790.16 720, 890 720" class="conexion"/>
+  <path d="M 159 632 C 285.88 632, 285.88 884, 403 884" class="conexion construccion"/>
+  <path d="M 427 884 H 658" class="conexion construccion"/>
+  <path d="M 682 884 C 790.16 884, 790.16 816, 890 816" class="conexion construccion"/>
+  <path d="M 682 884 C 790.16 884, 790.16 850, 890 850" class="conexion construccion"/>
+  <path d="M 682 884 C 790.16 884, 790.16 884, 890 884" class="conexion construccion"/>
+  <path d="M 682 884 C 790.16 884, 790.16 918, 890 918" class="conexion construccion"/>
+  <path d="M 682 884 C 790.16 884, 790.16 952, 890 952" class="conexion construccion"/>
+  <path d="M 159 632 C 285.88 632, 285.88 1133, 403 1133" class="conexion construccion"/>
+  <path d="M 427 1133 H 658" class="conexion construccion"/>
+  <path d="M 682 1133 C 790.16 1133, 790.16 1048, 890 1048" class="conexion construccion"/>
+  <path d="M 682 1133 C 790.16 1133, 790.16 1082, 890 1082" class="conexion construccion"/>
+  <path d="M 682 1133 C 790.16 1133, 790.16 1116, 890 1116" class="conexion construccion"/>
+  <path d="M 682 1133 C 790.16 1133, 790.16 1150, 890 1150" class="conexion construccion"/>
+  <path d="M 682 1133 C 790.16 1133, 790.16 1184, 890 1184" class="conexion construccion"/>
+  <path d="M 682 1133 C 790.16 1133, 790.16 1218, 890 1218" class="conexion construccion"/>
   <g class="nodo sistema"><title>atlas-orquestador-colombia</title>
-    <circle class="exterior" cx="145" cy="400" r="15"/>
-    <circle class="interior" cx="145" cy="400" r="8"/>
-    <text x="145" y="344" class="titulo" text-anchor="middle">Sistema Atlas</text>
-    <text x="145" y="367" class="titulo" text-anchor="middle">Colombia</text>
-    <text x="145" y="442" class="skill" text-anchor="middle">atlas-orquestador-colombia</text>
+    <circle class="exterior" cx="145" cy="632" r="15"/>
+    <circle class="interior" cx="145" cy="632" r="8"/>
+    <text x="145" y="576" class="titulo" text-anchor="middle">Sistema Atlas</text>
+    <text x="145" y="599" class="titulo" text-anchor="middle">Colombia</text>
+    <text x="145" y="674" class="skill" text-anchor="middle">atlas-orquestador-colombia</text>
   </g>
-  <g class="nodo atlas"><title>Atlas de Navegaci&#243;n Minero Energ&#233;tico de Colombia</title>
-    <circle cx="415" cy="225" r="12"/>
-    <text x="393" y="221" class="etiqueta-atlas">Atlas Minero</text>
-    <text x="393" y="242" class="etiqueta-atlas">Energ&#233;tico</text>
+  <g class="nodo atlas"><title>Atlas de Navegación Minero Energético de Colombia</title>
+    <circle cx="415" cy="233" r="12"/>
+    <text x="393" y="229" class="etiqueta-atlas">Atlas Minero</text>
+    <text x="393" y="250" class="etiqueta-atlas">Energético</text>
   </g>
-  <g class="nodo atlas"><title>Atlas de Navegaci&#243;n Ambiental de Colombia</title>
-    <circle cx="415" cy="595" r="12"/>
-    <text x="393" y="601" class="etiqueta-atlas">Atlas Ambiental</text>
+  <g class="nodo atlas"><title>Atlas de Navegación Ambiental de Colombia</title>
+    <circle cx="415" cy="618" r="12"/>
+    <text x="393" y="624" class="etiqueta-atlas">Atlas Ambiental</text>
+  </g>
+  <g class="nodo atlas construccion"><title>Atlas Intersectorial de Colombia</title>
+    <circle cx="415" cy="884" r="12"/>
+    <text x="393" y="890" class="etiqueta-atlas">Atlas Intersectorial</text>
+  </g>
+  <g class="nodo atlas construccion"><title>Atlas de Navegación de Transporte de Colombia</title>
+    <circle cx="415" cy="1133" r="12"/>
+    <text x="393" y="1139" class="etiqueta-atlas">Atlas Transporte</text>
   </g>
   <g class="nodo orquestadora"><title>atlas-orquestador-minero-energetico</title>
-    <polygon points="670,213 682,225 670,237 658,225"/>
-    <text x="670" y="259" class="etiqueta-orq">skill orquestadora</text>
+    <polygon points="670,221 682,233 670,245 658,233"/>
+    <text x="670" y="267" class="etiqueta-orq">skill orquestadora</text>
   </g>
   <g class="nodo orquestadora"><title>atlas-orquestador-ambiental</title>
-    <polygon points="670,583 682,595 670,607 658,595"/>
-    <text x="670" y="629" class="etiqueta-orq">skill orquestadora</text>
+    <polygon points="670,606 682,618 670,630 658,618"/>
+    <text x="670" y="652" class="etiqueta-orq">skill orquestadora</text>
   </g>
-  <g class="nodo entidad"><title>MinEnerg&#237;a</title><circle cx="895" cy="35" r="5"/><text x="913" y="40">MinEnerg&#237;a</text></g>
-  <g class="nodo entidad"><title>UPME</title><circle cx="895" cy="69" r="5"/><text x="913" y="74">UPME</text></g>
-  <g class="nodo entidad"><title>CREG</title><circle cx="895" cy="103" r="5"/><text x="913" y="108">CREG</text></g>
-  <g class="nodo entidad"><title>ANH</title><circle cx="895" cy="137" r="5"/><text x="913" y="142">ANH</text></g>
-  <g class="nodo entidad"><title>ANM</title><circle cx="895" cy="171" r="5"/><text x="913" y="176">ANM</text></g>
-  <g class="nodo entidad"><title>SGC</title><circle cx="895" cy="205" r="5"/><text x="913" y="210">SGC</text></g>
-  <g class="nodo entidad"><title>XM</title><circle cx="895" cy="239" r="5"/><text x="913" y="244">XM</text></g>
-  <g class="nodo entidad"><title>Ecopetrol</title><circle cx="895" cy="273" r="5"/><text x="913" y="278">Ecopetrol</text></g>
-  <g class="nodo entidad"><title>IPSE</title><circle cx="895" cy="307" r="5"/><text x="913" y="312">IPSE</text></g>
-  <g class="nodo entidad"><title>FENOGE</title><circle cx="895" cy="341" r="5"/><text x="913" y="346">FENOGE</text></g>
-  <g class="nodo entidad"><title>Superservicios</title><circle cx="895" cy="375" r="5"/><text x="913" y="380">Superservicios</text></g>
-  <g class="nodo entidad"><title>BEC</title><circle cx="895" cy="409" r="5"/><text x="913" y="414">BEC</text></g>
-  <g class="nodo entidad"><title>MinAmbiente</title><circle cx="895" cy="490" r="5"/><text x="913" y="495">MinAmbiente</text></g>
-  <g class="nodo entidad"><title>ANLA</title><circle cx="895" cy="533" r="5"/><text x="913" y="538">ANLA</text></g>
-  <g class="nodo entidad"><title>IDEAM</title><circle cx="895" cy="576" r="5"/><text x="913" y="581">IDEAM</text></g>
-  <g class="nodo entidad"><title>IAvH</title><circle cx="895" cy="619" r="5"/><text x="913" y="624">IAvH</text></g>
-  <g class="nodo entidad"><title>INVEMAR</title><circle cx="895" cy="662" r="5"/><text x="913" y="667">INVEMAR</text></g>
-  <g class="nodo entidad"><title>PNN</title><circle cx="895" cy="705" r="5"/><text x="913" y="710">PNN</text></g>
-  <g class="nodo entidad"><title>UNGRD</title><circle cx="895" cy="748" r="5"/><text x="913" y="753">UNGRD</text></g>
+  <g class="nodo orquestadora construccion"><title>atlas-orquestador-intersectorial</title>
+    <polygon points="670,872 682,884 670,896 658,884"/>
+    <text x="670" y="918" class="etiqueta-orq">skill orquestadora</text>
+  </g>
+  <g class="nodo orquestadora construccion"><title>atlas-orquestador-transporte</title>
+    <polygon points="670,1121 682,1133 670,1145 658,1133"/>
+    <text x="670" y="1167" class="etiqueta-orq">skill orquestadora</text>
+  </g>
+  <g class="nodo entidad"><title>MinEnergía — Política sectorial</title><circle cx="895" cy="46" r="5"/><text x="913" y="51">MinEnergía</text></g>
+  <g class="nodo entidad"><title>UPME — Planeación minero-energética</title><circle cx="895" cy="80" r="5"/><text x="913" y="85">UPME</text></g>
+  <g class="nodo entidad"><title>CREG — Regulación de energía y gas</title><circle cx="895" cy="114" r="5"/><text x="913" y="119">CREG</text></g>
+  <g class="nodo entidad"><title>ANH — Administración de hidrocarburos</title><circle cx="895" cy="148" r="5"/><text x="913" y="153">ANH</text></g>
+  <g class="nodo entidad"><title>ANM — Administración minera</title><circle cx="895" cy="182" r="5"/><text x="913" y="187">ANM</text></g>
+  <g class="nodo entidad"><title>SGC — Geología y recursos del subsuelo</title><circle cx="895" cy="216" r="5"/><text x="913" y="221">SGC</text></g>
+  <g class="nodo entidad"><title>XM — Operación del sistema eléctrico</title><circle cx="895" cy="250" r="5"/><text x="913" y="255">XM</text></g>
+  <g class="nodo entidad"><title>Ecopetrol — Cadena de hidrocarburos e información corporativa sectorial</title><circle cx="895" cy="284" r="5"/><text x="913" y="289">Ecopetrol</text></g>
+  <g class="nodo entidad"><title>IPSE — Energía en zonas no interconectadas</title><circle cx="895" cy="318" r="5"/><text x="913" y="323">IPSE</text></g>
+  <g class="nodo entidad"><title>FENOGE — Energías no convencionales y eficiencia</title><circle cx="895" cy="352" r="5"/><text x="913" y="357">FENOGE</text></g>
+  <g class="nodo entidad"><title>Superservicios — Vigilancia de servicios públicos</title><circle cx="895" cy="386" r="5"/><text x="913" y="391">Superservicios</text></g>
+  <g class="nodo entidad"><title>BEC — Gestor del mercado de gas natural</title><circle cx="895" cy="420" r="5"/><text x="913" y="425">BEC</text></g>
+  <g class="nodo entidad"><title>MinAmbiente — Política ambiental nacional</title><circle cx="895" cy="516" r="5"/><text x="913" y="521">MinAmbiente</text></g>
+  <g class="nodo entidad"><title>ANLA — Licenciamiento ambiental</title><circle cx="895" cy="550" r="5"/><text x="913" y="555">ANLA</text></g>
+  <g class="nodo entidad"><title>IDEAM — Hidrología, meteorología y estudios ambientales</title><circle cx="895" cy="584" r="5"/><text x="913" y="589">IDEAM</text></g>
+  <g class="nodo entidad"><title>IAvH — Investigación en biodiversidad</title><circle cx="895" cy="618" r="5"/><text x="913" y="623">IAvH</text></g>
+  <g class="nodo entidad"><title>INVEMAR — Investigación marina y costera</title><circle cx="895" cy="652" r="5"/><text x="913" y="657">INVEMAR</text></g>
+  <g class="nodo entidad"><title>PNN — Áreas protegidas</title><circle cx="895" cy="686" r="5"/><text x="913" y="691">PNN</text></g>
+  <g class="nodo entidad"><title>UNGRD — Gestión del riesgo de desastres</title><circle cx="895" cy="720" r="5"/><text x="913" y="725">UNGRD</text></g>
+  <g class="nodo entidad construccion"><title>DANE — Estadística oficial y Sistema Estadístico Nacional</title><circle cx="895" cy="816" r="5"/><text x="913" y="821">DANE</text></g>
+  <g class="nodo entidad construccion"><title>DNP — Planeación, inversión y evaluación de políticas públicas</title><circle cx="895" cy="850" r="5"/><text x="913" y="855">DNP</text></g>
+  <g class="nodo entidad construccion"><title>IGAC — Información geográfica, catastral y agrológica</title><circle cx="895" cy="884" r="5"/><text x="913" y="889">IGAC</text></g>
+  <g class="nodo entidad construccion"><title>Función Pública — Gestión pública, empleo, trámites y desempeño institucional</title><circle cx="895" cy="918" r="5"/><text x="913" y="923">Función Pública</text></g>
+  <g class="nodo entidad construccion"><title>ANCP — Contratación y compra pública</title><circle cx="895" cy="952" r="5"/><text x="913" y="957">ANCP</text></g>
+  <g class="nodo entidad construccion"><title>MinTransporte — Política y regulación del sector transporte</title><circle cx="895" cy="1048" r="5"/><text x="913" y="1053">MinTransporte</text></g>
+  <g class="nodo entidad construccion"><title>ANI — Concesiones de infraestructura de transporte</title><circle cx="895" cy="1082" r="5"/><text x="913" y="1087">ANI</text></g>
+  <g class="nodo entidad construccion"><title>INVÍAS — Red vial nacional no concesionada</title><circle cx="895" cy="1116" r="5"/><text x="913" y="1121">INVÍAS</text></g>
+  <g class="nodo entidad construccion"><title>Aerocivil — Aviación civil y espacio aéreo</title><circle cx="895" cy="1150" r="5"/><text x="913" y="1155">Aerocivil</text></g>
+  <g class="nodo entidad construccion"><title>Supertransporte — Vigilancia de la prestación del servicio de transporte</title><circle cx="895" cy="1184" r="5"/><text x="913" y="1189">Supertransporte</text></g>
+  <g class="nodo entidad construccion"><title>ANSV — Seguridad vial y siniestralidad</title><circle cx="895" cy="1218" r="5"/><text x="913" y="1223">ANSV</text></g>
 </svg>
