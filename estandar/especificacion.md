@@ -46,7 +46,7 @@ La skill orquestadora de cada atlas incluye una línea estandarizada apuntando a
 
 ### Autocontención
 
-Nada dentro de la carpeta de un atlas referencia archivos de otro atlas. Toda frontera temática entre atlas se declara únicamente en `registro.md`, y el cruce entre sectores se resuelve por el nodo nacional (N5), nunca por un enlace directo de un atlas a los archivos de otro. La regla mantiene cada atlas extraíble y verificable de forma aislada, exista como subcarpeta o como repositorio propio.
+Nada dentro de la carpeta de un atlas referencia archivos de otro atlas. El cruce entre sectores se resuelve por el nodo nacional (N5), nunca por un enlace directo de un atlas a los archivos de otro. La regla mantiene cada atlas extraíble y verificable de forma aislada, exista como subcarpeta o como repositorio propio.
 
 ### Prueba de compatibilidad
 

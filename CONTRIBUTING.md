@@ -20,8 +20,9 @@ Para correcciones menores (un enlace roto, una errata) también puedes abrir un 
 Si construiste un atlas compatible con el estándar (ver [Cómo crear un atlas nuevo](README.md#cómo-crear-un-atlas-nuevo)), un solo Pull Request lo registra:
 
 1. Agrega su fila en la tabla de atlas de [`registro.md`](registro.md), declarando la versión de la especificación que cumple.
-2. Agrega su tabla de entidades y las fronteras temáticas nuevas que introduce, en el mismo `registro.md`.
+2. Agrega su tabla de entidades en el mismo `registro.md`.
 3. Agrega su fila en la tabla «Atlas registrados» del `README.md` y su tarjeta en el banner. Si el atlas vive en este monorepo, el logo va en `atlas/<sector>/assets/`; si es externo, permanece en el `assets/` de su propio repositorio.
+4. Agrega a `examples/consultas-de-ejemplo.md` al menos una consulta que cruce hacia un atlas ya registrado, con su ruta esperada. Es la demostración de que el atlas se integró: una consulta se puede correr, una declaración no.
 
 ### 2. Proponer cambios al estándar
 
@@ -31,12 +32,12 @@ Si construiste un atlas compatible con el estándar (ver [Cómo crear un atlas n
 2. Indica qué componente de la versión subiría: parche (redacción, sin alterar lo exigido), menor (adición que no obliga a ajustar atlas) o mayor (cambio que sí los obliga).
 3. Acordado el alcance en el *Issue*, abre el Pull Request actualizando la especificación y su número de versión.
 
-### 3. Mejorar la orquestadora nacional o las fronteras temáticas
+### 3. Mejorar la orquestadora nacional
 
-La skill `atlas-orquestador-colombia` y la sección de fronteras de `registro.md` definen el enrutamiento entre atlas:
+La skill `atlas-orquestador-colombia` define el enrutamiento entre atlas:
 
 1. Respeta el patrón de enrutamiento (N4): el nodo señala qué atlas responde cada tramo; no duplica URLs ni contenido de las skills de los atlas.
-2. Toda frontera nueva se declara en `registro.md`; la tabla de la skill es su espejo compacto y debe actualizarse en el mismo cambio.
+2. El enrutamiento se expresa como criterio y ejemplos, no como catálogo de temas. Una mejora afina los indicios de cruce o aporta consultas que los demuestren.
 
 ### 4. Agregar consultas de ejemplo
 

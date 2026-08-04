@@ -49,13 +49,13 @@ Cada nivel enruta hacia abajo sin reemplazarlo. La respuesta e información espe
 
 El trazo discontinuo marca los atlas en construcción: el Intersectorial y el de Transporte tienen sus entidades definidas, pero todavía no sus skills ni su orquestadora, así que aún no se registran arriba.
 
-El detalle de entidades y fronteras temáticas vive en [`registro.md`](registro.md).
+El detalle de entidades vive en [`registro.md`](registro.md).
 
 ## Qué contiene este repositorio
 
 ```text
 sistema-atlas-colombia/
-├── registro.md       → Atlas existentes, entidades de cada uno, fronteras temáticas
+├── registro.md       → Atlas existentes y entidades de cada uno
 ├── instalar.ps1 / instalar.sh       → Instaladores de skills (interfaces equivalentes)
 ├── estandar/
 │   ├── especificacion.md            → El estándar de los atlas (versionado)
