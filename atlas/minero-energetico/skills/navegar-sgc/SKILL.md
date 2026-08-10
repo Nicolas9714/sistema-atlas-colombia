@@ -7,13 +7,13 @@ description: "Guía de navegación para el SGC: datos geocientíficos, cartograf
 
 El SGC es una entidad adscrita al Ministerio de Ciencia, Tecnología e Innovación. Es la autoridad científica y técnica del Estado colombiano en materia de geología, geofísica, geomagnetismo, amenazas de origen geológico y recursos del subsuelo.
 
-## ¿Qué tipo de información produce?
+## ¿Qué información publica?
 
 - MIIG (Mapa Interactivo de Información Geocientífica): visor de capas geocientíficas sin login; geología, minerales, amenazas y geofísica
 - Catálogo sísmico y monitoreo en tiempo real de volcanes y sismicidad nacional
 - SIMMA: inventario nacional de movimientos en masa; relevante para amenaza en infraestructura y minería
 - Cartografía geocientífica a múltiples escalas (1:100.000, 1:1.000.000) y Mapa Geológico de Colombia
-- Datos abiertos en `datos.sgc.gov.co`: shapefile de fallas, catálogo sísmico, inventarios de recursos minerales y datos de monitoreo
+- Datos abiertos: shapefile de fallas, catálogo sísmico, inventarios de recursos minerales y datos de monitoreo
 - Información geofísica: gravimetría, magnetometría y sísmica de reflexión
 - Publicaciones científicas: revistas arbitradas, libros y The Geology of Colombia
 

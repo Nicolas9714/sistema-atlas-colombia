@@ -7,16 +7,16 @@ description: "Guía de navegación para la UPME: planeación energética y miner
 
 La UPME es una Unidad Administrativa Especial adscrita al Ministerio de Minas y Energía. Su función principal es planear en forma integral, indicativa y coordinada el desarrollo y aprovechamiento de los recursos energéticos y mineros de Colombia, y ejerce como CIO (Chief Information Officer) del sector minero-energético colombiano.
 
-## ¿Qué tipo de información produce?
+## ¿Qué información publica?
 
-- Sistema de Información Minero Energético Colombiano (SIMEC): estadísticas de energía eléctrica, hidrocarburos, minería (SIMCO), eficiencia energética, oferta y demanda, y planeación energética (PEN, PERS, PET, PROURE, proyecciones)
-- Plan 6GW+: monitoreo de proyectos FNCER, indicadores energéticos y geovisores del plan de expansión de renovables
+- Sistema de Información Minero Energético Colombiano (SIMEC): estadísticas de energía eléctrica, hidrocarburos, minería (SIMCO, Sistema de Información Minero Colombiano), eficiencia energética, oferta y demanda, y planeación energética (PEN (Plan Energético Nacional), PERS (Plan de Energización Rural Sostenible), PET (Plan de Expansión de Transmisión), PROURE (Programa de Uso Racional y Eficiente de Energía), proyecciones)
+- Plan 6GW+: monitoreo de proyectos FNCER (Fuentes No Convencionales de Energía Renovable), indicadores energéticos y geovisores del plan de expansión de renovables
 - SIEM (Sistema de Interoperabilidad de Electromovilidad): registro y reporte de los operadores de puntos de carga de acceso público bajo el protocolo OCPI 2.2.1, con guía técnica de integración y normativa de electromovilidad
 - Geovisores sectoriales en cuatro categorías: Distritos Mineros, Potencial Energético (solar, OBCO, FNCER), Energía Eléctrica (capacidad, generación, transmisión) y Territorial
-- Convocatorias de expansión: transmisión (STN), gas y subastas de largo plazo para renovables
+- Convocatorias de expansión: STN (Sistema de Transmisión Nacional), gas y subastas de largo plazo para renovables
 - Tableros Power BI con series históricas de indicadores minero-energéticos
-- CIO sectorial: políticas, metodología y lineamientos de gobernanza de datos para todas las entidades del sector
-- Biblioteca digital con repositorio de estudios y publicaciones; Argo GPL para seguimiento al abastecimiento de GLP
+- Gobernanza de datos sectorial: políticas, metodología y lineamientos para todas las entidades del sector
+- Biblioteca digital con repositorio de estudios y publicaciones; Argo GPL para seguimiento al abastecimiento de GLP (Gas Licuado de Petróleo)
 
 ## Sitio oficial
 

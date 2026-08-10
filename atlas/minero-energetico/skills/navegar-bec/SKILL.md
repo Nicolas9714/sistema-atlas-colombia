@@ -7,7 +7,7 @@ description: "Guía de navegación para BEC: información transaccional y operat
 
 BEC es el gestor del mercado de gas natural en Colombia, operado por la Bolsa Mercantil de Colombia. Su función es recopilar y centralizar la información transaccional y operativa del sector bajo principios de neutralidad, transparencia, objetividad e independencia. Administra la plataforma SEGAS (Sistema Electrónico de Gas), publica informes periódicos del mercado y opera los mecanismos de negociación del mercado primario, secundario y subastas conforme a la regulación de la CREG.
 
-## ¿Qué tipo de información produce?
+## ¿Qué información publica?
 
 - Información transaccional del mercado primario y secundario: precios, contratos, suministro, transporte y procesos de comercialización y concurrencia
 - Datos operativos de producción, transporte y distribución-comercialización del sistema nacional de transporte (SNT)

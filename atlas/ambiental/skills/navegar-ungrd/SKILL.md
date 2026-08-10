@@ -7,9 +7,9 @@ description: "Guía de navegación para la UNGRD: sistemas de información sobre
 
 La UNGRD es la entidad del Estado colombiano que coordina el Sistema Nacional de Gestión del Riesgo de Desastres (SNGRD). Articula el conocimiento, la reducción y el manejo del riesgo asociado a amenazas de origen natural y socionatural — sismos, volcanes, movimientos en masa, inundaciones, erosión costera, variabilidad y cambio climático — con incidencia directa sobre la planificación ambiental y territorial del país.
 
-## ¿Qué tipo de información produce?
+## ¿Qué información publica?
 
-- Sistemas de información geoespacial sobre amenazas naturales: geovisores de riesgo volcánico, movimientos en masa, erosión costera, eventos NATECH y volcanes de lodo
+- Sistemas de información geoespacial sobre amenazas naturales: geovisores de riesgo volcánico, movimientos en masa, erosión costera, eventos NATECH (accidentes tecnológicos desencadenados por fenómenos naturales) y volcanes de lodo
 - Atlas de Riesgo nacional (departamental y municipal) con capas de amenaza, vulnerabilidad y pérdidas anuales esperadas
 - Datos abiertos filtrables por categoría (Amenaza, Institucional, NATECH, Riesgo)
 - Seguimiento al Fenómeno El Niño y a la variabilidad climática, con enfoque territorial y sectorial

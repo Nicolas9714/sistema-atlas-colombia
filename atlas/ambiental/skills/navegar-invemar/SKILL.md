@@ -7,7 +7,7 @@ description: Guía para navegar el sitio oficial de INVEMAR y encontrar informac
 
 INVEMAR es el instituto científico de referencia del Estado colombiano para la investigación y el monitoreo de los ecosistemas marinos y costeros del Caribe y el Pacífico. Está adscrito al Ministerio de Ambiente y Desarrollo Sostenible.
 
-## ¿Qué tipo de información produce?
+## ¿Qué información publica?
 
 - Sistema de Información Ambiental Marina (SIAM): datos marinos y costeros organizados en cinco áreas temáticas (biodiversidad, calidad ambiental, geociencias, valoración de recursos, gestión costera); incluye SIAM-Explorer y Geovisor SIAM
 - Cuatro operaciones estadísticas de acceso abierto en ArcGIS Hub: EPPA (presión pesquera artesanal), ICAM (calidad de aguas marinas y costeras), ICTAC (condición de áreas coralinas), IECC (erosión costera)

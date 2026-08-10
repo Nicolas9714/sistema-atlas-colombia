@@ -7,7 +7,7 @@ description: "Guía para navegar el sitio del Instituto Alexander von Humboldt y
 
 El IAvH es un instituto de investigación científica adscrito al Ministerio de Ambiente y Desarrollo Sostenible. Su mandato es investigar, conservar y divulgar la diversidad biológica y sus recursos en la zona continental colombiana. Coordina el Sistema de Información sobre Biodiversidad de Colombia (SiB Colombia) y administra el Registro Nacional de Colecciones biológicas (RNC).
 
-## ¿Qué tipo de información produce?
+## ¿Qué información publica?
 
 - Sistema I2D (Infraestructura Institucional de Datos): visor geográfico de registros biológicos, base de datos CEIBA, catálogo geoespacial GeoNetwork y datos socioecológicos (Biocultural)
 - BioModelos: modelos de distribución de especies validados por expertos para mamíferos, aves, reptiles, anfibios, peces, invertebrados y plantas
@@ -16,7 +16,7 @@ El IAvH es un instituto de investigación científica adscrito al Ministerio de 
 - Colecciones biológicas físicas: 11 colecciones (aves, mamíferos, anfibios, reptiles, peces, entomología, herbario, semillas, sonidos, entre otras)
 - Registro Nacional de Colecciones (RNC): inventario oficial de colecciones biológicas del país
 - Publicaciones científicas: revistas Biota Colombiana y Biodiversidad en la Práctica; repositorio institucional; publicaciones editoriales
-- SiB Colombia: red nacional de datos abiertos de biodiversidad (portal de datos, catálogo de especies, estadísticas, IPT GBIF)
+- SiB Colombia: red nacional de datos abiertos de biodiversidad — portal de datos, catálogo de especies, estadísticas e IPT de GBIF (Global Biodiversity Information Facility, la infraestructura mundial de información en biodiversidad)
 
 ## Sitio oficial
 

@@ -7,11 +7,11 @@ description: "Guía de navegación para la ANM: catastro minero, estadísticas d
 
 La ANM es una Agencia Nacional Estatal de Naturaleza Especial adscrita al Ministerio de Minas y Energía. Administra los recursos mineros del Estado colombiano, gestiona el Catastro Minero, otorga títulos mineros y fiscaliza las actividades de la industria minera.
 
-## ¿Qué tipo de información produce?
+## ¿Qué información publica?
 
 - AnnA Minería (SIGM): plataforma de gestión de contratos de concesión vigentes, solicitudes en curso, obligaciones de declaración de producción y regalías, y visor geográfico de la Cuadrícula Minera
 - Cuadrícula Minera Colombiana descargable en GeoJSON y GDB: estado de celdas (libre, titulada, en proceso), áreas de reserva especial y zonas excluidas
-- Estadísticas de producción minera por mineral y región, publicadas trimestralmente; RUCOM de plantas de beneficio certificadas
+- Estadísticas de producción minera por mineral y región, publicadas trimestralmente; RUCOM (Registro Único de Comercializadores de Minerales) de plantas de beneficio certificadas
 - Normograma consolidado y normativa sectorial por tipo de acto
 - Programas de formalización y asistencia técnica (programa VETA)
 - Fiscalización: seguimiento a obligaciones de títulos, seguridad minera y salvamento

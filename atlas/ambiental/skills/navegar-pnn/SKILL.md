@@ -7,11 +7,11 @@ description: "Guía de navegación para Parques Nacionales Naturales de Colombia
 
 PNN es la entidad adscrita al Ministerio de Ambiente y Desarrollo Sostenible encargada de administrar el Sistema de Parques Nacionales Naturales (SPNN) y de coordinar el Sistema Nacional de Áreas Protegidas (SINAP). Gestiona 61 áreas protegidas que cubren 23.208.921 hectáreas (10,07 % del territorio nacional) y 38.865.081 hectáreas incluyendo los Distritos Nacionales de Manejo Integrado.
 
-## ¿Qué tipo de información produce?
+## ¿Qué información publica?
 
 - **RUNAP** (Registro Único Nacional de Áreas Protegidas): registro oficial de todas las áreas protegidas del país — nacionales, regionales y locales
-- **SINAP**: portal del sistema nacional con subsistemas regionales (SIRAP), marco normativo y análisis de representatividad ecológica
-- Geovisor de áreas protegidas (ArcGIS, accesible vía `mapas.parquesnacionales.gov.co`)
+- **SINAP** (Sistema Nacional de Áreas Protegidas): portal del sistema nacional con subsistemas regionales (SIRAP, Sistema Regional de Áreas Protegidas), marco normativo y análisis de representatividad ecológica
+- Geovisor de áreas protegidas (ArcGIS)
 - Catálogo de metadatos espaciales (GeoNetwork)
 - Planes de manejo en PDF por área protegida (57 áreas documentadas, organizadas por territorial)
 - Estadísticas de visitantes (series anuales 2010–2025) y encuestas de satisfacción

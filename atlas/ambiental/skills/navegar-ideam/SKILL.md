@@ -7,13 +7,13 @@ description: "Guía de navegación para el IDEAM: datos hidrometeorológicos, mo
 
 El IDEAM es un establecimiento público adscrito al Ministerio de Ambiente y Desarrollo Sostenible. Su función principal es generar el conocimiento, la información y los datos del estado de los recursos naturales del país —agua, aire, suelo, ecosistemas y clima— que sirven de base para la gestión ambiental, el ordenamiento territorial y la toma de decisiones públicas y privadas. Opera la red nacional de estaciones hidrometeorológicas y es la autoridad técnica en hidrología, meteorología y estudios ambientales de Colombia.
 
-## ¿Qué tipo de información produce?
+## ¿Qué información publica?
 
-- Datos hidrometeorológicos: series de tiempo de caudales, niveles, precipitación y temperatura de la red nacional de estaciones, descargables desde el DHIME
+- Datos hidrometeorológicos: series de tiempo de caudales, niveles, precipitación y temperatura de la red nacional de estaciones, descargables desde el DHIME (Consulta y Descarga de Datos Hidrometeorológicos)
 - Pronósticos y alertas: boletines meteorológicos diarios, alertas hidrológicas (FEWS), imágenes de satélite GOES y radar en tiempo casi real
-- Información forestal y de deforestación: monitoreo anual de bosques y carbono (SMByC), Inventario Forestal Nacional (IFN), SNIF y Registro Nacional de Zonas Deforestadas (RNZD)
-- Registros ambientales: RUA (uso de recursos naturales por sectores), RETC (emisiones y transferencia de contaminantes), inventarios de PCB y generadores de residuos peligrosos (RESPEL)
-- Calidad del aire: monitoreo continuo por estaciones en SISAIRE, informes anuales y datos de PM2.5, PM10, ruido y emisiones por fuentes fijas y móviles
+- Información forestal y de deforestación: monitoreo anual de bosques y carbono (SMByC), Inventario Forestal Nacional (IFN), SNIF (Sistema Nacional de Información Forestal) y Registro Nacional de Zonas Deforestadas (RNZD)
+- Registros ambientales: RUA (uso de recursos naturales por sectores), RETC (emisiones y transferencia de contaminantes), inventarios de PCB (bifenilos policlorados) y generadores de residuos peligrosos (RESPEL)
+- Calidad del aire: monitoreo continuo por estaciones en SISAIRE (Subsistema de Información sobre Calidad del Aire), informes anuales y datos de PM2.5, PM10, ruido y emisiones por fuentes fijas y móviles
 - Estudios de cambio climático: inventario nacional de GEI, proyecciones climáticas, vulnerabilidad y adaptación, NDC y contabilidad de carbono
 - Atlas y documentos de referencia: Atlas Climatológico, Atlas de Radiación Solar y Atlas del Viento de Colombia; normales climatológicas históricas
 

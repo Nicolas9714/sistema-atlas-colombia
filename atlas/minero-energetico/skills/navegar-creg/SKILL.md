@@ -7,9 +7,9 @@ description: "Guía de navegación para la CREG: normativa regulatoria de energ�
 
 La CREG es una comisión de expertos adscrita al Ministerio de Minas y Energía. Regula las actividades de los sectores de energía eléctrica, gas natural, GLP y combustibles líquidos con el fin de asegurar una oferta energética eficiente, propiciar la competencia y establecer las tarifas de los servicios públicos.
 
-## ¿Qué tipo de información produce?
+## ¿Qué información publica?
 
-- Resoluciones de regulación tarifaria y de mercado para cuatro sectores: energía eléctrica, gas natural, GLP y combustibles líquidos
+- Resoluciones de regulación tarifaria y de mercado para cuatro sectores: energía eléctrica, gas natural, GLP (Gas Licuado de Petróleo) y combustibles líquidos
 - Proyectos de resolución en consulta pública y circulares informativas
 - Marco regulatorio compilado por sector en el Gestor Normativo Alejandría: resoluciones originales, versiones vigentes consolidadas e índices temáticos
 - Estadísticas sectoriales y directorio de empresas reguladas por subsector
