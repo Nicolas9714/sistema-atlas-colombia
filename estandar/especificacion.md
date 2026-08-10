@@ -62,11 +62,6 @@ Buenas prácticas de los atlas fundadores (el Atlas de Navegación Minero Energ�
 - **Tablas de fuentes con inventario tipificado:** sistemas, geovisores, portales de datos, publicaciones y documentos clave, cada uno con su URL verificada y una nota de qué resuelve.
 - **Carpeta `examples/`:** una vitrina de consultas (`consultas-de-ejemplo.md`: prompt + ruta esperada, sin URLs) y casos de análisis reproducibles que recorren las capas completas del atlas.
 - **Verificación en vivo:** las URLs y afirmaciones sobre sistemas se contrastan contra el sitio real antes de publicarse.
-- **La sección de tipos de información se titula «¿Qué información publica?»:** una entidad expone información que no siempre produce —normas de terceros, datos de otras entidades—, y el título tiene que cubrir los dos casos.
-- **Sin dominios ni rutas de URL en esa sección:** se nombra el sistema (VITAL, SINERGOX, RUNAP) y los enlaces viven en `fuentes.md`, que es donde se verifican y se fechan.
-- **Cada sigla institucional se explica en su primera mención dentro de la ficha,** con el patrón `SIGLA (Nombre completo)`, o se reescribe sin el acrónimo cuando el nombre completo se lee mejor. Quedan exentas las de uso corriente: API, IVA, CO2, PDF.
-- **Sin cifras que envejecen:** un conteo de proyectos o de trámites caduca sin avisar; la estructura que los organiza no.
-- **Nada de nomenclatura sin fuente:** si no se puede verificar qué significa una sigla o cuál es el nombre oficial de un trámite, se reescribe la frase sin ella. Son entidades reales del Estado y una glosa inventada es peor que ninguna.
 - **Reglas de competencia en la orquestadora:** cómo combinar resultados sin atribuir datos de una entidad a otra.
 - **Identidad visual:** logo propio en SVG monocromo dentro de la familia visual del Sistema.
 
