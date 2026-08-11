@@ -29,7 +29,7 @@ El IDEAM es un establecimiento público adscrito al Ministerio de Ambiente y Des
 
 ## Notas de navegación
 
-- El DHIME (`dhime.ideam.gov.co/atencionciudadano/`) es la puerta de entrada para descargar series históricas de estaciones hidrometeorológicas; el acceso interno a la plataforma AQUARIUS requiere credenciales institucionales.
-- Los geovisores del IDEAM están alojados en el subdominio `visualizador.ideam.gov.co` (ArcGIS Online); el punto de entrada es el Geoportal Ambiental Institucional en `ideam.gov.co/geoportal-ambiental-institucional`.
-- SISAIRE (`sisaire.ideam.gov.co`) y FEWS (`fews.ideam.gov.co`) son subdominios propios; presentaron errores de certificado SSL durante la verificación — usar el Geoportal como acceso alternativo si el acceso directo falla.
+- El DHIME (`https://dhime.ideam.gov.co/atencionciudadano/`) es la puerta de entrada para descargar series históricas de estaciones hidrometeorológicas; el acceso interno a la plataforma AQUARIUS requiere credenciales institucionales.
+- Los geovisores del IDEAM están alojados en el subdominio `https://visualizador.ideam.gov.co` (ArcGIS Online); el punto de entrada es el Geoportal Ambiental Institucional en `https://ideam.gov.co/geoportal-ambiental-institucional`.
+- SISAIRE (`https://sisaire.ideam.gov.co`) y FEWS (`https://fews.ideam.gov.co`) son subdominios propios; presentaron errores de certificado SSL durante la verificación — usar el Geoportal como acceso alternativo si el acceso directo falla.
 - El SMByC publica el informe anual de deforestación; los datos abiertos de bosques se descargan desde la sección de datos abiertos del sitio principal.

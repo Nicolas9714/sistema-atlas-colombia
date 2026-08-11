@@ -30,8 +30,8 @@ El IAvH es un instituto de investigación científica adscrito al Ministerio de 
 
 ## Notas de navegación
 
-- El sitio principal (`humboldt.org.co`) actúa como portal de acceso; la mayoría de herramientas de datos operan en subdominios propios (`datos.humboldt.org.co`, `biomodelos.humboldt.org.co`, `biotablero.humboldt.org.co`, etc.).
-- El sistema I2D en `datos.humboldt.org.co` es la columna vertebral; desde allí se accede a CEIBA, el Visor I2D y GeoNetwork.
-- `rnc.humboldt.org.co` está accesible por HTTP y HTTPS al 2026-07-04, con el contenido del Registro Nacional de Colecciones.
-- `ecosistema.humboldt.org.co` es intranet institucional; no tiene contenido público.
-- El SiB Colombia (`biodiversidad.co`) es coordinado por el IAvH pero es una red nacional con múltiples nodos institucionales.
+- El sitio principal (`https://humboldt.org.co`) actúa como portal de acceso; la mayoría de herramientas de datos operan en subdominios propios (`https://datos.humboldt.org.co`, `https://biomodelos.humboldt.org.co`, `https://biotablero.humboldt.org.co`, etc.).
+- El sistema I2D en `https://datos.humboldt.org.co` es la columna vertebral; desde allí se accede a CEIBA, el Visor I2D y GeoNetwork.
+- `https://rnc.humboldt.org.co` está accesible por HTTP y HTTPS al 2026-07-04, con el contenido del Registro Nacional de Colecciones.
+- `https://ecosistema.humboldt.org.co` es intranet institucional; no tiene contenido público.
+- El SiB Colombia (`https://biodiversidad.co`) es coordinado por el IAvH pero es una red nacional con múltiples nodos institucionales.

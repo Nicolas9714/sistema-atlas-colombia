@@ -29,9 +29,9 @@ INVEMAR es el instituto científico de referencia del Estado colombiano para la 
 
 ## Notas de navegación
 
-- El SIAM (`siam.invemar.org.co`) es el portal central de datos; estaba en renovación parcial al momento de la verificación. Conviene navegar desde ahí antes de buscar en el sitio general.
+- El SIAM (`https://siam.invemar.org.co`) es el portal central de datos; estaba en renovación parcial al momento de la verificación. Conviene navegar desde ahí antes de buscar en el sitio general.
 - Las cuatro operaciones estadísticas (EPPA, ICAM, ICTAC, IECC) son portales ArcGIS Hub independientes con datasets descargables; los enlaces directos están en `fuentes.md`.
-- `centrodocumentacion.invemar.org.co` presentó error SSL el 2026-06-15; acceder al CDO desde la sección de servicios del sitio principal.
-- `boletin.invemar.org.co/ojs/index.php/boletin` devuelve 404 (2026-06-15); buscar la revista en Redalyc o SciELO como alternativa.
-- El SAMP (Subsistema de Áreas Marinas Protegidas) está accesible en `siam.invemar.org.co/samp` al 2026-07-04; la ruta anterior `cinto.invemar.org.co/samp` devuelve 404.
+- `https://centrodocumentacion.invemar.org.co` presentó error SSL el 2026-06-15; acceder al CDO desde la sección de servicios del sitio principal.
+- `https://boletin.invemar.org.co/ojs/index.php/boletin` devuelve 404 (2026-06-15); buscar la revista en Redalyc o SciELO como alternativa.
+- El SAMP (Subsistema de Áreas Marinas Protegidas) está accesible en `https://siam.invemar.org.co/samp` al 2026-07-04; la ruta anterior `https://cinto.invemar.org.co/samp` devuelve 404.
 - El sitio usa Liferay; el crawler genera URLs con prefijo `/web/guest/`. Las URLs sin ese prefijo son las canónicas para navegar manualmente.

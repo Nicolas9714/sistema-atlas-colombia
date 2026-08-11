@@ -29,7 +29,7 @@ El Ministerio de Ambiente y Desarrollo Sostenible es la autoridad ambiental del 
 
 ## Notas de navegación
 
-- El SIAC (`siac.gov.co`) es la puerta de entrada a los 15 subsistemas ambientales; conviene empezar por ahí antes de navegar el sitio principal del MADS.
-- El hub de datos abiertos (`siac-datosabiertos-mads.hub.arcgis.com`) es la ruta más directa para descargar datasets geoespaciales y tabulares del MADS.
+- El SIAC (`https://www.siac.gov.co`) es la puerta de entrada a los 15 subsistemas ambientales; conviene empezar por ahí antes de navegar el sitio principal del MADS.
+- El hub de datos abiertos (`https://siac-datosabiertos-mads.hub.arcgis.com`) es la ruta más directa para descargar datasets geoespaciales y tabulares del MADS.
 - El RENARE y el SNICC operan dentro del portal principal del MADS (sin subdominio propio); sus secciones están bajo `cambio-climatico-y-gestion-del-riesgo/`.
-- La normativa ambiental tiene buscador avanzado en `minambiente.gov.co/filtros-normativa/busqueda-avanzada/` (etiquetado como "Portal Antiguo", pero funcional).
+- La normativa ambiental tiene buscador avanzado en `https://www.minambiente.gov.co/filtros-normativa/busqueda-avanzada/` (etiquetado como "Portal Antiguo", pero funcional).
