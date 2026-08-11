@@ -227,9 +227,16 @@ minambiente.gov.co/
 │   └── directrices
 │
 ├── carbononeutral.minambiente.gov.co/
+│   ├── programa-nacional-de-carbono-neutralidad/
+│   │   ├── version-2021
+│   │   ├── version-2022-i
+│   │   ├── programa-sina-carbono-neutral-2022
+│   │   ├── grupos-de-trabajo
+│   │   └── aula-virtual
 │   ├── pncnrc-sector-publico
-│   ├── pncnrc-empresarial
-│   └── mi-huella-de-carbono
+│   └── pncnrc-corporativa
+│
+├── mi-huella-c.minambiente.gov.co/
 │
 ├── visionamazonia.minambiente.gov.co/
 │   ├── programa-redd-fase-i
@@ -262,12 +269,6 @@ minambiente.gov.co/
 │
 ├── respira2030.gov.co/
 │   └── nuestra-siembra-en-cifras
-│
-├── aulamads.minambiente.gov.co/
-│   ├── estado-dns-no-resuelve
-│   └── cursos-referenciados-portal-principal
-│       ├── control-ciudadano-veedurias-ambientales-2024
-│       └── curso-virtual-e2050
 │
 ├── almorzadero.minambiente.gov.co/
 │   ├── proceso-delimitacion
@@ -321,3 +322,5 @@ minambiente.gov.co/
 ## Última verificación
 
 Verificado: 2026-06-02
+
+Revisión parcial el 2026-08-10: se reescribió el subárbol de `carbononeutral.minambiente.gov.co` contra el sitemap del micrositio y se incorporó `mi-huella-c.minambiente.gov.co`, subdominio al que se mudó la calculadora de huella. Salió del árbol `aulamads.minambiente.gov.co`, cuyo estado se documenta en `fuentes.md`. El resto del árbol conserva la verificación de junio.
