@@ -22,7 +22,7 @@
 
 ---
 
-Sistema Atlas Colombia es un proyecto abierto que busca democratizar el acceso a la información pública de Colombia. Este proyecto parte de la convicción de que hacer pública la información también implica hacer públicas sus rutas y conexiones. Gran parte de la información ya es accesible en portales web, micrositios, sistemas de información, geovisores, entre otros. Pero saber navegar esta información — dónde buscar, qué priorizar, qué ignorar, qué fuente contrastar — es un conocimiento práctico que suele permanecer invisible, acumulado en la experiencia de quienes conocen cada sector. 
+Sistema Atlas Colombia es un proyecto abierto que busca democratizar el acceso a la información pública de Colombia. Este proyecto parte de la convicción de que hacer pública la información también implica hacer públicas sus rutas y conexiones. Gran parte de la información ya es accesible en portales web, micrositios, sistemas de información, geovisores, entre otros. Pero saber navegar esta información (dónde buscar, qué priorizar, qué ignorar, qué fuente contrastar) es un conocimiento práctico que suele permanecer invisible, acumulado en la experiencia de quienes conocen cada sector.
 
 Cada Atlas de Navegación convierte ese saber en una estructura abierta, documentada y reutilizable que opera directamente en herramientas y modelos de IA.
 
@@ -34,9 +34,9 @@ Cada Atlas de Navegación es una colección abierta de skills que documentan y s
 
 A cada entidad le corresponde una skill, y a cada atlas una skill orquestadora que coordina las consultas que cruzan entidades de un mismo sector. Este repositorio agrega una capa adicional: la skill que coordina las consultas que cruzan atlas (inter-atlas). Cómo se construye cada skill está definido en la [especificación](estandar/especificacion.md).
 
-Esta estructura permite que las skills por entidad y los atlas puedan funcionar de forma modular e independiente, y, además, de forma integrada.  
+Esta estructura permite que las skills por entidad y los atlas puedan funcionar de forma modular e independiente.
 
-Cada nivel enruta hacia abajo sin reemplazarlo. La respuesta e información específica siempre vive en la skill de la entidad. Si solo tienes un atlas instalado, todo sigue funcionando — el atlas resuelve su sector y te señala dónde vive el resto.
+La respuesta e información específica siempre vive en la skill de la entidad. Si solo tienes un atlas instalado, todo sigue funcionando; el atlas resuelve su sector y te señala dónde vive el resto.
 
 ## Atlas registrados
 
@@ -82,7 +82,7 @@ Clona el monorepo junto a tu proyecto:
 git clone https://github.com/Nicolas9714/sistema-atlas-colombia.git
 ```
 
-Un solo comando ejecutado desde la raíz de tu proyecto instala los atlas que pidas — y, si son dos o más, agrega automáticamente la orquestadora nacional:
+Un solo comando ejecutado desde la raíz de tu proyecto instala los atlas que pidas, y, si son dos o más, agrega automáticamente la orquestadora nacional:
 
 > El repo clonado y la copia en tu proyecto cumplen roles distintos: el clon es la fuente, que actualizas con `git pull` (o con `-Actualizar` / `--actualizar` al instalar); la copia en tu carpeta de skills es la instalación, que tu proyecto controla y que solo cambia cuando decides reinstalar.
 >
@@ -168,7 +168,7 @@ Las rutas esperadas de estas consultas viven en [`examples/consultas-de-ejemplo.
 
 El Sistema Atlas Colombia de este repositorio captura el hecho de que la información pública se organiza según las competencias de las instituciones que la producen, y los problemas reales suelen abarcar varias: por eso cada atlas nuevo amplía lo que el Sistema puede responder.
 
-El estándar aplica a cualquier sector — agro, salud, transporte — y a cualquier país: un nodo nacional de otro país puede usar esta misma estructura y los sistemas nacionales que comparten el estándar formarían, entre sí, una red.
+El estándar aplica a cualquier sector (agro, salud, transporte) y a cualquier país: un nodo nacional de otro país puede usar esta misma estructura y los sistemas nacionales que comparten el estándar formarían, entre sí, una red.
 
 ## Cómo se comprueba la conformidad
 
@@ -191,7 +191,7 @@ Hay tres modos de evaluación:
 
 Un atlas cuenta como «en construcción» cuando figura en la lista `EN_CONSTRUCCION` del script. La lista es explícita a propósito, para que un atlas que se despueble por error falle en vez de pasar por pendiente. Al crear un atlas nuevo hay que añadirlo ahí y a la nota de [`registro.md`](registro.md), y retirarlo de ambas cuando quede poblado.
 
-[`tests/probar-verificar-conformidad.sh`](tests/probar-verificar-conformidad.sh) acompaña al verificador con pruebas adversariales: sabotean el repositorio sobre una copia temporal —nombres divergentes, enlaces entre atlas, skills vaciadas, entidades a medio poblar— y exigen que el verificador lo detecte. Sin ellas, un verificador que aprobara todo también saldría en verde.
+[`tests/probar-verificar-conformidad.sh`](tests/probar-verificar-conformidad.sh) acompaña al verificador con pruebas adversariales: sabotean el repositorio sobre una copia temporal (nombres divergentes, enlaces entre atlas, skills vaciadas, entidades a medio poblar) y exigen que el verificador lo detecte. Sin ellas, un verificador que aprobara todo también saldría en verde.
 
 [`.github/workflows/conformidad.yml`](.github/workflows/conformidad.yml) corre ambos en cada push y cada pull request a `main`.
 
