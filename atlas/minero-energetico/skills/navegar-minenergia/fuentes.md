@@ -64,11 +64,10 @@
 | Ecosistema H2 Colombia | `minenergia.gov.co/es/ecosistema-hidrogeno-colombia/` | Plan nacional de hidrógeno; directorio de actores, proyectos activos y publicaciones | 2026-05-29 |
 | Plan 6GW+ | `upme.gov.co/simec/plan-6gw/` | Sitio del Plan 6GW+ operado por la UPME dentro del SIMEC; enlazado desde la home del ministerio. Documentado en la skill `navegar-upme` | 2026-07-10 |
 | Transición Energética Justa (TEJ) | `minenergia.gov.co/es/micrositios/transicion-energetica-justa/` | Hoja de Ruta TEJ; documentos oficiales, cursos, audiencias y avances | 2026-05-29 |
-| Energía Eólica Costa Afuera | `minenergia.gov.co/es/micrositios/energia-eolica-costa-afuera/` | Normatividad del proceso de energía eólica offshore | 2026-05-29 |
+| Energía Eólica Costa Afuera | `https://www.minenergia.gov.co/es/micrositios/energ%C3%ADa-e%C3%B3lica-costa-afuera/` | Normatividad del proceso de energía eólica offshore | 2026-08-11 |
 | Comunidades Energéticas | `minenergia.gov.co/es/comunidades-energeticas/` | Impacto (comunidad/educación/salud), recursos (ABC, normativa, procesos) y Registro RCE | 2026-05-29 |
 | Territorios Energéticos | `minenergia.gov.co/es/territorios-energeticos/` | Programa de energización de entes territoriales en el marco de la TEJ | 2026-05-29 |
 | REDTEJ | `minenergia.gov.co/es/redtej/` | Red Nacional de Conocimiento para la TEJ; publicaciones y voces territoriales | 2026-05-29 |
-| PIGCCME | `pigccme.minenergia.gov.co` | Planes de mitigación y adaptación climática empresarial del sector | 2026-05-29 |
 | PGRDSME | `pgrdsme.minenergia.gov.co` | Portal de gestión del riesgo de desastres del sector minero-energético | 2026-05-29 |
 
 ---
@@ -91,7 +90,7 @@
 | `infraestructura-de-datos-espaciales/catalogo-metadatos` | GeoNetwork en `geonetwork.minenergia.gov.co` |
 | `infraestructura-de-datos-espaciales/geovisor-sectorial` | Geovisor en `geovisor.minenergia.gov.co/visor-ide-me/`; integra capas de ANH, ANM, SGC, CREG, IPSE, UPME y FENOGE |
 | `infraestructura-de-datos-espaciales/catalogo-geoservicios` | GeoServer en `geoserver.minenergia.gov.co/geoserver/web/` |
-| `ambiental-social/cambio-climatico/pigccme` | Portal en `pigccme.minenergia.gov.co`; planes de mitigación y adaptación empresarial del sector (PIGCCme) |
+| `ambiental-social/cambio-climatico/pigccme` | El aplicativo en `pigccme.minenergia.gov.co` dejó de resolver entre su verificación del 29 de mayo y la comprobación del 11 de agosto de 2026. No se encontró un sucesor funcional y la página oficial de cambio climático todavía enlaza sus rutas caídas. La explicación del Plan Integral de Gestión del Cambio Climático del Sector Minero Energético (PIGCCme), sus componentes y documentos permanece en `https://www.minenergia.gov.co/es/misional/ambiental-social/cambio-clim%C3%A1tico/` |
 | `ambiental-social/estrategia-relacionamiento-territorial` | ERT con mapa de territorios priorizados, planes de trabajo territorial y estrategia de hidrocarburos |
 | `ambiental-social/estrategia-relacionamiento-territorial/visor-conflictos` | Geovisor en `oaas_visor_conflictos.minenergia.gov.co`; público desde navegador; bloqueado por WAF en modo headless |
 | `ambiental-social/gestion-del-riesgo-de-desastres-grd/pgrdsme` | Portal en `pgrdsme.minenergia.gov.co`; sección `documentos/` con política y materiales |

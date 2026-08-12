@@ -9,7 +9,7 @@ FENOGE es un fondo adscrito al Ministerio de Minas y Energía creado por la Ley 
 
 ## ¿Qué información publica?
 
-- Convocatorias activas: EN-Comunidad (proyectos FNCER —Fuentes No Convencionales de Energía Renovable, según la Ley 1715 de 2014— en comunidades) y +H2 Colombia (hidrógeno); criterios de elegibilidad y pasos de acceso
+- Convocatorias y resultados: EN-Comunidad (proyectos FNCER —Fuentes No Convencionales de Energía Renovable, según la Ley 1715 de 2014— en comunidades) y +H2 Colombia (hidrógeno); criterios de elegibilidad y pasos de acceso
 - Portafolio de proyectos en ejecución y ejecutados con ficha por proyecto y región
 - Plan de Transición Energética Popular (PTEP): documento estratégico que orienta la asignación de recursos hacia comunidades vulnerables y territorios con brechas energéticas
 - Gestión del conocimiento: marco conceptual sobre FNCER (solar, eólica, biomasa, pequeñas centrales hidroeléctricas) e hidrógeno verde
@@ -22,7 +22,7 @@ FENOGE es un fondo adscrito al Ministerio de Minas y Energía creado por la Ley 
 ## Cómo usar esta skill
 
 1. Consulta `mapa-web.md` para ubicar convocatorias, proyectos o el PTEP.
-2. Consulta `fuentes.md` para acceder directamente a las convocatorias activas, el portafolio de proyectos o la normativa.
+2. Consulta `fuentes.md` para acceder directamente a las convocatorias y sus resultados, el portafolio de proyectos o la normativa.
 3. En el repositorio del Atlas, la carpeta `examples/` reúne casos de análisis reproducibles y consultas de ejemplo con su ruta esperada.
 
 ## Notas de navegación

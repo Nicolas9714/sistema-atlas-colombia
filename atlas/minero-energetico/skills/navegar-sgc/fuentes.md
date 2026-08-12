@@ -24,7 +24,7 @@
 | Cartografía Geocientífica | `srvags.sgc.gov.co/Flexviewer/Cartografia_Geocientifica/` | Visor de cartografía geocientífica escala 1:100.000; geología, amenazas, recursos minerales | 2026-05-30 |
 | Mapa Geológico de Colombia | `www2.sgc.gov.co/MGC/Paginas/Inicio.aspx` | MGC oficial; descarga de mapas geológicos nacionales y regionales | 2026-05-30 |
 | Volcanes — Vigilancia | `sgc.gov.co/volcanes` | Monitoreo en tiempo real de volcanes activos de Colombia; reportes de actividad | 2026-05-30 |
-| Consulta información geofísica | `www2.sgc.gov.co/ProgramasDeInvestigacion/DireccionTecnicaRecursosMinerales/Paginas/consulta-informacion-geofisica.aspx` | Acceso a bases de datos geofísicas (gravimetría, magnetometría, sísmica de reflexión) | 2026-05-30 |
+| Consulta información geofísica | `https://www2.sgc.gov.co/Direcciones-Tecnicas/RecursosMinerales/Paginas/consulta-informacion-geofisica.aspx` | Información aerogeofísica de magnetometría y gamma espectrometría | 2026-08-11 |
 
 ---
 
@@ -46,7 +46,7 @@
 |---|---|---|---|
 | The Geology of Colombia | Libro de referencia geológica | `www2.sgc.gov.co/LibroGeologiaColombia/Paginas/Inicio.aspx` | 2026-05-30 |
 | Geological Map of South America (2019) | Mapa regional 1:5M | `www2.sgc.gov.co/MGC/Paginas/gmsa5M2019.aspx` | 2026-05-30 |
-| Guías QGIS | Tutoriales de SIG aplicado | `www2.sgc.gov.co/Publicaciones/Cientificas/Paginas/Guias-QGIS.aspx` | 2026-05-30 |
+| Guías QGIS | Tutoriales de SIG aplicado | `https://www2.sgc.gov.co/Publicaciones/Cientificas/Paginas/Guias.aspx` | 2026-08-11 |
 | Libros SGC | Monografías geocientíficas | `libros.sgc.gov.co/index.php/editorial` | 2026-05-30 |
 | Productos oficializados | Cartografía y estudios oficiales | `www2.sgc.gov.co/Publicaciones/Paginas/Productos-oficializados.aspx` | 2026-05-30 |
 
@@ -60,6 +60,6 @@
 | `miig.sgc.gov.co` | Sistema de consulta pública de datos geocientíficos; permite descargar capas vectoriales y raster; sin login; clave para minerales, geología y amenazas |
 | `simma.sgc.gov.co` | Inventario nacional de movimientos en masa; relevante para evaluación de amenaza en proyectos de infraestructura y minería |
 | `sgc.gov.co/volcanes` | Reportes de actividad volcánica en tiempo real; los boletines se emiten desde las oficinas de Manizales y Pasto |
-| `DireccionTecnicaRecursosMinerales/consulta-informacion-geofisica` | Acceso a bases de datos de gravimetría, magnetometría y sísmica; útil para exploración minera e hidrocarburos |
+| `Direcciones-Tecnicas/RecursosMinerales/consulta-informacion-geofisica` | Información aerogeofísica de magnetometría y gamma espectrometría; incluye productos, visor, guía y procedimiento de solicitud |
 | `datos.sgc.gov.co` | Portal de datos abiertos; incluye shapefile de fallas geológicas, catálogo sísmico, inventarios de recursos minerales y datos de monitoreo |
 | `MGC/` | Mapa Geológico de Colombia escala 1:1.000.000 (última versión 2023); también disponibles mapas departamentales y de plancha a 1:100.000 |

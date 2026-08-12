@@ -84,7 +84,6 @@
 | SosTECnibilidad | `ecopetrol.com.co/wps/portal/Home/sostecnibilidad` | Portal integrado de sostenibilidad ambiental, social y de gobernanza (ASG) | 2026-06-01 |
 | Portal comercial — productos y precios | `ecopetrol.com.co/wps/portal/Home/multisitios/comercial/` | Portal de información comercial: portafolio, precios vigentes e históricos, información GLP, gas natural, energía y crudo | 2026-06-01 |
 | CT&F — Revista Ciencia, Tecnología y Futuro | `ctyf.journal.ecopetrol.com.co/index.php/ctyf` | Revista científica del ICP-Ecopetrol; indexada en Scopus, SciELO, ISI; acceso abierto; vigente desde 1995 | 2026-06-01 |
-| files.ecopetrol.com.co | `files.ecopetrol.com.co/` | CDN de documentos oficiales de Ecopetrol; aloja informes anuales, TCFD, SASB, CDP y otros reportes descargables | 2026-06-01 |
 | nuevoportal.ecopetrol.com.co | `nuevoportal.ecopetrol.com.co/wps/portal/` | Portal corporativo activo; las URLs bajo `/wps/portal/` sin prefijo `/Home/es/` funcionan directamente aquí; la redirección es bidireccional con `www.ecopetrol.com.co` | 2026-06-01 |
 | SIPROE — Sistema de Proveedores | `siproe.ecopetrol.com.co/proveedor` | URL directa del sistema SAP Ariba de confirmación de cantidades para proveedores | 2026-06-01 |
 

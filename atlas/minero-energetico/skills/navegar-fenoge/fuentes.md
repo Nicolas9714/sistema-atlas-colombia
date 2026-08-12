@@ -9,7 +9,7 @@
 | Acceso a recursos FENOGE | `fenoge.gov.co/quieres-acceder-a-nuestros-recursos/` | Punto de entrada para entidades o proyectos que buscan financiación del fondo; incluye criterios y pasos | 2026-05-30 |
 | Criterios de elegibilidad | `fenoge.gov.co/criterios-de-elegibilidad/` | Requisitos técnicos y jurídicos para presentar proyectos al FENOGE | 2026-05-30 |
 | EN-Comunidad (convocatoria) | `fenoge.gov.co/services/convocatoria-en-comunidad/` | Convocatoria para proyectos FNCER y eficiencia energética en comunidades; 55 proyectos en 43 municipios | 2026-05-30 |
-| +H2 Colombia (convocatoria) | `fenoge.gov.co/services/convocatoria-h2-colombia/` | Convocatoria para proyectos de hidrógeno en Colombia | 2026-05-30 |
+| +H2 Colombia (resultados) | `https://fenoge.gov.co/convocatoria/h2-colombia/` | Convocatoria finalizada para proyectos de hidrógeno en Colombia; conserva términos, documentos y resultados | 2026-08-11 |
 | Retos y Necesidades Energéticas | `fenoge.gov.co/services/retos-y-necesidades-energeticas-en-colombia/` | Diagnóstico de retos energéticos por región; orienta las líneas de financiación | 2026-05-30 |
 | Banco de proveedores | `fenoge.gov.co/convocatoria/banco-proveedores/` | Convocatoria para inscripción en banco de proveedores del FENOGE | 2026-05-30 |
 
