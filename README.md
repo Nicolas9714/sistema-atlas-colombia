@@ -95,7 +95,7 @@ Un solo comando ejecutado desde la raíz de tu proyecto instala los atlas que pi
 
 ```bash
 # macOS / Linux / Git Bash
-../sistema-atlas-colombia/instalar.sh --atlas todos
+bash ../sistema-atlas-colombia/instalar.sh --atlas todos
 ```
 
 **Opciones** (PowerShell / bash):
@@ -119,28 +119,28 @@ Copia las skills de cada atlas desde su subcarpeta del monorepo a la carpeta de 
 macOS / Linux / Git Bash:
 
 ```bash
-cp -r sistema-atlas-colombia/atlas/ambiental/skills/* .claude/skills/
+cp -r ../sistema-atlas-colombia/atlas/ambiental/skills/* .claude/skills/
 ```
 
 Windows (PowerShell):
 
 ```powershell
 Copy-Item -Recurse -Force `
-  "sistema-atlas-colombia\atlas\ambiental\skills\*" `
+  "..\sistema-atlas-colombia\atlas\ambiental\skills\*" `
   ".claude\skills\"
 ```
 
-Cambia `ambiental` por `minero-energetico` para el otro atlas, y `.claude\skills` por `.agents\skills` (Codex) u `.opencode\skills` (OpenCode) según tu herramienta. Si ya tenés skills en `.claude/skills/`, OpenCode también las lee, sin necesidad de duplicar.
+Cambia `ambiental` por `minero-energetico` para el otro atlas, y `.claude\skills` por `.agents\skills` (Codex) u `.opencode\skills` (OpenCode) según tu herramienta. Si ya tienes skills en `.claude/skills/`, OpenCode también las lee, sin necesidad de duplicar.
 
 Si instalas dos o más atlas, agrega también la orquestadora nacional desde `atlas/nacional/`:
 
 ```bash
-cp -r sistema-atlas-colombia/atlas/nacional/skills/atlas-orquestador-colombia .claude/skills/
+cp -r ../sistema-atlas-colombia/atlas/nacional/skills/atlas-orquestador-colombia .claude/skills/
 ```
 
 Para instalación global, usa la carpeta del usuario en vez del proyecto (`~/.claude/skills/`, `~/.agents/skills/`, `~/.opencode/skills/`; en Windows `~` corresponde a `$env:USERPROFILE`).
 
-> **Claude.ai / ChatGPT (no recomendada):** solo como referencia — Claude.ai: *Personalizar* → *Skills* → *Añadir* → *Cargar una habilidad*; ChatGPT: *Complementos* → *Habilidades* → *Subir desde tu ordenador* (si no reconoce la skill en el chat normal, cambiá a modo *Work*).
+> **Claude.ai / ChatGPT (no recomendada):** solo como referencia — Claude.ai: *Personalizar* → *Skills* → *Añadir* → *Cargar una habilidad*; ChatGPT: *Complementos* → *Habilidades* → *Subir desde tu ordenador* (si no reconoce la skill en el chat normal, cambia a modo *Work*).
 
 ### Pregunta en lenguaje natural
 
@@ -155,7 +155,7 @@ Las rutas esperadas de estas consultas viven en [`examples/consultas-de-ejemplo.
 ## Para quién
 
 - investigadores y estudiantes que cruzan sectores en un mismo análisis
-- analistas y consultores de proyectos con componentes técnicos 
+- analistas y consultores de proyectos con componentes técnicos
 - funcionarios públicos que coordinan información entre entidades
 - equipos y personas que quieran construir un atlas nuevo sobre el estándar
 

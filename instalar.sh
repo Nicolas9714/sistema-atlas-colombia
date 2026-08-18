@@ -7,9 +7,9 @@
 # del usuario (ej. .claude/skills para Claude Code, .agents/skills para Codex).
 #
 # Ejemplos:
-#   ./instalar.sh --atlas ambiental
-#   ./instalar.sh --atlas todos --actualizar
-#   ./instalar.sh --atlas ambiental --entidad navegar-anla --global
+#   bash instalar.sh --atlas ambiental
+#   bash instalar.sh --atlas todos --actualizar
+#   bash instalar.sh --atlas ambiental --entidad navegar-anla --global
 #
 set -euo pipefail
 
@@ -27,7 +27,7 @@ modo_global=0
 actualizar=0
 
 mostrar_uso() {
-    echo "Uso: ./instalar.sh --atlas ambiental|minero-energetico|todos[,...] [opciones]"
+    echo "Uso: bash instalar.sh --atlas ambiental|minero-energetico|todos[,...] [opciones]"
     echo ""
     echo "Opciones:"
     echo "  --atlas LISTA      Atlas a instalar, separados por coma (obligatorio)"

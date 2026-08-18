@@ -48,7 +48,7 @@ Indicios de cruce:
 - Combina datos de operación con datos de control o seguimiento.
 - Nombra una entidad de un sector y un objeto de competencia de otro.
 
-La lista orienta el juicio y admite casos nuevos. [`examples/consultas-de-ejemplo.md`](../../../../examples/consultas-de-ejemplo.md) reúne consultas con su ruta esperada: calibra el criterio y muestra recorridos posibles, sin convertirlos en un catálogo cerrado de conexiones.
+La lista orienta el juicio y admite casos nuevos. [`examples/consultas-de-ejemplo.md`](https://github.com/Nicolas9714/sistema-atlas-colombia/blob/main/examples/consultas-de-ejemplo.md) reúne consultas con su ruta esperada: calibra el criterio y muestra recorridos posibles, sin convertirlos en un catálogo cerrado de conexiones.
 
 ## Cobertura parcial y límites
 
@@ -58,4 +58,4 @@ La lista orienta el juicio y admite casos nuevos. [`examples/consultas-de-ejempl
 
 ## Registro
 
-La lista autorizada de atlas y entidades vive en [`registro.md`](../../../../registro.md). La tabla de arriba es su espejo compacto; ante cualquier divergencia, manda el registro.
+La lista autorizada de atlas y entidades vive en [`registro.md`](https://github.com/Nicolas9714/sistema-atlas-colombia/blob/main/registro.md). La tabla de arriba es su espejo compacto; ante cualquier divergencia, manda el registro.

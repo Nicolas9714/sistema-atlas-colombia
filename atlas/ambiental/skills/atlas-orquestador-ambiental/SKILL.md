@@ -75,4 +75,4 @@ Puntos de entrada para consultas que cruzan varias entidades. El orden es orient
 
 ## Consultas que cruzan a otros sectores
 
-Para consultas que cruzan a otros sectores, el enrutamiento entre atlas vive en el nodo nacional [Sistema Atlas Colombia](../../../nacional/skills/atlas-orquestador-colombia/SKILL.md).
+Para consultas que cruzan a otros sectores, el enrutamiento entre atlas vive en el nodo nacional [Sistema Atlas Colombia](https://github.com/Nicolas9714/sistema-atlas-colombia/blob/main/atlas/nacional/skills/atlas-orquestador-colombia/SKILL.md).
