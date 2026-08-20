@@ -28,15 +28,15 @@ Cada Atlas de Navegación convierte ese saber en una estructura abierta, documen
 
 ## Cómo funciona
 
-El Sistema Atlas representa el nodo que articula y coordina los Atlas de Navegación sectoriales de Colombia: define el estándar que comparten, registra qué atlas existen y qué entidades cubre cada uno, y orquesta las consultas que cruzan de un sector a otro.
+El Sistema Atlas articula los Atlas de Navegación de Colombia: define el estándar que comparten, registra qué atlas existen y qué entidades cubre cada uno, y mantiene un Nodo Nacional (la skill de orquestación [`atlas-orquestador-colombia`](atlas/nacional/skills/atlas-orquestador-colombia/SKILL.md)) que conecta sus ámbitos de información.
 
-Cada Atlas de Navegación es una colección abierta de skills que documentan y sistematizan cómo encontrar, usar y apropiar la información pública de un sector.
+Cada Atlas de Navegación es una colección abierta de skills que documentan y sistematizan cómo encontrar, usar y apropiar la información pública de un sector. A cada entidad le corresponde una skill, y a cada atlas una skill orquestadora que organiza los recorridos dentro de su ámbito.
 
-A cada entidad le corresponde una skill, y a cada atlas una skill orquestadora que coordina las consultas que cruzan entidades de un mismo sector. Este repositorio agrega una capa adicional: la skill que coordina las consultas que cruzan atlas (inter-atlas). Cómo se construye cada skill está definido en la [especificación](estandar/especificacion.md).
+El Nodo Nacional incorpora una capa de articulación entre atlas. Hace explícitas las conexiones entre sectores, reconoce dónde vive cada parte de un asunto y permite recorrer de forma conjunta información distribuida entre distintas entidades y competencias.
 
-Esta estructura permite que las skills por entidad y los atlas puedan funcionar de forma modular e independiente.
+Estas conexiones pertenecen a la arquitectura del Sistema antes de que una consulta las active. Una pregunta permite recorrerlas, pero no las crea ni delimita su alcance. Ante una necesidad concreta, el nodo reconoce los ámbitos involucrados, localiza la información, conecta los tramos y coordina su recorrido mediante las orquestadoras sectoriales. Cómo se construye cada skill está definido en la [especificación](estandar/especificacion.md).
 
-La respuesta e información específica siempre vive en la skill de la entidad. Si solo tienes un atlas instalado, todo sigue funcionando; el atlas resuelve su sector y te señala dónde vive el resto.
+Esta estructura permite que las skills de entidad y los atlas funcionen de forma modular e independiente. La información específica permanece en la skill de la entidad que la documenta. Si solo tienes un atlas instalado, este conserva toda su capacidad sectorial y señala dónde debería continuar un recorrido que supera su cobertura.
 
 ## Atlas registrados
 
@@ -61,7 +61,7 @@ sistema-atlas-colombia/
 │   ├── especificacion.md            → El estándar de los atlas (versionado)
 │   └── templates/                   → Plantillas para construir nuevas skills
 ├── atlas/
-│   ├── nacional/         → Nodo nacional: atlas-orquestador-colombia (enruta ENTRE atlas)
+│   ├── nacional/         → Nodo nacional: articula los atlas y coordina recorridos interatlas
 │   ├── ambiental/        → Atlas ambiental: README propio + skills/ + examples/
 │   ├── minero-energetico/ → Atlas minero energético: README propio + skills/ + examples/
 │   ├── intersectorial/   → Entidades transversales (DANE, DNP, …) — en construcción
@@ -72,7 +72,7 @@ sistema-atlas-colombia/
 
 ## Instalación
 
-Instala uno, varios o todos los atlas con un solo comando. Cada atlas funciona completo por sí solo; al instalar dos o más, se agrega automáticamente `atlas-orquestador-colombia`, la skill que enruta las consultas entre atlas.
+Instala uno, varios o todos los atlas con un solo comando. Cada atlas funciona completo por sí solo; al instalar dos o más, se agrega automáticamente `atlas-orquestador-colombia`, la skill que articula los atlas instalados, identifica conexiones entre sus ámbitos y coordina recorridos y consultas interatlas.
 
 ### Instalación con script
 
@@ -142,9 +142,9 @@ Para instalación global, usa la carpeta del usuario en vez del proyecto (`~/.cl
 
 > **Claude.ai / ChatGPT (no recomendada):** solo como referencia — Claude.ai: *Personalizar* → *Skills* → *Añadir* → *Cargar una habilidad*; ChatGPT: *Complementos* → *Habilidades* → *Subir desde tu ordenador* (si no reconoce la skill en el chat normal, cambia a modo *Work*).
 
-### Pregunta en lenguaje natural
+### Ejemplo: consulta en lenguaje natural
 
-Cuando la consulta cruce sectores, la skill identifica qué parte responde cada atlas y en qué orden:
+Las consultas son una de las formas de activar las conexiones interatlas. Cuando una pregunta cruza sectores, el Nodo Nacional identifica qué parte corresponde a cada atlas y coordina el orden del recorrido:
 
 > - «¿Qué títulos y solicitudes mineras existen en el suroeste de Antioquia, qué potencial geológico tiene la zona y qué restricciones ambientales la limitan?»
 > - «¿Qué proyectos de hidrocarburos con licencia activa operan en el Magdalena Medio, qué obligaciones ambientales tienen y qué muestra el monitoreo de sus cuencas?»
@@ -166,7 +166,7 @@ Las rutas esperadas de estas consultas viven en [`examples/consultas-de-ejemplo.
 3. Comprueba la conformidad con `bash verificar-conformidad.sh <alias>` antes de proponer nada. Ver [Cómo se comprueba la conformidad](#cómo-se-comprueba-la-conformidad).
 4. Cuando el atlas esté publicado, propón su registro con un pull request a [`registro.md`](registro.md), declarando la versión del estándar que cumple y agregando su tarjeta al banner de este README.
 
-El Sistema Atlas Colombia de este repositorio captura el hecho de que la información pública se organiza según las competencias de las instituciones que la producen, y los problemas reales suelen abarcar varias: por eso cada atlas nuevo amplía lo que el Sistema puede responder.
+El Sistema Atlas Colombia captura el hecho de que la información pública se organiza según las competencias de las instituciones que la producen, mientras los asuntos reales suelen atravesar varias. Cada atlas nuevo amplía los ámbitos, rutas y conexiones que el Sistema puede reconocer y recorrer.
 
 El estándar aplica a cualquier sector (agro, salud, transporte) y a cualquier país: un nodo nacional de otro país puede usar esta misma estructura y los sistemas nacionales que comparten el estándar formarían, entre sí, una red.
 
