@@ -51,6 +51,12 @@ El trazo discontinuo marca los atlas en construcción: el Intersectorial y el de
 
 El detalle de entidades vive en [`registro.md`](registro.md).
 
+## Sitio web
+
+El Sistema Atlas Colombia puede explorarse en su [sitio web provisional](https://sistema-atlas-colombia.nicolasmcfc.workers.dev), que reúne los atlas, las entidades, las skills y la documentación del proyecto.
+
+El sitio también presenta las [morfologías web](https://sistema-atlas-colombia.nicolasmcfc.workers.dev/morfologias), representaciones visuales construidas a partir del `mapa-web.md` de cada entidad.
+
 ## Qué contiene este repositorio
 
 ```text
