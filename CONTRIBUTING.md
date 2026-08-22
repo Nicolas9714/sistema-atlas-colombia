@@ -43,12 +43,6 @@ La skill `atlas-orquestador-colombia` define el enrutamiento entre atlas:
 
 `examples/consultas-de-ejemplo.md` reúne consultas que cruzan atlas: cada una es un prompt más su ruta esperada, anotada por atlas y entidad, sin URLs (las URLs viven en las skills de los atlas).
 
-## Convenciones
-
-- **Nombres de los atlas:** siempre el título completo (p. ej. «Atlas de Navegación Ambiental de Colombia»); el proyecto no usa siglas para los atlas.
-- **Redacción en positivo:** afirmaciones de atribución («operado por X»), sin negaciones ni menciones de fallas salvo que sean información de navegación necesaria.
-- **Encoding:** todos los archivos en UTF-8, con tildes, `ñ` y signos de apertura (`¿` `¡`) correctos.
-
 ## Proceso de revisión
 
 - Los cambios al registro, la orquestadora y los ejemplos pueden proponerse directamente por Pull Request.
